@@ -13,7 +13,7 @@ const showNotification = (type = 'info', title = '', text = '', closeButton = tr
     $close.html(closeButton ? '<button type="button" class="close-btn flex items-center gap-2 border rounded-md px-3 py-1 bg-[rgba(57,57,57,0.1)] border-[#33333385] text-[#ffffffa3] hover:bg-[rgba(57,57,57,0.35)] transition"><span class="font-medium">بستن</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4"><path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" /></svg></button>' : '');
     
     $notification.hasClass('opacity-100') ? $notification.removeClass('opacity-100 translate-y-0').addClass('opacity-0 -translate-y-full') && setTimeout(() => $notification.removeClass('opacity-0 -translate-y-full').addClass('opacity-100 translate-y-0'), 500) : $notification.removeClass('opacity-0 -translate-y-full').addClass('opacity-100 translate-y-0');
-    setTimeout(() => $notification.removeClass('opacity-100 translate-y-0').addClass('opacity-0 -translate-y-full'), 3000);
+    setTimeout(() => $notification.removeClass('opacity-100 translate-y-0').addClass('opacity-0 -translate-y-full'), 93000);
 }
 
 $(document).on('click', '.close-btn', () => $('#notification').removeClass('opacity-100 translate-y-0').addClass('opacity-0 -translate-y-full'));
