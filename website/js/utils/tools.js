@@ -1,0 +1,1 @@
+export const wait = (min, max = null) => new Promise(res => setTimeout(res, max ? Math.random() * (max - min) + min : min));
