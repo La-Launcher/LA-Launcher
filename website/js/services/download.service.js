@@ -1,7 +1,7 @@
 // import { wait } from "../utils/tools.js";
 import showNotification from "./notification.service.js";
 
-// $.getJSON("https://api.github.com/repos/KAKXER/la-launcher/releases/latest").done(function (release) {
+// $.getJSON("https://api.github.com/repos/LaPlatform/la-launcher/releases/latest").done(function (release) {
 //     $(".downloadButton").removeClass("disabled");
 
 //     let downloadUrl = release.assets[0].browser_download_url;
@@ -23,7 +23,7 @@ $(".downloadButton").on("click", async function (e) {
     // if ($(this).hasClass("disabled")) {
     //     showNotification('warning', 'اخطار!', "مشکلی در بارگزاری لیتک دانلود پیش آمده", false);
     //     await wait(1000);
-    //     window.location.href = "https://github.com/KAKXER/la-launcher/releases/latest";
+    //     window.location.href = "https://github.com/LaPlatform/la-launcher/releases/latest";
     //     return
     // }
 
