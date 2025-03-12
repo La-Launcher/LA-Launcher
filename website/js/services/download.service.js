@@ -18,6 +18,7 @@ import showNotification from "./notification.service.js";
 
 $(".downloadButton").on("click", async function (e) {
     e.preventDefault();
+    if ($(this).hasClass("disabled")) return;
     showNotification('error', 'خطا!', "لانچر هنوز متشر نشده است اعلامه دیسکورد را دنبال کنید.", true);
 
     // if ($(this).hasClass("disabled")) {

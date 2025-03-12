@@ -212,6 +212,19 @@ img {
     cursor: no-drop;
 }
 
+.downloadButton.disabled:first-child:hover,
+.downloadButton.disabled:first-child:focus {
+    background-color: #ffffff05 !important; 
+    color: inherit !important; 
+}
+
+.downloadButton.disabled:last-child:hover,
+.downloadButton.disabled:last-child:focus {
+    background-color: #C30440 !important; 
+    color: rgb(255 255 255 / 0.8) !important; 
+    transform: none;
+}
+
 .mobile-header:hover {
     filter: brightness(0) saturate(100%) invert(13%) sepia(89%) saturate(3784%) hue-rotate(330deg) brightness(93%) contrast(108%);
 }
