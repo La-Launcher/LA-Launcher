@@ -16,6 +16,10 @@ import showNotification from "./notification.service.js";
 //     showNotification('error', 'خطا!', "مشکلی در بارگذاری لینک دانلود پیش آمده", true);
 // });
 
+$("#buttonText").text("متتشر نشده است");
+$("#buttonLoading").fadeOut(0);
+$("#buttonIcon").fadeIn(200);
+
 $(".downloadButton").on("click", async function (e) {
     e.preventDefault();
     if ($(this).hasClass("disabled")) return;

@@ -11,7 +11,7 @@ const animateCounter = (element, target) => {
     });
 };
 
-const updatePlatform = () => $.getJSON("http://api.la5m.ir/platform-info").done(({ servers, activePlayers, totalInstalls }) => {
+const updatePlatform = () => $.getJSON("https://api.la5m.ir/platform-info").done(({ servers, activePlayers, totalInstalls }) => {
     if (servers === 1) return;
     $('.conuts').html("0").each((i, el) => 
         animateCounter($(el), [servers, activePlayers, totalInstalls][i])
