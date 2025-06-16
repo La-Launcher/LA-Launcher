@@ -91,7 +91,9 @@ img {
 }
 
 @media (min-width: 2000px) {
-    .intro-overlay, .intro-background {
+
+    .intro-overlay,
+    .intro-background {
         background-size: 2000px
     }
 }
@@ -137,6 +139,7 @@ img {
     0% {
         background-position: 0vw 0vw;
     }
+
     100% {
         background-position: 800vw -800vw;
     }
@@ -158,6 +161,7 @@ img {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -167,6 +171,7 @@ img {
     from {
         opacity: 1;
     }
+
     to {
         opacity: 0;
     }
@@ -214,14 +219,14 @@ img {
 
 .downloadButton.disabled:first-child:hover,
 .downloadButton.disabled:first-child:focus {
-    background-color: #ffffff05 !important; 
-    color: inherit !important; 
+    background-color: #ffffff05 !important;
+    color: inherit !important;
 }
 
 .downloadButton.disabled:last-child:hover,
 .downloadButton.disabled:last-child:focus {
-    background-color: #C30440 !important; 
-    color: rgb(255 255 255 / 0.8) !important; 
+    background-color: #C30440 !important;
+    color: rgb(255 255 255 / 0.8) !important;
     transform: none;
 }
 
