@@ -8,7 +8,7 @@ $(document).ready(() => {
         name = form.find("input[placeholder*='نام']"),
         msg = form.find("textarea"),
         amount = form.find("input[placeholder*='مبلغ']"),
-        donateBtn = form.find("a:contains('حمایت مالی')");
+        donateBtn = form.find("a:contains('رفتن به درگاه بانکی')");
 
     // const inputs = $('#phone-inputs input');
 
@@ -123,6 +123,6 @@ $(document).ready(() => {
     async function startDonationProcess(data) {
         await wait(1000);
         showNotification('error', 'خطا در درگاه بانکی', "از حسن نیست شما بابت حمایت از ما سپاس گزاریم, درگاه حمایت مالی فعلا فعال نمی باشد 🙏", true);
-        donateBtn.html("خصا در درگاه بانکی");
+        donateBtn.html("خصا در درگاه بانکی 😨");
     }
 });
