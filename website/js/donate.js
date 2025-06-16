@@ -105,6 +105,7 @@ $(document).ready(() => {
             e.preventDefault();
             return;
         }
+
         e.preventDefault();
 
         const data = {
@@ -114,6 +115,7 @@ $(document).ready(() => {
         };
 
         if (!data.name || !data.amount) return;
+        if (data.amount < 30000) return showNotification('alert', 'مبلغ حمایتی', "مبلغ کمتر از <span class='text-[#fFF7]'>30,000 تومان</span> مجاز نمی باشد.", false);
 
         donateBtn.addClass("opacity-50 pointer-events-none").html('در حال انتقال به درگاه بانکی<span class="loading-tag">...</span>');
 
