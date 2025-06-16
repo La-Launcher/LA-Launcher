@@ -1,0 +1,128 @@
+import showNotification from "./services/notification.service.js";
+import './utils/loading.dat.js';
+import { wait } from "./utils/tools.js";
+
+$(document).ready(() => {
+    const form = $("#donation-form"),
+        info = $("#donation-info"),
+        name = form.find("input[placeholder*='نام']"),
+        msg = form.find("textarea"),
+        amount = form.find("input[placeholder*='مبلغ']"),
+        donateBtn = form.find("a:contains('حمایت مالی')");
+
+    // const inputs = $('#phone-inputs input');
+
+    // inputs.on('input', function () {
+    //     const $this = $(this);
+    //     let val = $this.val().replace(/\D/g, '').charAt(0) || '';
+
+    //     if (inputs.index(this) === 0 && val !== '9') {
+    //         $this.val('');
+    //         return;
+    //     }
+
+    //     $this.val(val);
+
+    //     if (val) {
+    //         const next = inputs.eq(inputs.index(this) + 1);
+    //         if (next.length) next.focus();
+    //     }
+    // });
+
+    // inputs.on('keydown', function (e) {
+    //     const $this = $(this);
+    //     const index = inputs.index(this);
+
+    //     if (e.key === 'Backspace') {
+    //         if (!$this.val() && index > 0) {
+    //             inputs.eq(index - 1).focus().val('');
+    //             e.preventDefault();
+    //         } else {
+    //             $this.val('');
+    //             e.preventDefault();
+    //         }
+    //     }
+
+    //     if (e.key === 'ArrowLeft' && index > 0) {
+    //         inputs.eq(index - 1).focus();
+    //         e.preventDefault();
+    //     }
+
+    //     if (e.key === 'ArrowRight' && index < inputs.length - 1) {
+    //         inputs.eq(index + 1).focus();
+    //         e.preventDefault();
+    //     }
+    // });
+
+    $("a:contains('حمایت مالی'):first").on("click", e => {
+        e.preventDefault();
+        info.fadeOut(250, () => form.hide().removeClass("hidden").slideDown(250));
+    });
+
+    const formatAmount = val =>
+        val.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",") + " تومان";
+
+    form.find("button").on("click", function () {
+        amount.val(formatAmount($(this).text()));
+        validate();
+    });
+
+    amount.on("input", function () {
+        let val = $(this).val()
+            .replace(/\s*تومان\s*/g, "")
+            .replace(/,/g, "")
+            .replace(/\D/g, "")
+            .replace(/^0+/, "");
+        $(this).val(val ? formatAmount(val) : "");
+        validate();
+    });
+
+    amount.on("keydown click", function () {
+        setTimeout(() => {
+            const pos = this.value.indexOf(" تومان");
+            if (this.selectionStart > pos) this.setSelectionRange(pos, pos);
+        });
+    });
+
+    name.on("input", function () {
+        const filtered = $(this).val().replace(/[^a-zA-Z\u0600-\u06FF\s]/g, "");
+        if (filtered !== $(this).val()) $(this).val(filtered);
+        validate();
+    });
+
+    function validate() {
+        const nameValid = name.val().trim().length > 0;
+        const amountVal = amount.val().replace(/\s*تومان\s*/g, "").replace(/,/g, "");
+        const amountValid = amountVal.length > 0 && !isNaN(amountVal) && +amountVal > 0;
+        donateBtn.toggleClass("opacity-50 pointer-events-none", !(nameValid && amountValid));
+    }
+
+    msg.on("input", validate);
+    validate();
+
+    donateBtn.on("click", e => {
+        if (donateBtn.hasClass("pointer-events-none")) {
+            e.preventDefault();
+            return;
+        }
+        e.preventDefault();
+
+        const data = {
+            name: name.val().trim(),
+            message: msg.val().trim(),
+            amount: amount.val().replace(/\s*تومان\s*/g, "").replace(/,/g, "").trim()
+        };
+
+        if (!data.name || !data.amount) return;
+
+        donateBtn.addClass("opacity-50 pointer-events-none").html('در حال انتقال به درگاه بانکی<span class="loading-tag">...</span>');
+
+        startDonationProcess(data);
+    });
+
+    async function startDonationProcess(data) {
+        await wait(1000);
+        showNotification('error', 'خطا در درگاه بانکی', "از حسن نیست شما بابت حمایت از ما سپاس گزاریم, درگاه حمایت مالی فعلا فعال نمی باشد 🙏", true);
+        donateBtn.html("خصا در درگاه بانکی");
+    }
+});
