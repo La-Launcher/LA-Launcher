@@ -1,0 +1,15 @@
+@font-face {
+    font-display: swap;
+    font-family: 'PFDinDisplayPro-Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('PFDinDisplayPro-Regular'), url('PFDinDisplayPro-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'PFDinDisplayPro-Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('PFDinDisplayPro-Bold'), url('PFDinDisplayPro-Bold.woff') format('woff');
+}
