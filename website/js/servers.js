@@ -8,12 +8,11 @@ import './services/download.service.js';
 async function tryLoadServers(retryCount = 3) {
     try {
         let attempts = 0;
-        let getServers = false;
 
         while (attempts < retryCount) {
             const response = await fetch('https://api.la5m.ir/servers');
             if (!response.ok) throw new Error(response.statusText);
-            getServers = await response.json();
+            const getServers = await response.json();
 
             if (getServers !== 1 && typeof getServers?.data === "object") return getServers; else {
                 await wait(1200);
@@ -24,7 +23,7 @@ async function tryLoadServers(retryCount = 3) {
         }
 
         $(".app-servers-loading h3").html("اطلاعات سرور بارگزاری نشد ⌛");
-        return getServers;
+        return false;
    } catch (error) {
         console.error('Error loading JSON:', error);
         $(".app-servers-loading h3").html("اتصال به سرور برای دریافت اطلاعات با شکست مواجع شد<br> لطفا اعلامیه های دیسکورد را دنبال کنید.");
