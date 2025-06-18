@@ -475,7 +475,7 @@ img {
     width: 0.8rem;
     height: 0.8rem;
     overflow: hidden;
-    border-radius: 0.104vw;
+    border-radius: 2px;
     transform: scale(2.5);
 }
 
