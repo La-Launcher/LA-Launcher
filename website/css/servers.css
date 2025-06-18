@@ -384,7 +384,7 @@ img {
 
 .app-servers-filter-tags-box h1 {
     margin-left: 12px;
-    font-family: 'Rajdhani SemiBold';
+    font-family: 'Rajdhani Medium';
 }
 
 .app-servers-filter-tags-box h2 {
@@ -447,8 +447,8 @@ img {
 }
 
 .filter-tag h1 {
+    letter-spacing: 1px;
     font-size: 2em;
-    font-weight: 200;
 }
 
 .filter-tag h2 {
