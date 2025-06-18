@@ -26,7 +26,7 @@ async function tryLoadServers(retryCount = 3) {
         return false;
    } catch (error) {
         console.error('Error loading JSON:', error);
-        $(".app-servers-loading h3").html("اتصال به سرور برای دریافت اطلاعات با شکست مواجع شد<br> لطفا اعلامیه های دیسکورد را دنبال کنید.");
+        $(".app-servers-loading h3").html("اتصال به سرور برای دریافت اطلاعات با شکست مواجه شد<br> لطفا اعلامیه های دیسکورد را دنبال کنید.");
     }
 }
 
