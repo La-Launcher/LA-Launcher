@@ -1,0 +1,8 @@
+{
+  "app": "la-website",
+  "port": 80,
+  "build": {
+    "location": "iran"
+  },
+  "disks": []
+}
