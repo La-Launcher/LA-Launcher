@@ -1,0 +1,10 @@
+{
+  "app": "LA-Launcher",
+  "port": 80,
+  "build": {
+    "location": "iran"
+  },
+  "platform": "static",
+  "path": "./website",
+  "disks": []
+}
