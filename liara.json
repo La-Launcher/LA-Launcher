@@ -5,6 +5,6 @@
     "location": "iran"
   },
   "platform": "static",
-  "root": "public",
+  "root": "website",
   "disks": []
 }
