@@ -1,8 +1,10 @@
 {
-  "app": "la-website",
+  "app": "LA-Launcher",
   "port": 80,
   "build": {
     "location": "iran"
   },
+  "platform": "static"و
+  "root": "public",
   "disks": []
 }
