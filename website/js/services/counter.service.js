@@ -16,7 +16,7 @@ const updatePlatform = () => $.getJSON("https://api.la5m.ir/platform-info").done
     $('.conuts').html("0").each((i, el) => 
         animateCounter($(el), [servers, activePlayers, totalInstalls][i])
     );
-}).fail(() => showNotification('error', 'خطا!', "مشکلی در دریافت اطلاعات سرور پیش آمده امکان دارد سرور در دسترس نباشد یا اتصال شما به سرور به مشکل خورده است لطفا اعلامیه های دیسکورد را دنبال کنید یا اینترنت خود را بررسی کنید.", true));
+}).fail(() => showNotification('error', 'خطا!', 'مشکلی در دریافت اطلاعات سرور پیش آمده, اینترنت خود را بررسی کنید.', true));
 
 setInterval(updatePlatform, 120000);
 updatePlatform();
