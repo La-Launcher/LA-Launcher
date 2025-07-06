@@ -95,6 +95,7 @@ img {
     height: 27.994px;
     border-radius: 3.994px;
     margin-left: 8.006px;
+    all: revert;
 }
 
 .app-server-list-server-name {
