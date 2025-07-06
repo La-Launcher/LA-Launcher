@@ -91,18 +91,19 @@ img {
 }
 
 .app-server-list-server-logo {
-    width: 27.994px;
-    height: 27.994px;
-    border-radius: 3.994px;
-    margin-left: 8.006px;
+    width: 28px;
+    all: revert;
+    height: 28px;
+    border-radius: 4px;
+    margin-left: 8px;
 }
 
 .app-server-list-server-name {
     height: 22px;
     color: rgb(255, 255, 240);
     font-family: 'Rajdhani SemiBold', Peyda;
-    font-size: 15.994px;
-    margin-left: 8.006px;
+    font-size: 16px;
+    margin-left: 8px;
     clip-path: content-box;
     min-width: fit-content;
     margin-right: 6.72px;
