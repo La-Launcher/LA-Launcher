@@ -553,3 +553,26 @@ img {
     transform: translateY(0);
   }
 }
+
+.app-server-list-main offline {
+    padding-inline: 6px;
+    width: max-content;
+    height: 23.002px;
+    border-radius: 4px;
+    background: rgba(255, 38, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8.5px;
+}
+
+.app-server-list-main offline span {
+    color: rgba(238, 38, 0, 1);
+    text-align: right;
+    text-shadow: 0 0 4px rgba(209, 35, 8, 0.35);
+    font-family: Peyda;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+}
