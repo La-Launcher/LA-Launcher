@@ -1,28 +1,15 @@
 const express = require("express");
 const path = require("path");
-
 const app = express();
-const PORT = 3005;
-const HOST = process.env.LIARA_URL || "localhost";
 
-app.use(express.static(path.join(__dirname, "website")));
+app.use(express.static("website"));
 
-app.get("/", (_, res) => {
-  res.sendFile(path.join(__dirname, "/website/index.html"));
+["", "servers", "errors", "donate"].forEach(route => {
+  app.get("/" + route, (_, res) =>
+    res.sendFile(path.join(__dirname, `website/${route || "index"}.html`))
+  );
 });
 
-app.get("/servers", (_, res) => {
-  res.sendFile(path.join(__dirname, "/website/servers.html"));
-});
+app.use((_, res) => res.status(404).sendFile(path.join(__dirname, "website/404.html")));
 
-app.get("/errors", (_, res) => {
-  res.sendFile(path.join(__dirname, "/website/errors.html"));
-});
-
-app.get("/donate", (_, res) => {
-  res.sendFile(path.join(__dirname, "/website/donate.html"));
-});
-
-app.listen(PORT, () => {
-  console.log(`App listening on ${HOST}:${PORT}`);
-});
+app.listen(3005);
