@@ -1,3 +1,7 @@
 {
-  "port": 3005
+    "app": "la-website""port": 3000
+    "build": {
+        "location": "iran"
+    }
+    "disks": []
 }
