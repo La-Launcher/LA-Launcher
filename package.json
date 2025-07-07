@@ -1,0 +1,12 @@
+{
+  "name": "LA-Website",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
