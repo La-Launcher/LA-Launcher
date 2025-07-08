@@ -16,14 +16,14 @@ $.getJSON("https://api.github.com/repos/LaPlatform/la-launcher/releases/latest")
     showNotification('error', 'خطا!', "مشکلی در بارگذاری لینک دانلود پیش آمده", true);
 });
 
-$("#buttonText").text("متتشر نشده است");
-$("#buttonLoading").fadeOut(0);
-$("#buttonIcon").fadeIn(200);
+// $("#buttonText").text("منتشر نشده است");
+// $("#buttonLoading").fadeOut(0);
+// $("#buttonIcon").fadeIn(200);
 
 $(".downloadButton").on("click", async function (e) {
     // e.preventDefault();
     // if ($(this).hasClass("disabled")) return;
-    // showNotification('error', 'خطا!', "لانچر هنوز متشر نشده است اعلامه دیسکورد را دنبال کنید.", true);
+    // showNotification('error', 'خطا!', "لانچر هنوز منتشر نشده است اعلامه دیسکورد را دنبال کنید.", true);
 
     if ($(this).hasClass("disabled")) {
         showNotification('warning', 'اخطار!', "مشکلی در بارگزاری لیتک دانلود پیش آمده", false);
