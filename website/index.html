@@ -518,5 +518,30 @@
                 </div>
             </div>
         </div>
+
+        <div id="feedback" class="fixed z-[100] flex justify-center items-center bg-[#00000052] backdrop-blur-[5.208vw] w-full h-full hidden">
+            <div class="gap-6 px-6 py-6 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl animate-in fade-in-0 slide-in-from-top-6 duration-700 fill-mode-backwards max-w-[90vw] font-['Peyda','Rajdhani_SemiBold']" dir="rtl">
+
+                <p class="text-[18px] font-medium">نظر خود را در مورد LA Launcher به ما بگوید</p>
+                <p class="mt-2 text-[14px]">این کار شما باعث پیشرف خدمات و انرژی دادن به ما می شود.</p>
+
+                <div class="mt-4 flex justify-between">
+                    <div class="flex h-12 w-14 cursor-pointer items-center justify-center bg-white/10 border-[2px] border-white/20 rounded-[8px] hover:bg-white/20 text-xl" onclick="selectEmoji('😤')">😤</div>
+                    <div class="flex h-12 w-14 cursor-pointer items-center justify-center bg-white/10 border-[2px] border-white/20 rounded-[8px] hover:bg-white/20 text-xl" onclick="selectEmoji('😒')">😒</div>
+                    <div class="flex h-12 w-14 cursor-pointer items-center justify-center bg-white/10 border-[2px] border-white/20 rounded-[8px] hover:bg-white/20 text-xl" onclick="selectEmoji('😐')">😐</div>
+                    <div class="flex h-12 w-14 cursor-pointer items-center justify-center bg-white/10 border-[2px] border-white/20 rounded-[8px] hover:bg-white/20 text-xl" onclick="selectEmoji('🙂')">🙂</div>
+                    <div class="flex h-12 w-14 cursor-pointer items-center justify-center bg-white/10 border-[2px] border-white/20 rounded-[8px] hover:bg-white/20 text-xl" onclick="selectEmoji('😀')">😀</div>
+                </div>
+
+                <div class="mt-4">                
+                    <textarea placeholder="لطفا یک پیام برای ما ارسال کنید, دوست داریم نظر و انتقادات شما در مورد این سرویس را بدانیم 📝" maxlength="500" class="w-full p-[12px] text-[15px] bg-transparent border-[2px] border-white/20 rounded-[10px] text-right focus:outline-none h-[180px] resize-none focus:outline-none focus:border-[#C30440] transition-colors duration-300 ease-in-out"></textarea>
+                </div>
+
+                <div class="mt-4 flex justify-end" style="flex-direction: row-reverse; justify-content: space-between;">
+                    <button id="submitBtn" class="p-[0_20px] sm:p-[0_26px] rounded-md bg-[#C30440] text-white font-bold shadow-[0px_-1px_0px_1px_rgba(0,0,0,0.20)_inset] ring-stone-50 hover:bg-[#171A24]" onclick="submitFeedback()">ثبت</button>
+                    <p class="text-[0.8rem] sm:text-[0.9rem] text-right">خوش حالیم که شما از خدمات راضی هستید<br>برای حمایت از می توانید <a href="https://la5m.ir/donate" class="text-yellow-400">دونیت</a> کنید 🙏</p>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

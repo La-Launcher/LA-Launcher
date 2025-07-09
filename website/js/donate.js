@@ -94,17 +94,14 @@ $(document).ready(() => {
         const nameValid = name.val().trim().length > 0;
         const amountVal = amount.val().replace(/\s*تومان\s*/g, "").replace(/,/g, "");
         const amountValid = amountVal.length > 0 && !isNaN(amountVal) && +amountVal > 0;
-        donateBtn.toggleClass("opacity-50 pointer-events-none", !(nameValid && amountValid));
+        donateBtn.toggleClass("opacity-50 cursor-not-allowed", !(nameValid && amountValid));
     }
 
     msg.on("input", validate);
     validate();
 
     donateBtn.on("click", e => {
-        if (donateBtn.hasClass("pointer-events-none")) {
-            e.preventDefault();
-            return;
-        }
+        if (donateBtn.hasClass("cursor-not-allowed")) return;
 
         e.preventDefault();
 
@@ -117,7 +114,7 @@ $(document).ready(() => {
         if (!data.name || !data.amount) return;
         if (data.amount < 30000) return showNotification('alert', 'مبلغ حمایتی', "مبلغ کمتر از <span class='text-[#fFF7]'>30,000 تومان</span> مجاز نمی باشد.", false);
 
-        donateBtn.addClass("opacity-50 pointer-events-none").html('در حال انتقال به درگاه بانکی<span class="loading-tag">...</span>');
+        donateBtn.addClass("opacity-50 cursor-not-allowed").html('در حال انتقال به درگاه بانکی<span class="loading-tag">...</span>');
 
         startDonationProcess(data);
     });
