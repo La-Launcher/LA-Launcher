@@ -76,11 +76,11 @@ img {
 
 .app-server-license-effect:after {
     position: absolute;
-    width: 1100.006px;
-    height: 39.994px;
+    width: 100%;
+    height: 100%;;
     content: "";
-    background-image: url("/img/license-effect.png");
-    background-size: 1100.006px, 39.994px;
+    background-image: url("../img/license-effect.png");
+    background-size: auto;
 }
 
 .app-server-list-main div {

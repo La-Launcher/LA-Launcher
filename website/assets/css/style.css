@@ -43,7 +43,7 @@ img {
 }
 
 .intro-overlay {
-    background-image: linear-gradient(180deg, #14141480, #0b0b0b), url("../img/bg.webp");
+    background-image: linear-gradient(180deg, #14141480, #0b0b0b), var(--url-bg-main);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
@@ -52,7 +52,7 @@ img {
 
 
 .intro-background {
-    background-image: linear-gradient(180deg, #0b0b0b99, #0b0b0b00, #0b0b0b), linear-gradient(90deg, #0b0b0b, #0b0b0b00, #0b0b0b), url("../img/bg.webp");
+    background-image: linear-gradient(180deg, #0b0b0b99, #0b0b0b00, #0b0b0b), linear-gradient(90deg, #0b0b0b, #0b0b0b00, #0b0b0b), var(--url-bg-main);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom
@@ -60,13 +60,13 @@ img {
 
 @media (min-width: 1024px) {
     .intro-background {
-        background-image: linear-gradient(180deg, #0b0b0b99, #0b0b0b00, #0b0b0b), linear-gradient(90deg, #0b0b0b, #0b0b0b00, #0b0b0b), url("../img/bg.webp");
+        background-image: linear-gradient(180deg, #0b0b0b99, #0b0b0b00, #0b0b0b), linear-gradient(90deg, #0b0b0b, #0b0b0b00, #0b0b0b), var(--url-bg-main);
         background-size: 134vw;
         background-position-y: top;
     }
 
     .intro-overlay {
-        background-image: linear-gradient(180deg, #14141480, #0b0b0b), url("../img/bg.webp");
+        background-image: linear-gradient(180deg, #14141480, #0b0b0b), var(--url-bg-main);
         background-size: 134vw;
     }
 

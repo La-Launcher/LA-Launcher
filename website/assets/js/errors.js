@@ -2,7 +2,7 @@ import { wait } from "./utils/tools.js";
 
 $(document).ready(async function () {
     try {
-        const response = await fetch('./json/errors.json');
+        const response = await fetch('../assets/json/errors.json');
         const data = await response.json();
 
         for (const error of data) {
