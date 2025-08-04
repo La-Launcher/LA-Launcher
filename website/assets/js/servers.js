@@ -48,7 +48,7 @@ async function UpdateServers() {
 
         const serversData = $(".app-server-list").empty();
         for (const server of getServers.data) {
-            const licenseTag = server.licenseType ? `<img class="app-server-list-server-license-type" src="../assets/img/licenses/${server.licenseType}.svg" alt="License">` : '';
+            const licenseTag = server.licenseType ? `<img class="app-server-list-server-license-type" src="../img/licenses/${server.licenseType}.svg" alt="License">` : '';
             const randomTags = (server.tags?.list || []).sort(() => 0.5 - Math.random()) .slice(0, Math.floor(Math.random() * 5)).map(tag => `<box><span>${tag}</span></box>`).join('');
             const tags = randomTags ? `<main-box class="app-server-list-server-tags hidden lg:flex">${randomTags}</main-box>`  : '';
             const randomLogo = Math.floor(Math.random() * 16) + 1;
@@ -59,14 +59,14 @@ async function UpdateServers() {
             const serverElement = $(`
                 <div id="${server.id}" tags="${server.tags?.list}" class="app-server-list-main fade-in-row ${server.licenseType === "pt" ? "app-server-license-effect" : ''}">
                     <div>
-                        <img class="app-server-list-server-logo" src="../assets/img/logo-template/${randomLogo}.svg" alt="Server Logo">
+                        <img class="app-server-list-server-logo" src="../img/logo-template/${randomLogo}.svg" alt="Server Logo">
                         ${server.offline ? "<offline><span>خاموش</span></offline>" : ''} 
                         <h1 class="app-server-list-server-name">${serverName == "" ? server.hostName : serverName}</h1>
                         <h2 class="app-server-list-server-text">${parseColorCodes(server.projectDescription)}</h2>
                     </div>
                     <div>
                         <span class="app-server-list-server-player-count min-w-[55px] lg:min-w-[80px] [min-inline-size:max-content]">${server.players.maxCount} / ${server.players.count}</span>
-                        <img class="app-server-list-server-flag" src="../assets/img/icon/flag.png" alt="f">
+                        <img class="app-server-list-server-flag" src="../img/icon/flag.png" alt="f">
                         ${licenseTag}
                         ${tags}
                     </div>
@@ -80,7 +80,7 @@ async function UpdateServers() {
             const serverLogo = serverElement.find(".app-server-list-server-logo");
             $('<img>').attr('src', logoUrl)
                 .on('load', () => serverLogo.attr('src', logoUrl))
-                .on('error', () => serverLogo.attr('src', `../assets/img/logo-template/${randomLogo}.svg`));
+                .on('error', () => serverLogo.attr('src', `../img/logo-template/${randomLogo}.svg`));
         };
 
         $(".app-server-list").removeClass('fade-in-row, fade-in-row');
