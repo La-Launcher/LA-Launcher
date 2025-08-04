@@ -5,8 +5,8 @@ const PLATFORM_NAME = process.env.PLATFORM_NAME ?? "la5m";
 
 app.use(express.static("website"));
 
-["", "servers", "errors", "donate", "api"].forEach(route => {
-  app.get("/" + route, (_, res) => res.sendFile(path.join(__dirname, `website/${PLATFORM_NAME}/${route || "index"}.html`)));
+["index", "servers", "errors", "donate", "api"].forEach(route => {
+  app.get("/" + (route === "index" ? "" : route), (_, res) => res.sendFile(path.join(BASE_DIR, `${route}.html`)));
 });
 
 app.use((_, res) => res.status(404).sendFile(path.join(__dirname, `website/${PLATFORM_NAME}/404.html`)));
