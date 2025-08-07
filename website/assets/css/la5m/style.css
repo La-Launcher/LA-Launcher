@@ -129,7 +129,7 @@ img {
 }
 
 .partnership {
-    background: url("../img/pattern.webp"), #161923;
+    background: url("../../img/pattern.webp"), #161923;
     background-size: 18.229vw, 18.229vw;
     animation: moveBackground 1000s linear infinite, opacity-open 0.3s forwards;
     background-blend-mode: soft-light;

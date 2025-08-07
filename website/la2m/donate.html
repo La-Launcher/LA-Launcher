@@ -11,7 +11,7 @@
         <meta property="og:image" content="../img/logo/64x64.png">
         <meta property="og:url" content="https://LA5M.ir/donate">
         <meta property="og:type" content="website">
-        <meta name="theme-color" content="#C30440">
+        <meta name="theme-color" content="#ba0202">
         <meta property="og:site_name" content="LA Launcher">
         <meta property="og:image:width" content="64">
         <meta property="og:image:height" content="64">
@@ -26,14 +26,14 @@
         <link rel="icon" type="image/png" href="../img/logo/48x48.png" sizes="48x48">
         <link rel="icon" type="image/png" href="../img/logo/192x192.png" sizes="192x192">
         <link rel="apple-touch-icon" href="../img/logo/64x64.png">
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/la2m/style.css">
         <link rel="stylesheet" type="text/css" href="../font/Rajdhani/style.css"/>
         <link rel="stylesheet" type="text/css" href="../font/Peyda/style.css"/>
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="../js/assets/jquery-3.7.1.min.js"></script>
         <script type="module" src="../js/donate.js"></script>
     </head>
-    <body class="relative h-screen flex items-center justify-center bg-[url('../img/bg-donate.webp')] bg-cover bg-center overflow-hidden">
+    <body class="relative h-screen flex items-center justify-center bg-[url('../img/bg-la2m-donate.png')] bg-cover bg-center overflow-hidden">
 
         <div id="notification" dir="rtl" class="notification z-[22] mx-[20px] md:mx-0 backdrop-blur-[25px] bg-[#00000052] rounded-[12px] fixed border border-white/10 top-[2.1vh] right-0 left-0 dir-rtl font-['Peyda','Rajdhani_Medium'] max-w-md p-6 flex items-center gap-4 shadow-sm opacity-0 -translate-y-full transition-all duration-500 ease-in-out">
             <div class="icon flex-shrink-0"></div>
@@ -41,9 +41,9 @@
             <div class="close flex-shrink-0"></div>
         </div>
 
-        <div class="rounded-[28px] bg-[rgba(38,41,55,0.75)] backdrop-blur-[25px] w-[90%] max-w-[490px] h-auto flex flex-col items-center justify-between px-5 py-6 sm:p-[22px_25px]" id="donation-info">
+        <div class="rounded-[28px] bg-[rgba(47,46,42,0.20)] backdrop-blur-[25px] w-[90%] max-w-[490px] h-auto flex flex-col items-center justify-between px-5 py-6 sm:p-[22px_25px]" id="donation-info">
             <h1 class="text-white/80 text-center text-[6.7vw] sm:text-[2.5rem] md:text-[2.3rem] tracking-[0.8px] uppercase leading-[2.75rem] md:leading-[3.5rem] mb-4" style="font-family: 'Rajdhani Bold';">
-                donation on <span class="text-[#C30440]">la</span> service
+                donation on <span class="text-[#ba0202]">la</span> service
             </h1>
 
             <p class="text-white/90 text-center font-[Peyda] text-[15.5px] sm:text-[17px] md:text-[18px] font-medium tracking-[-0.6px] mb-[30px]" dir="rtl">
@@ -54,37 +54,37 @@
                 با حمایتت می توانیم به قوی تر شدن و پیشرفت ما در این پروژه کمک کنی, پس اجباری در کار نیست 😇
             </p>
 
-            <a target="_blank" class="cursor-pointer rounded-[13px] bg-[#C30440] text-white px-6 py-3 hover:bg-[#C30450] transition duration-300 text-white font-[Peyda] text-[14px] sm:text-[15px] w-full flex items-center gap-[6px] justify-center font-bold leading-[17.04px] tracking-[-0.6px] shadow-[0_0_20px_rgba(195,4,64,0.8),_inset_0_-4px_6px_rgba(0,0,0,0.25)] hover:scale-[0.995]">
+            <a target="_blank" class="cursor-pointer rounded-[13px] bg-[#ba0202] text-white px-6 py-3 hover:bg-[red] transition duration-300 text-white font-[Peyda] text-[14px] sm:text-[15px] w-full flex items-center gap-[6px] justify-center font-bold leading-[17.04px] tracking-[-0.6px] shadow-[0_0_20px_rgba(195,4,64,0.8),_inset_0_-4px_6px_rgba(0,0,0,0.25)] hover:scale-[0.995]">
                 حمایت مالی
                 <img class="w-[20px] h-[20px] sm:w-[21.6px] sm:h-[21.6px]" src="../img/icon/donate.svg" alt="d">
             </a>
         </div>
 
-        <div class="rounded-[28px] bg-[rgba(38,41,55,0.75)] backdrop-blur-[25px] w-[90%] max-w-[490px] h-auto flex flex-col items-center justify-between px-5 py-6 sm:p-[22px_25px] hidden" id="donation-form">
+        <div class="rounded-[28px] bg-[rgba(47,46,42,0.20)] backdrop-blur-[25px] w-[90%] max-w-[490px] h-auto flex flex-col items-center justify-between px-5 py-6 sm:p-[22px_25px] hidden" id="donation-form">
             <h1 class="text-white/80 text-center text-[6.7vw] sm:text-[2.5rem] md:text-[2.3rem] tracking-[0.8px] uppercase leading-[2.75rem] md:leading-[3.5rem] mb-4" style="font-family: 'Rajdhani Bold';">
-                donation on <span class="text-[#C30440]">la</span> service
+                donation on <span class="text-[#ba0202]">la</span> service
             </h1>
 
             <div class="w-full flex flex-col gap-[20px] text-right text-white/80 text-[14px] sm:text-[15px] font-medium tracking-[-0.6px] px-[10px]" style="font-family: 'Rajdhani medium', Peyda;" dir="rtl">
                 <input type="text" placeholder="نام و نام خانوادگی 🫵" maxlength="36"
-                    class="w-full p-[12px] bg-transparent border-[2px] border-white/20 rounded-[10px] text-right focus:outline-none focus:outline-none focus:border-[#C30440] transition-colors duration-300 ease-in-out" />
+                    class="w-full p-[12px] bg-transparent border-[2px] border-white/20 rounded-[10px] text-right focus:outline-none focus:outline-none focus:border-[#ba0202] transition-colors duration-300 ease-in-out" />
                 
                 <textarea placeholder="لطفا یک پیام برای ما ارسال کنید, دوست داریم نظر و انتقادات شما در مورد این سرویس را بدانیم 📝" maxlength="500"
-                    class="w-full p-[12px] bg-transparent border-[2px] border-white/20 rounded-[10px] text-right focus:outline-none h-[180px] resize-none focus:outline-none focus:border-[#C30440] transition-colors duration-300 ease-in-out"></textarea>
+                    class="w-full p-[12px] bg-transparent border-[2px] border-white/20 rounded-[10px] text-right focus:outline-none h-[180px] resize-none focus:outline-none focus:border-[#ba0202] transition-colors duration-300 ease-in-out"></textarea>
                 
                 <!-- <div class="w-full flex flex-col gap-[8px]">
                     <p>شماره همراه [ جهت تایید تراکنش ]</p>
                     <div dir="rtl" class="flex justify-center gap-2 flex-row-reverse" id="phone-inputs">
-                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#C30440] caret-[#C30440]" />
-                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#C30440] caret-[#C30440]" />
-                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#C30440] caret-[#C30440]" />
-                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#C30440] caret-[#C30440]" />
-                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#C30440] caret-[#C30440]" />
-                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#C30440] caret-[#C30440]" />
-                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#C30440] caret-[#C30440]" />
-                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#C30440] caret-[#C30440]" />
-                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#C30440] caret-[#C30440]" />
-                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#C30440] caret-[#C30440]" />
+                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#ba0202] caret-[#ba0202]" />
+                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#ba0202] caret-[#ba0202]" />
+                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#ba0202] caret-[#ba0202]" />
+                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#ba0202] caret-[#ba0202]" />
+                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#ba0202] caret-[#ba0202]" />
+                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#ba0202] caret-[#ba0202]" />
+                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#ba0202] caret-[#ba0202]" />
+                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#ba0202] caret-[#ba0202]" />
+                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#ba0202] caret-[#ba0202]" />
+                        <input maxlength="1" type="text" inputmode="numeric" pattern="[0-9]*" class="w-full h-12 text-center rounded-lg border-[2px] border-white/20 bg-transparent text-white focus:outline-none focus:border-[#ba0202] caret-[#ba0202]" />
                     </div>
                 </div> -->
 
@@ -107,7 +107,7 @@
             </div>
 
             <a target="_blank" dir="rtl"
-                class="cursor-pointer mt-4 rounded-[13px] bg-[#C30440] text-white px-6 py-4 hover:bg-[#C30450] transition duration-300 text-white font-[Peyda] text-[14px] sm:text-[15px] w-full flex items-center gap-[6px] justify-center font-bold leading-[17.04px] tracking-[-0.6px] shadow-[0_0_20px_rgba(195,4,64,0.8),_inset_0_-4px_6px_rgba(0,0,0,0.25)] hover:scale-[0.995]">
+                class="cursor-pointer mt-4 rounded-[13px] bg-[#ba0202] text-white px-6 py-4 hover:bg-[red] transition duration-300 text-white font-[Peyda] text-[14px] sm:text-[15px] w-full flex items-center gap-[6px] justify-center font-bold leading-[17.04px] tracking-[-0.6px] shadow-[0_0_20px_rgba(195,4,64,0.8),_inset_0_-4px_6px_rgba(0,0,0,0.25)] hover:scale-[0.995]">
                 <img class="w-[20px] h-[20px] sm:w-[21.6px] sm:h-[21.6px]" src="../img/icon/donate.svg" alt="d">
                 رفتن به درگاه بانکی
             </a>

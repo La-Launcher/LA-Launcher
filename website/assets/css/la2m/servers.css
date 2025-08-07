@@ -39,7 +39,7 @@ img {
 .app-server-list-main {
     border-bottom: 1px solid #3A3C43;
     box-sizing: border-box;
-    background: #232630;
+    background: rgba(30, 29, 26, 0.5);
     width: -webkit-fill-available;
     height: 40px;
     display: flex;
@@ -51,7 +51,7 @@ img {
 }
 
 .app-server-list:not(:has(.disable-server))>div:hover {
-    background: #33353e;
+    background: rgba(30, 29, 26, 0.15);
 }
 
 .app-server-list:not(:has(.disable-server))>div:hover .app-server-list-server-tags {
@@ -71,7 +71,7 @@ img {
 }
 
 .app-server-license-effect {
-    background: linear-gradient(68deg, rgba(0, 0, 0, 0.00) 0%, rgba(195, 4, 64, 0.10) 100%), rgba(22, 25, 35, 0.50);
+    background: linear-gradient(68deg, rgba(0, 0, 0, 0.00) 0%, rgb(216 13 13 / 12%) 100%), rgba(22, 25, 35, 0.50);
 }
 
 .app-server-license-effect:after {
@@ -79,7 +79,7 @@ img {
     width: 100%;
     height: 100%;;
     content: "";
-    background-image: url("../img/license-effect.png");
+    background-image: url("../../img/license-effect.png");
     background-size: auto;
 }
 
@@ -181,7 +181,7 @@ img {
     width: 319px;
     height: 511.45px;
     border-radius: 6.01px;
-    background: radial-gradient(37.21% 37.21% at 50% 62.79%, #31333ca0 0%, #31333ca0 100%);
+    background: radial-gradient(37.21% 37.21% at 50% 62.79%, rgb(59 57 53 / 75%) 0%, rgb(63 62 57 / 75%) 100%);
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(50px);
     align-items: center;
@@ -215,7 +215,7 @@ img {
     height: 41px;
     border-radius: 4px;
     border: 2.093px solid #757776;
-    background: #47494E;
+    background: #595858;
     box-sizing: border-box;
     display: flex;
     gap: 12px;
@@ -270,7 +270,7 @@ img {
 }
 
 .app-servers-filter-title-line div:last-child:hover {
-    background: #47494E;
+    background: #595858;
 }
 
 .app-setting-image-trash:hover {
@@ -401,7 +401,7 @@ img {
     width: 183px;
     height: 137px;
     border-radius: 6px;
-    background: radial-gradient(37.21% 37.21% at 50% 62.79%, #31333ca0 0%, #31333ca0 100%);
+    background: radial-gradient(37.21% 37.21% at 50% 62.79%, rgb(59 57 53 / 75%) 0%, rgb(63 62 57 / 75%) 100%);
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(50px);
     flex-direction: column;
@@ -410,7 +410,7 @@ img {
 }
 
 .app-servers-sort div.selected {
-    background: #242730;
+    background-color: rgb(18 14 14 / 40%);
 }
 
 .app-servers-sort div {
@@ -422,7 +422,7 @@ img {
 }
 
 .app-servers-sort div:hover {
-    background-color: #161923;
+    background-color: rgb(18 14 14 / 72%);
 }
 
 .app-servers-sort .app-servers-sort-frist-img {
@@ -523,7 +523,7 @@ img {
 
 .downloadButton.disabled:last-child:hover,
 .downloadButton.disabled:last-child:focus {
-    background-color: #C30440 !important;
+    background-color: #ba0202 !important;
     color: rgb(255 255 255 / 0.8) !important;
     transform: none;
 }

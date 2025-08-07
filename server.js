@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const PLATFORM_NAME = process.env.PLATFORM_NAME ?? "la5m";
+const PLATFORM_NAME = process.env.PLATFORM_NAME ?? "la2m";
 
 app.use(express.static("website/assets"));
 

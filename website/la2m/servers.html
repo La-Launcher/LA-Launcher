@@ -11,7 +11,7 @@
     <meta property="og:image" content="../img/logo/64x64.png">
     <meta property="og:url" content="https://LA5M.ir">
     <meta property="og:type" content="website">
-    <meta name="theme-color" content="#C30440">
+    <meta name="theme-color" content="#ba0202">
     <meta property="og:site_name" content="LA Launcher">
     <meta property="og:image:width" content="64">
     <meta property="og:image:height" content="64">
@@ -26,7 +26,7 @@
     <link rel="icon" type="image/png" href="../img/logo/48x48.png" sizes="48x48">
     <link rel="icon" type="image/png" href="../img/logo/192x192.png" sizes="192x192">
     <link rel="apple-touch-icon" href="../img/logo/64x64.png">
-    <link rel="stylesheet" href="../css/servers.css">
+    <link rel="stylesheet" href="../css/la2m/servers.css">
     <link rel="stylesheet" type="text/css" href="../font/Rajdhani/style.css"/>
     <link rel="stylesheet" type="text/css" href="../font/Peyda/style.css"/>
     <link rel="stylesheet" type="text/css" href="../font/BeVietnam/style.css"/>
@@ -36,13 +36,13 @@
     <script type="module" src="../js/servers.js"></script>
   </head>
   <body class="relative min-h-screen bg-gray-100">
-    <img src="../img/bg-servers.webp" alt="Background" class="absolute inset-0 w-full h-full object-cover z-0"/>
+    <img src="../img/bg-la2m.png" alt="Background" class="absolute inset-0 w-full h-full object-cover z-0"/>
 
-    <div class="absolute inset-0 bg-black/70 z-9 backdrop-blur-[25px]"></div>
+    <div class="absolute inset-0 bg-[rgba(50,47,43,0.5)] z-9 backdrop-blur-[25px]"></div>
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95vw] max-w-[1826px] h-[90vh] max-h-[990px] flex flex-col items-center overflow-auto gap-[3.33vh]">
       <div class="h-[44px] w-full flex">
         <div class="flex items-center gap-4 justify-center lg:justify-start w-full">
-          <h1 class="lg:h-full h-[45px] text-[#C30440] font-[800] italic text-[40px] tracking-[1px] uppercase font-['Be Vietnam ExtraBold Italic'] h-[-webkit-fill-available] leading-[100%]">la</h1>
+          <h1 class="lg:h-full h-[45px] text-[#ba0202] font-[800] italic text-[40px] tracking-[1px] uppercase font-['Be Vietnam ExtraBold Italic'] h-[-webkit-fill-available] leading-[100%]">la</h1>
           <div class="flex flex-col gap-[6px] text-[rgba(255,255,240,0.5)] text-[16px]" style="font-family: 'Rajdhani Medium';">
             <div class="flex items-center gap-3 h-[13px]" id="players"><img src="../img/icon/players.svg" class="w-[14px] h-[11px]" alt="p"> <span>LOADING<span class='loading-tag'>...</span></span></div>
             <div class="flex items-center gap-3 h-[13px]" id="servers"><img src="../img/icon/servers.svg" class="w-[14px] h-[8px]" alt="s"><span>LOADING<span class='loading-tag'>...</span></span></div>
@@ -60,20 +60,20 @@
       </div>
 
       <div class="flex flex-row-reverse items-center justify-between gap-6 h-[45px] w-full">
-        <input type="search" placeholder="جست و جو > IP address سرور را وارد کنید" required maxlength="70" dir="rtl" class="app-main-server-search-input relative w-full h-full rounded border-2 border-white/25 bg-[#575F66] px-[10px] py-[4.666px] outline-none text-[rgba(255,255,240,0.793)] font-[500] font-['Rajdhani_Medium','Peyda'] text-[17px] transition-all duration-300 ease-in-out focus:border-[#C30440] focus:text-[rgb(235,235,235)]"/>
+        <input type="search" placeholder="جست و جو > IP address سرور را وارد کنید" required maxlength="70" dir="rtl" class="app-main-server-search-input relative w-full h-full rounded border-2 border-white/25 bg-[#666666] px-[10px] py-[4.666px] outline-none text-[rgba(255,255,240,0.793)] font-[500] font-['Rajdhani_Medium','Peyda'] text-[17px] transition-all duration-300 ease-in-out focus:border-[#ba0202] focus:text-[rgb(235,235,235)]"/>
 
         <div class="flex items-center justify-start h-full gap-[2px] min-w-min">
-          <div class="app-main-server-search-filter-sort w-[40px] h-full bg-[#5E6266] rounded-l flex justify-center items-center border-2 border-transparent cursor-pointer hover:bg-[#aa0036] hover:border-[#C30440] active:bg-transparent active:border-[#C30440]">
+          <div class="app-main-server-search-filter-sort w-[40px] h-full bg-[#787878] rounded-l flex justify-center items-center border-2 border-transparent cursor-pointer hover:bg-[#ba0202] hover:border-[#ba0202] active:bg-transparent active:border-[#ba0202]">
             <img src="../img/icon/sort-server.svg" alt="ss" class="w-[12px] h-[9px]" />
           </div>
 
-          <div class="app-main-server-search-filter-button-menu h-full px-[15px] w-max flex justify-center items-center rounded-r bg-[#5E6266] gap-[3px] border-2 border-transparent cursor-pointer hover:bg-[#aa0036] hover:border-[#C30440] active:bg-transparent active:border-[#C30440]">
+          <div class="app-main-server-search-filter-button-menu h-full px-[15px] w-max flex justify-center items-center rounded-r bg-[#787878] gap-[3px] border-2 border-transparent cursor-pointer hover:bg-[#ba0202] hover:border-[#ba0202] active:bg-transparent active:border-[#ba0202]">
             <span class="text-[#FFFFF0] text-center font-['Peyda'] text-[12.5px] font-bold tracking-[-0.5px]" style="line-height: normal;">دسته بندی</span><img src="../img/icon/filter.svg" alt="f" class="w-[10px] h-[10px]" />
           </div>
         </div>
       </div>
-      
-      <div class="app-server-list w-full h-[831px] rounded-[8px] border-2 border-white/10 bg-[rgba(42,46,66,0.75)] backdrop-blur-[50px] sm:rounded-xl sm:border-[3px] sm:backdrop-blur-[70px] bottom-0 notailwind">
+
+      <div class="app-server-list w-full h-[831px] rounded-[8px] border-2 border-white/10 bg-[rgba(47,46,42,0.75)] backdrop-blur-[50px] sm:rounded-xl sm:border-[3px] sm:backdrop-blur-[70px] bottom-0 notailwind">
           <div class="app-servers-loading disable-server">
             <div class="loading-main">
               <div style="animation-delay: 0ms;"></div>
@@ -151,7 +151,7 @@
         </div>
 
         <div class="flex-wrap justify-center gap-x-3 gap-y-2 delay-500 duration-1000 animate-in fade-in-0 slide-in-from-top-3 fill-mode-backwards" dir="ltr">
-          <a href="#" class="downloadButton disabled inline-flex items-center justify-center whitespace-nowrap outline-none max-w-max ring-offset-2 ring-offset-stone-900 transition-all duration-150 ease-out-quad focus-visible:ring-2 active:scale-[0.975] disabled:cursor-not-allowed disabled:opacity-40 bg-[#C30440] font-semibold text-white/80 text-right font-[Peyda] text-[16px] font-extrabold shadow-[0px_-1px_0px_1px_rgba(0,0,0,0.20)_inset] ring-stone-50 hover:bg-[#171A24] h-12 gap-2 rounded-[9px] px-5 shrink-0 grow basis-auto disabled" >
+          <a href="#" class="downloadButton disabled inline-flex items-center justify-center whitespace-nowrap outline-none max-w-max ring-offset-2 ring-offset-stone-900 transition-all duration-150 ease-out-quad focus-visible:ring-2 active:scale-[0.975] disabled:cursor-not-allowed disabled:opacity-40 bg-[#ba0202] font-semibold text-white/80 text-right font-[Peyda] text-[16px] font-extrabold shadow-[0px_-1px_0px_1px_rgba(0,0,0,0.20)_inset] ring-stone-50 hover:bg-[#171A24] h-12 gap-2 rounded-[9px] px-5 shrink-0 grow basis-auto disabled" >
               <span id="buttonText" dir="rtl">در حال بارگذاری...</span>
               <span id="buttonLoading" class="inline-block w-6 h-6 border-4 border-t-white border-gray-500/30 rounded-full animate-spin"></span>
               <img id="buttonIcon" src="../img/icon/download.svg" alt="loading" class="w-6 h-6 hidden">
