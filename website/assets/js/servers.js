@@ -18,7 +18,7 @@ async function tryLoadServers(retryCount = 3) {
 
             if (getServers !== 1 && typeof getServers?.data === "object") return getServers; else {
                 await wait(1200);
-                $(".app-servers-loading h3").html("سرور مرکزی در حال بارگذاری سرورهای فایوم است<br>لطفاً کمی صبر کنید<span class='loading-tag'>...</span>");
+                $(".app-servers-loading h3").html(`سرور مرکزی در حال بارگذاری سرورهای ${gameName == "gta5" ? "فایوم" : "رد ام"} است<br>لطفاً کمی صبر کنید<span class='loading-tag'>...</span>`);
             }
 
             attempts++;
