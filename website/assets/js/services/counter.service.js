@@ -11,7 +11,9 @@ const animateCounter = (element, target) => {
     });
 };
 
-const updatePlatform = () => $.getJSON("https://api.la5m.ir/platform-info").done(({ servers, activePlayers, totalInstalls }) => {
+const gameName = $('meta[name="game-name"]').attr('content');
+console.log("Game Name: %s", gameName);
+const updatePlatform = () => $.getJSON("https://api.la5m.ir/platform-info?platform=" + gameName).done(({ servers, activePlayers, totalInstalls }) => {
     if (servers === 1) return;
     $('.conuts').html("0").each((i, el) => 
         animateCounter($(el), [servers, activePlayers, totalInstalls][i])

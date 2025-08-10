@@ -10,7 +10,9 @@ async function tryLoadServers(retryCount = 3) {
         let attempts = 0;
 
         while (attempts < retryCount) {
-            const response = await fetch('https://api.la5m.ir/servers');
+            const gameName = $('meta[name="game-name"]').attr('content');
+            console.log(`Loading servers for game: ${gameName}`);
+            const response = await fetch('https://api.la5m.ir/servers?platform=' + gameName);
             if (!response.ok) throw new Error(response.statusText);
             const getServers = await response.json();
 
