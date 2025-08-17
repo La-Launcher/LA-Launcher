@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="FiveStar Development Team">
+    <meta name="theme-color" content="#C30440">
+    <meta property="og:site_name" content="LA Platform - Verify Payment">
+    <meta property="og:image:width" content="64">
+    <meta property="og:image:height" content="64">
+    <meta property="og:image:type" content="image/png">
+    <title id="page-title">LA Platform - Verifying Payment</title>
+    <link rel="icon" type="image/png" href="../img/logo/32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../img/logo/64x64.png">
+    <link rel="stylesheet" type="text/css" href="../font/Rajdhani/style.css" />
+    <link rel="stylesheet" type="text/css" href="../font/Peyda/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="../js/assets/jquery-3.7.1.min.js"></script>
+    <script type="module" src="../js/payment.js"></script>
+  </head>
+
+  <body class="relative min-h-screen bg-gray-900 font-[peyda]">
+    <img src="../img/bg-servers.webp" alt="Background" class="absolute inset-0 w-full h-full object-cover z-0" />
+    <div class="absolute inset-0 bg-black/60 z-[9] backdrop-blur-[25px]"></div>
+    <div
+      class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95vw] max-w-[550px] h-auto flex flex-col items-center justify-center gap-6 z-10">
+      <div id="content-box" class="flex flex-col items-center text-center gap-5 px-6 py-10 bg-[rgba(0,0,0,0.25)] backdrop-blur-[30px] rounded-2xl border border-white/10 shadow-2xl w-full">
+        <dotlottie-player src="../json/checking-payment.lottie" speed="1" autoplay loop style="height:200px;opacity:0.5;margin:-45px 0;"></dotlottie-player>
+        <p class="text-white text-lg font-semibold mt-4 mb-[-10px]">در حال بررسی پرداخت<span class='loading-tag'>...</span></span></p>
+      </div>
+    </div>
+  </body>
+</html>
