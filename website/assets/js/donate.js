@@ -120,8 +120,24 @@ $(document).ready(() => {
     });
 
     async function startDonationProcess(data) {
-        await wait(1000);
-        showNotification('error', 'خطا در درگاه بانکی', "از حسن نیت شما بابت حمایت از ما سپاس گزاریم, درگاه حمایت مالی فعلا فعال نمی باشد 🙏", true);
-        donateBtn.html("خطا در درگاه بانکی 😨");
+        try {
+            const response = await fetch('https://api.la5m.ir/donate/create-invoice', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            });
+
+            const result = await response.json();
+
+            if (result.paymentUrl) 
+                window.location.href = result.paymentUrl;
+            else {
+                showNotification('error', 'خطا', result.message || "ساخت درگاه موفق نبود.", true);
+                donateBtn.html("خطا 😨").removeClass("opacity-50 cursor-not-allowed");
+            }
+        } catch (err) {
+            console.error(err);
+            showNotification('error', 'خطا', "ارتباط با سرور برقرار نشد.", true);
+        }
     }
 });
