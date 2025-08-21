@@ -37,12 +37,12 @@
   {
     "code": 108,
     "message": "مسیر نصب WireSock پیدا نشد 😕",
-    "solution": "بررسی کنید WireSock به درستی در مسیر <span class='bg-black/20 p-1 rounded-md'>C:\Program Files\WireSock VPN Client\bin\wiresock-client.exe</span> نصب باشد."
+    "solution": "بررسی کنید WireSock به درستی در مسیر <span class='bg-black/20 p-1 rounded-md'>C:\\Program Files\\WireSock VPN Client\\bin\\wiresock-client.exe</span> نصب باشد."
   },
   {
     "code": 109,
     "message": "اتصال به سرویس رفع تحریم با شکست مواجه شد 😶",
-    "solution": "بررسی کنید WireSock به درستی در مسیر <span class='bg-black/20 p-1 rounded-md'>C:\Program Files\WireSock VPN Client\bin\wiresock-client.exe</span> نصب باشد."
+    "solution": "بررسی کنید WireSock به درستی در مسیر <span class='bg-black/20 p-1 rounded-md'>C:\\Program Files\\WireSock VPN Client\\bin\\wiresock-client.exe</span> نصب باشد."
   },
   {
     "code": 110,
