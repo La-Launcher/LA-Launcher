@@ -1,499 +1,1091 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="بستری برای سرور های فایوم ایران که به شما امکان اتصال سریع و پایدار را فراهم می کند">
-        <meta name="keywords" content="la fivem, la launcher, la5m, la5m.ir, la5m fivem, la5m launcher, la5m.ir fivem, la5m.ir launcher, رفع تحریم فایوم, رفع ایترنت فایوم, مشکل ارور فایوم, فایوم, فایوم ایران, فایوم ایرانی, فایوم فارسی, فایوم پارسی, فایوم فارسی, فایوم پارسی, فایوم ایران">
-        <meta name="author" content="FiveStar Development Team">
-        <meta property="og:title" content="LA Launcher - Without Restrictions">
-        <meta property="og:description" content="The Ultimate FiveM Experience Without Restrictions! Seamless, optimized, free, and securely built for Iranian gamers.">
-        <meta property="og:image" content="../img/logo/64x64.png">
-        <meta property="og:url" content="https://LA5M.ir">
-        <meta property="og:type" content="website">
-        <meta name="theme-color" content="#C30440">
-        <meta property="og:site_name" content="LA Launcher">
-        <meta property="og:image:width" content="64">
-        <meta property="og:image:height" content="64">
-        <meta property="og:image:type" content="image/png">
-        <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="LA Launcher - Without Restrictions">
-        <meta name="twitter:description" content="The Ultimate FiveM Experience Without Restrictions! Seamless, optimized, free, and securely built for Iranian gamers.">
-        <meta name="twitter:image" content="../img/logo/64x64.png">
-        <meta name="game-name" content='gta5'>
-        <title>LA Launcher - Without Restrictions</title>
-        <link rel="icon" type="image/png" href="" sizes="32x32">
-        <link rel="icon" type="image/png" href="../img/logo/16x16.png" sizes="16x16">
-        <link rel="icon" type="image/png" href="../img/logo/48x48.png" sizes="48x48">
-        <link rel="icon" type="image/png" href="../img/logo/192x192.png" sizes="192x192">
-        <link rel="apple-touch-icon" href="../img/logo/64x64.png">
-        <link rel="stylesheet" href="../css/la5m/style.css">
-        <link rel="stylesheet" type="text/css" href="../font/Rajdhani/style.css"/>
-        <link rel="stylesheet" type="text/css" href="../font/BeVietnam/style.css"/>
-        <link rel="stylesheet" type="text/css" href="../font/Inter/style.css"/>
-        <link rel="stylesheet" type="text/css" href="../font/Peyda/style.css"/>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script src="../js/assets/jquery-3.7.1.min.js"></script>
-        <script type="module" src="../js/index.js"></script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1MRBTDMR3W"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+<html lang="fa" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="بستری برای سرور های فایوم ایران که به شما امکان اتصال سریع و پایدار را فراهم می کند"
+    />
+    <meta
+      name="keywords"
+      content="la fivem, la launcher, la5m, la5m.ir, la5m fivem, la5m launcher, la5m.ir fivem, la5m.ir launcher, رفع تحریم فایوم, رفع ایترنت فایوم, مشکل ارور فایوم, فایوم, فایوم ایران, فایوم ایرانی, فایوم فارسی, فایوم پارسی, فایوم فارسی, فایوم پارسی, فایوم ایران"
+    />
+    <meta name="author" content="FiveStar Development Team" />
+    <meta property="og:title" content="LA Launcher - Without Restrictions" />
+    <meta
+      property="og:description"
+      content="The Ultimate FiveM Experience Without Restrictions! Seamless, optimized, free, and securely built for Iranian gamers."
+    />
+    <meta property="og:image" content="../assets//logo/64x64.png" />
+    <meta property="og:url" content="https://LA5M.ir" />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#C30440" />
+    <meta property="og:site_name" content="LA Launcher" />
+    <meta property="og:image:width" content="64" />
+    <meta property="og:image:height" content="64" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LA Launcher - Without Restrictions" />
+    <meta
+      name="twitter:description"
+      content="The Ultimate FiveM Experience Without Restrictions! Seamless, optimized, free, and securely built for Iranian gamers."
+    />
+    <meta name="twitter:image" content="../assets/img/logo/64x64.png" />
+    <meta name="game-name" content="gta5" />
+    <title lang="en">LA Launcher - Without Restrictions</title>
+    <link rel="icon" type="image/png" href="" sizes="32x32" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/img/logo/16x16.png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/img/logo/48x48.png"
+      sizes="48x48"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/img/logo/192x192.png"
+      sizes="192x192"
+    />
+    <link rel="apple-touch-icon" href="../assets/img/logo/64x64.png" />
+    <link rel="stylesheet" href="../assets/css/la5m/style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/font/Rajdhani/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/font/BeVietnam/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/font/Inter/style.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../assets/font/Peyda/style.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="../assets/js/assets/jquery-3.7.1.min.js"></script>
+    <script type="module" src="../assets/js/index.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1MRBTDMR3W"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-            gtag('config', 'G-1MRBTDMR3W');
-        </script>
-    </head>
-    <body style="--url-bg-main: url('../../img/bg.webp');">
-        <header class="items-center fixed inset-0 z-20 h-[--header-height] border-b border-white/10 bg-[#0A0A0AB] backdrop-blur-[20px] backdrop-saturate-150 sm:px-8">
-            <nav class="flex items-center justify-between px-6 h-[fill-available]" aria-label="Global">
+      gtag("config", "G-1MRBTDMR3W");
+    </script>
+  </head>
+  <body style="--url-bg-main: url('../../img/bg.webp')">
+    <header
+      class="items-center fixed inset-0 z-20 h-[--header-height] border-b border-white/10 bg-[#0A0A0AB] backdrop-blur-[20px] backdrop-saturate-150 sm:px-8"
+    >
+      <nav
+        class="flex items-center justify-between px-6 h-[fill-available]"
+        aria-label="Global"
+      >
+        <div class="flex items-center gap-8">
+          <a class="text-indigo-600 flex items-center">
+            <h1
+              class="text-[#C30440] font-[800] italic text-[45px] tracking-[1px] uppercase font-['Be Vietnam ExtraBold Italic'] mr-auto sm:mr-0"
+              lang="en"
+            >
+              LA
+            </h1>
+          </a>
 
-                <div class="flex items-center gap-8">
-                    <a class="text-indigo-600 flex items-center">
-                        <h1 class="text-[#C30440] font-[800] italic text-[45px] tracking-[1px] uppercase font-['Be Vietnam ExtraBold Italic'] mr-auto sm:mr-0">LA</h1>
-                    </a>
-                    
-                    <div class="hidden md:flex space-x-4" style="font-family: 'Rajdhani SemiBold';">
-                        <a href="#" header-data="download" class="downloadButton disabled text-white h-[38px] bg-[#ffffff05] hover:bg-[#C30440] focus:bg-white/10 focus:text-white rounded-md py-2 px-4 tracking-wide transition-colors">
-                            Download
-                        </a>
-                        <a  href="https://la5m.ir/servers" target="_blank" class="text-white h-[38px] bg-[#ffffff05] hover:bg-[#C30440] focus:bg-white/10 focus:text-white rounded-md py-2 px-4 tracking-wide transition-colors">
-                            Servers
-                        </a>
-                        <a href="https://status.la5m.ir" target="_blank" class="text-white h-[38px] bg-[#ffffff05] hover:bg-[#C30440] focus:bg-white/10 focus:text-white rounded-md py-2 px-4 tracking-wide transition-colors">
-                            Status
-                        </a>
-                        <a href="https://la5m.ir/errors" target="_blank" class="text-white h-[38px] bg-[#ffffff05] hover:bg-[#C30440] focus:bg-white/10 focus:text-white rounded-md py-2 px-4 tracking-wide transition-colors">
-                            Errors
-                        </a>
-                        <a href="https://la5m.ir/donate" target="_blank" class="text-white h-[38px] bg-[#ffffff05] hover:bg-[#C30440] focus:bg-white/10 focus:text-white rounded-md py-2 px-4 tracking-wide transition-colors">
-                            Donate
-                        </a>
-                    </div>
+          <div
+            class="hidden md:flex space-x-4"
+            style="font-family: 'Rajdhani SemiBold'"
+          >
+            <a
+              href="#"
+              header-data="download"
+              class="downloadButton disabled text-white h-[38px] bg-[#ffffff05] hover:bg-[#C30440] focus:bg-white/10 focus:text-white rounded-md py-2 px-4 tracking-wide transition-colors"
+              lang="en"
+            >
+              Download
+            </a>
+            <a
+              href="https://la5m.ir/servers"
+              target="_blank"
+              class="text-white h-[38px] bg-[#ffffff05] hover:bg-[#C30440] focus:bg-white/10 focus:text-white rounded-md py-2 px-4 tracking-wide transition-colors"
+              lang="en"
+            >
+              Servers
+            </a>
+            <a
+              href="https://status.la5m.ir"
+              target="_blank"
+              class="text-white h-[38px] bg-[#ffffff05] hover:bg-[#C30440] focus:bg-white/10 focus:text-white rounded-md py-2 px-4 tracking-wide transition-colors"
+              lang="en"
+            >
+              Status
+            </a>
+            <a
+              href="https://la5m.ir/errors"
+              target="_blank"
+              class="text-white h-[38px] bg-[#ffffff05] hover:bg-[#C30440] focus:bg-white/10 focus:text-white rounded-md py-2 px-4 tracking-wide transition-colors"
+              lang="en"
+            >
+              Errors
+            </a>
+            <a
+              href="https://la5m.ir/donate"
+              target="_blank"
+              class="text-white h-[38px] bg-[#ffffff05] hover:bg-[#C30440] focus:bg-white/10 focus:text-white rounded-md py-2 px-4 tracking-wide transition-colors"
+              lang="en"
+            >
+              Donate
+            </a>
+          </div>
+        </div>
+
+        <div class="hidden md:flex items-center space-x-6">
+          <a
+            href="#"
+            class="dashboard flex items-center gap-1.5 font-[Peyda] rounded-md bg-white px-3.5 py-2.5 text-sm font-bold text-gray-900 shadow-sm hover:bg-[#C30440] transition-all duration-150 ease-out-quad focus-visible:ring-2 active:scale-[0.975] disabled:cursor-not-allowed disabled:opacity-40 h-[38px]"
+            >داشبورد<img
+              src="../assets/img/icon/dashboard.svg"
+              class="size-6"
+              alt="d"
+          /></a>
+        </div>
+
+        <div class="md:hidden flex">
+          <button
+            type="button"
+            class="mobile-header text-gray-700 hover:text-indigo-600"
+          >
+            <img
+              src="../assets/img/icon/dashboard-mobile.svg"
+              class="size-6 transition-all duration-150 ease-out-quad focus-visible:ring-2 active:scale-[0.955]"
+              alt="d"
+            />
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <div
+      id="notification"
+      dir="rtl"
+      class="notification z-[22] mx-[20px] md:mx-0 backdrop-blur-[25px] bg-[#00000052] rounded-[12px] fixed border border-white/10 top-[2.1vh] right-0 left-0 dir-rtl font-['Peyda','Rajdhani_Medium'] max-w-md p-6 flex items-center gap-4 shadow-sm opacity-0 -translate-y-full transition-all duration-500 ease-in-out"
+    >
+      <div class="icon flex-shrink-0"></div>
+      <div class="content flex-grow"></div>
+      <div class="close flex-shrink-0"></div>
+    </div>
+
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 flex flex-col items-center justify-center z-20 transition-all duration-300 bg-[rgba(48,48,48,0.45)] backdrop-blur-[18px] opacity-0 pointer-events-none"
+    >
+      <header class="p-4 text-center mt-[2.7rem]">
+        <h1
+          class="text-2xl font-bold text-white font-[Peyda] text-[45px] font-extrabold leading-normal"
+        >
+          موارد دیگری
+        </h1>
+      </header>
+
+      <div
+        class="p-4 flex-1 flex flex-col justify-start gap-[20px] px-[4rem] pt-[1rem] w-full max-w-[33rem]"
+      >
+        <a
+          href="#"
+          class="dashboard w-full h-[60px] bg-[#C30440] drop-shadow-[0px_0px_8px_rgba(195,4,64,0.5)] rounded-[12px] flex items-center justify-center gap-2 text-[rgba(0,0,0,0.85)] text-center font-[Peyda] text-[23px] font-extrabold leading-[0] active:bg-[#a00334] active:scale-[0.98] transition-all duration-200"
+        >
+          داشبورد
+          <img
+            src="../assets/img/icon/dashboard.svg"
+            class="size-9 active:scale-[1.1] transition-transform duration-200"
+            alt="d"
+          />
+        </a>
+        <a
+          href="#"
+          header-data="download"
+          class="downloadButton w-full h-[46px] bg-[url('../assets/img/pattern.webp')] bg-lightgray bg-center bg-cover bg-no-repeat flex items-center justify-center bg-[rgba(255,255,255,0.20)] backdrop-blur-[2.5px] text-white rounded-[12px] font-['Rajdhani_Medium'] text-[rgba(255,255,255,0.75)] text-[25px] leading-[0] active:bg-[rgba(255,255,255,0.15)] active:scale-[0.98] transition-all duration-200"
+          lang="en"
+        >
+          Download
+        </a>
+        <a
+          href="https://la5m.ir/servers"
+          target="_blank"
+          class="w-full h-[46px] bg-[url('../assets/img/pattern.webp')] bg-lightgray bg-unset bg-cover bg-no-repeat flex items-center justify-center bg-[rgba(255,255,255,0.20)] backdrop-blur-[2.5px] text-white rounded-[12px] font-['Rajdhani_Medium'] text-[rgba(255,255,255,0.75)] text-[25px] leading-[0] active:bg-[rgba(255,255,255,0.15)] active:scale-[0.98] transition-all duration-200"
+          lang="en"
+        >
+          Servers
+        </a>
+        <a
+          href="https://status.la5m.ir"
+          target="_blank"
+          class="w-full h-[46px] bg-[url('../assets/img/pattern.webp')] bg-lightgray bg-left bg-cover bg-no-repeat flex items-center justify-center bg-[rgba(255,255,255,0.20)] backdrop-blur-[2.5px] text-white rounded-[12px] font-['Rajdhani_Medium'] text-[rgba(255,255,255,0.75)] text-[25px] leading-[0] active:bg-[rgba(255,255,255,0.15)] active:scale-[0.98] transition-all duration-200"
+          lang="en"
+        >
+          Status
+        </a>
+        <a
+          href="https://la5m.ir/errors"
+          target="_blank"
+          class="w-full h-[46px] bg-[url('../assets/img/pattern.webp')] bg-lightgray bg-bottom bg-cover bg-no-repeat flex items-center justify-center bg-[rgba(255,255,255,0.20)] backdrop-blur-[2.5px] text-white rounded-[12px] font-['Rajdhani_Medium'] text-[rgba(255,255,255,0.75)] text-[25px] leading-[0] active:bg-[rgba(255,255,255,0.15)] active:scale-[0.98] transition-all duration-200"
+          lang="en"
+        >
+          Errors
+        </a>
+        <a
+          href="https://la5m.ir/donate"
+          target="_blank"
+          class="w-full h-[46px] bg-[url('../assets/img/pattern.webp')] bg-lightgray bg-right bg-cover bg-no-repeat flex items-center justify-center bg-[rgba(255,255,255,0.20)] backdrop-blur-[2.5px] text-white rounded-[12px] font-['Rajdhani_Medium'] text-[rgba(255,255,255,0.75)] text-[25px] leading-[0] active:bg-[rgba(255,255,255,0.15)] active:scale-[0.98] transition-all duration-200"
+          lang="en"
+        >
+          Donate
+        </a>
+      </div>
+
+      <div
+        class="mobile-header-exit fixed bottom-[3.8rem] left-1/2 transform -translate-x-1/2 w-[85px] h-[85px] bg-[#12121259] rounded-full flex items-center justify-center cursor-pointer hover:shadow-[0_0_10px_rgba(18,18,18,0.5)] active:bg-[rgba(18,18,18,0.2)] active:scale-[0.95] transition-all duration-200"
+      >
+        <img
+          src="../assets/img/icon/back.svg"
+          class="w-[42px] h-[42px] active:scale-[1.1] transition-transform duration-200"
+          alt="b"
+        />
+      </div>
+    </div>
+
+    <main class="relative flex-1 pt-[--header-height]">
+      <section
+        class="relative mx-auto lg:-mt-[--header-height] lg:px-8 lg:pt-36"
+      >
+        <div
+          class="intro-background absolute left-[-49.8%] -right-1/2 top-0 -z-[1] mx-auto hidden h-full max-w-full object-cover opacity-30 lg:block"
+        ></div>
+        <div
+          class="intro-overlay mx-auto flex flex-col items-center gap-y-12 border-b border-stone-500 px-6 py-20 lg:container sm:px-8 sm:py-24 lg:rounded-[32px] lg:border-b-0 lg:p-24 lg:px-0 lg:ring-1 lg:ring-white/15 xl:max-w-[1200px]"
+        >
+          <div class="flex w-full max-w-3xl flex-col items-center gap-y-6">
+            <h1
+              class="text-white text-[10vw] sm:text-[8vw] md:text-[6vw] lg:text-[96px] xl:text-[120px] leading-[50px] sm:leading-[60px] md:leading-[70px] lg:leading-[80px] xl:leading-[90px] tracking-[1.8px] sm:tracking-[2px] md:tracking-[2.5px] lg:tracking-[3px] xl:tracking-[3.6px] uppercase w-max md:mt-[-38px]"
+              style="font-family: 'Be Vietnam ExtraBold Italic'"
+              lang="en"
+            >
+              <span class="text-[#C30440]">la</span> launcher
+            </h1>
+            <p
+              class="w-full text-balance text-center text-sm leading-normal text-white/75 transition-none delay-300 duration-1000 animate-in fade-in-0 slide-in-from-top-3 running fill-mode-backwards sm:text-base lg:text-lg mb-[10px] md:mb-[76.8px]"
+              lang="en"
+            >
+              The Ultimate FiveM Experience Without Restrictions!<br />
+              Seamless, optimized, free, and securely built for Iranian gamers.
+            </p>
+
+            <p
+              class="text-center text-[#FCD53F] text-[18px] sm:text-[20px] lg:text-[22px] font-[700] leading-[23px] font-['Inter Bold'] mb-[-8.76px]"
+              style="text-shadow: 0px 0px 20px rgba(252, 213, 63, 0.44)"
+              lang="en"
+            >
+              FREE FOR EVERYONE!
+            </p>
+
+            <div
+              class="flex items-center text-white space-x-8 justify-between mb-[-5.76px]"
+            >
+              <div class="text-center w-[60px] sm:w-[80px] md:w-[100px]">
+                <p
+                  class="conuts text-white text-[25px] sm:text-[28px] md:text-[30px] leading-[30px] font-['Rajdhani_SemiBold'] flex justify-center items-center"
+                >
+                  <span
+                    class="inline-block w-6 h-6 border-4 border-t-white border-gray-500/30 rounded-full animate-spin mb-2.5"
+                  ></span>
+                </p>
+                <p
+                  class="text-white/75 text-center font-[Peyda] text-[12px] sm:text-[14px] md:text-[16px] font-bold leading-[20px] uppercase"
+                >
+                  سرور فعال
+                </p>
+                <p
+                  class="text-[#3A3C43] font-[Peyda] text-[12px] sm:text-[14px] md:text-[16px] font-bold leading-[12px] uppercase"
+                >
+                  در لیست
+                </p>
+              </div>
+
+              <div class="w-px h-[35px] bg-[#D9D9D9] hidden sm:block"></div>
+
+              <div class="text-center w-[60px] sm:w-[80px] md:w-[100px]">
+                <p
+                  class="conuts text-white text-[25px] sm:text-[28px] md:text-[30px] leading-[30px] font-['Rajdhani_SemiBold'] flex justify-center items-center"
+                >
+                  <span
+                    class="inline-block w-6 h-6 border-4 border-t-white border-gray-500/30 rounded-full animate-spin mb-2.5"
+                  ></span>
+                </p>
+                <p
+                  class="text-white/75 text-center font-[Peyda] text-[12px] sm:text-[14px] md:text-[16px] font-bold leading-[20px] uppercase"
+                >
+                  کاربر فعال
+                </p>
+                <p
+                  class="text-[#3A3C43] font-[Peyda] text-[12px] sm:text-[14px] md:text-[16px] font-bold leading-[12px] uppercase"
+                >
+                  همین لحظه
+                </p>
+              </div>
+
+              <div class="w-px h-[35px] bg-[#D9D9D9] hidden sm:block"></div>
+
+              <div class="text-center w-[60px] sm:w-[80px] md:w-[100px]">
+                <p
+                  class="conuts text-white text-[25px] sm:text-[28px] md:text-[30px] leading-[30px] font-['Rajdhani_SemiBold'] flex justify-center items-center"
+                >
+                  <span
+                    class="inline-block w-6 h-6 border-4 border-t-white border-gray-500/30 rounded-full animate-spin mb-2.5"
+                  ></span>
+                </p>
+                <p
+                  class="text-white/75 text-center font-[Peyda] text-[12px] sm:text-[14px] md:text-[16px] font-bold leading-[20px] uppercase"
+                >
+                  نصب
+                </p>
+                <p
+                  class="text-[#3A3C43] font-[Peyda] text-[12px] sm:text-[14px] md:text-[16px] font-bold leading-[12px] uppercase"
+                >
+                  تا کنون
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-wrap justify-center gap-x-3 gap-y-2 delay-500 duration-1000 animate-in fade-in-0 slide-in-from-top-3 fill-mode-backwards"
+            >
+              <a
+                href="#"
+                class="downloadButton disabled inline-flex items-center justify-center whitespace-nowrap outline-none max-w-max ring-offset-2 ring-offset-stone-900 transition-all duration-150 ease-out-quad focus-visible:ring-2 active:scale-[0.975] disabled:cursor-not-allowed disabled:opacity-40 bg-[#C30440] font-semibold text-white text-right font-[Peyda] text-[16px] font-extrabold shadow-[0px_-1px_0px_1px_rgba(0,0,0,0.20)_inset] ring-stone-50 hover:bg-[#171A24] h-12 gap-2 rounded-[9px] px-5 shrink-0 grow basis-auto disabled"
+              >
+                <span id="buttonText" dir="rtl">در حال بارگذاری...</span>
+                <span
+                  id="buttonLoading"
+                  class="inline-block w-6 h-6 border-4 border-t-white border-gray-500/30 rounded-full animate-spin"
+                ></span>
+                <img
+                  id="buttonIcon"
+                  src="../assets/img/icon/download.svg"
+                  alt="loading"
+                  class="w-6 h-6 hidden"
+                />
+              </a>
+            </div>
+            <span
+              class="relative text-[rgba(224,225,226,0.50)] text-center font-[Peyda] text-[12px] w-full -mt-[15px]"
+              dir="rtl"
+            >
+              برای Windows 11, Windows 10
+            </span>
+          </div>
+
+          <span
+            class="absolute bottom-[15px] text-[rgba(224,225,226,0.75)] text-center font-[Peyda] text-[14px] font-medium leading-[16px] w-full px-[40px]"
+          >
+            .بستری برای سرور های فایوم ایران که به شما امکان اتصال سریع و پایدار
+            را فراهم می کند
+          </span>
+          <img
+            class="snail self-start absolute bottom-0 lg:rounded-[32px] hidden"
+            src="../assets/img/snail-la5m.webp"
+            alt=""
+          />
+        </div>
+      </section>
+
+      <section
+        class="relative mx-auto flex justify-center px-12 pb-[90px] py-28 md:px-10"
+      >
+        <div
+          class="container flex flex-col items-center gap-12 lg:flex-row xl:max-w-[1200px]"
+        >
+          <astro-island>
+            <div class="flex w-full flex-col items-center lg:max-w-2xl">
+              <div
+                class="relative w-full overflow-hidden rounded-md bg-[#0D0D0D] h-auto shadow-xl ring-1 ring-white/10 sm:rounded-lg"
+              >
+                <div>
+                  <ul
+                    class="flex touch-pan-y touch-pinch-zoom [backface-visibility:hidden"
+                    style="transform: translate3d(0px, 0px, 0px)"
+                  >
+                    <li class="min-w-0 shrink-0 grow-0 basis-full">
+                      <button type="button" class="w-full h-full">
+                        <img
+                          src="../assets/img/showcase/fivem_showcase_client_1.webp"
+                          alt="LA fivem client interface showcase 1"
+                          fetchpriority="auto"
+                          width="1280"
+                          height="720"
+                          class="select-none w-full h-full object-cover"
+                          alt="LA client interface showcase"
+                        />
+                      </button>
+                    </li>
+                    <li class="min-w-0 shrink-0 grow-0 basis-full">
+                      <button type="button" class="w-full h-full">
+                        <img
+                          src="../assets/img/showcase/fivem_showcase_client_2.webp"
+                          alt="LA fivem client interface showcase 2 "
+                          fetchpriority="auto"
+                          width="1280"
+                          height="720"
+                          class="select-none w-full h-full object-cover"
+                          alt="LA client interface showcase"
+                        />
+                      </button>
+                    </li>
+                    <li class="min-w-0 shrink-0 grow-0 basis-full">
+                      <button type="button" class="w-full h-full">
+                        <img
+                          src="../assets/img/showcase/fivem_showcase_client_3.webp"
+                          alt="LA fivem client interface showcase 3"
+                          fetchpriority="auto"
+                          width="1280"
+                          height="720"
+                          class="select-none w-full h-full object-cover"
+                          alt="LA client interface showcase"
+                        />
+                      </button>
+                    </li>
+                  </ul>
                 </div>
-            
-                <div class="hidden md:flex items-center space-x-6">
-                    <a href="#" class="dashboard flex items-center gap-1.5 font-[Peyda] rounded-md bg-white px-3.5 py-2.5 text-sm font-bold text-gray-900 shadow-sm hover:bg-[#C30440] transition-all duration-150 ease-out-quad focus-visible:ring-2 active:scale-[0.975] disabled:cursor-not-allowed disabled:opacity-40 h-[38px]">داشبورد<img src="../img/icon/dashboard.svg" class="size-6" alt="d"></a>
-                </div>
-            
-                <div class="md:hidden flex">
-                <button type="button" class="mobile-header text-gray-700 hover:text-indigo-600">
-                    <img src="../img/icon/dashboard-mobile.svg" class="size-6 transition-all duration-150 ease-out-quad focus-visible:ring-2 active:scale-[0.955]" alt="d">
+              </div>
+              <div class="mt-1 flex h-[21px] w-full max-w-sm gap-2.5">
+                <button
+                  class="group flex-1 py-2 outline-none"
+                  type="button"
+                  aria-label="Go to slide #1"
+                  data-selected="true"
+                >
+                  <div
+                    class="h-[5px] rounded-full bg-white/10 transition-colors group-hover:bg-white/15 group-data-[selected]:bg-[#C30440]"
+                  ></div>
                 </button>
-                </div>
-            </nav>
-        </header>
-        
-        <div id="notification" dir="rtl" class="notification z-[22] mx-[20px] md:mx-0 backdrop-blur-[25px] bg-[#00000052] rounded-[12px] fixed border border-white/10 top-[2.1vh] right-0 left-0 dir-rtl font-['Peyda','Rajdhani_Medium'] max-w-md p-6 flex items-center gap-4 shadow-sm opacity-0 -translate-y-full transition-all duration-500 ease-in-out">
-            <div class="icon flex-shrink-0"></div>
-            <div class="content flex-grow"></div>
-            <div class="close flex-shrink-0"></div>
-        </div>
-
-        <div id="mobile-menu" class="fixed inset-0 flex flex-col items-center justify-center z-20 transition-all duration-300 bg-[rgba(48,48,48,0.45)] backdrop-blur-[18px] opacity-0 pointer-events-none">
-            <header class="p-4 text-center mt-[2.7rem]">
-                <h1 class="text-2xl font-bold text-white font-[Peyda] text-[45px] font-extrabold leading-normal">
-                    موارد دیگری
-                </h1>
-            </header>
-        
-            <div class="p-4 flex-1 flex flex-col justify-start gap-[20px] px-[4rem] pt-[1rem] w-full max-w-[33rem]">
-                <a href="#" class="dashboard w-full h-[60px] bg-[#C30440] drop-shadow-[0px_0px_8px_rgba(195,4,64,0.5)] rounded-[12px] flex items-center justify-center gap-2 text-[rgba(0,0,0,0.85)] text-center font-[Peyda] text-[23px] font-extrabold leading-[0] active:bg-[#a00334] active:scale-[0.98] transition-all duration-200">
-                    داشبورد
-                    <img src="../img/icon/dashboard.svg" class="size-9 active:scale-[1.1] transition-transform duration-200" alt="d">
-                </a>
-                <a href="#" header-data="download" class="downloadButton w-full h-[46px] bg-[url('../img/pattern.webp')] bg-lightgray bg-center bg-cover bg-no-repeat flex items-center justify-center bg-[rgba(255,255,255,0.20)] backdrop-blur-[2.5px] text-white rounded-[12px] font-['Rajdhani_Medium'] text-[rgba(255,255,255,0.75)] text-[25px] leading-[0] active:bg-[rgba(255,255,255,0.15)] active:scale-[0.98] transition-all duration-200">
-                    Download
-                </a>
-                <a href="https://la5m.ir/servers" target="_blank" class="w-full h-[46px] bg-[url('../img/pattern.webp')] bg-lightgray bg-unset bg-cover bg-no-repeat flex items-center justify-center bg-[rgba(255,255,255,0.20)] backdrop-blur-[2.5px] text-white rounded-[12px] font-['Rajdhani_Medium'] text-[rgba(255,255,255,0.75)] text-[25px] leading-[0] active:bg-[rgba(255,255,255,0.15)] active:scale-[0.98] transition-all duration-200">
-                    Servers
-                </a>
-                <a href="https://status.la5m.ir" target="_blank" class="w-full h-[46px] bg-[url('../img/pattern.webp')] bg-lightgray bg-left bg-cover bg-no-repeat flex items-center justify-center bg-[rgba(255,255,255,0.20)] backdrop-blur-[2.5px] text-white rounded-[12px] font-['Rajdhani_Medium'] text-[rgba(255,255,255,0.75)] text-[25px] leading-[0] active:bg-[rgba(255,255,255,0.15)] active:scale-[0.98] transition-all duration-200">
-                    Status
-                </a>
-                <a href="https://la5m.ir/errors" target="_blank" class="w-full h-[46px] bg-[url('../img/pattern.webp')] bg-lightgray bg-bottom bg-cover bg-no-repeat flex items-center justify-center bg-[rgba(255,255,255,0.20)] backdrop-blur-[2.5px] text-white rounded-[12px] font-['Rajdhani_Medium'] text-[rgba(255,255,255,0.75)] text-[25px] leading-[0] active:bg-[rgba(255,255,255,0.15)] active:scale-[0.98] transition-all duration-200">
-                    Errors
-                </a>
-                <a href="https://la5m.ir/donate" target="_blank" class="w-full h-[46px] bg-[url('../img/pattern.webp')] bg-lightgray bg-right bg-cover bg-no-repeat flex items-center justify-center bg-[rgba(255,255,255,0.20)] backdrop-blur-[2.5px] text-white rounded-[12px] font-['Rajdhani_Medium'] text-[rgba(255,255,255,0.75)] text-[25px] leading-[0] active:bg-[rgba(255,255,255,0.15)] active:scale-[0.98] transition-all duration-200">
-                    Donate
-                </a>
+                <button
+                  class="group flex-1 py-2 outline-none"
+                  type="button"
+                  aria-label="Go to slide #2"
+                >
+                  <div
+                    class="h-[5px] rounded-full bg-white/10 transition-colors group-hover:bg-white/15 group-data-[selected]:bg-[#C30440]"
+                  ></div>
+                </button>
+                <button
+                  class="group flex-1 py-2 outline-none"
+                  type="button"
+                  aria-label="Go to slide #3"
+                >
+                  <div
+                    class="h-[5px] rounded-full bg-white/10 transition-colors group-hover:bg-white/15 group-data-[selected]:bg-[#C30440]"
+                  ></div>
+                </button>
+              </div>
             </div>
-        
-            <div class="mobile-header-exit fixed bottom-[3.8rem] left-1/2 transform -translate-x-1/2 w-[85px] h-[85px] bg-[#12121259] rounded-full flex items-center justify-center cursor-pointer hover:shadow-[0_0_10px_rgba(18,18,18,0.5)] active:bg-[rgba(18,18,18,0.2)] active:scale-[0.95] transition-all duration-200">
-                <img src="../img/icon/back.svg" class="w-[42px] h-[42px] active:scale-[1.1] transition-transform duration-200" alt="b">
-            </div>
+          </astro-island>
+          <div class="flex flex-col items-start lg:-mt-8" dir="rtl">
+            <h2
+              class="mb-6 max-w-3xl text-balance text-[2.5rem] font-[Peyda] font-medium leading-[1.1] tracking-tight text-white md:text-[3.3rem]"
+            >
+              دسترسی سریع<br />به سرور لیست
+            </h2>
+            <p
+              class="max-w-3xl font-[Peyda] text-balance text-sm leading-relaxed text-white/75 md:text-base md:leading-relaxed"
+            >
+              <span class="text-[#FF4F5A] font-extrabold">LA Launcher</span> یک
+              لانچر حرفه‌ای برای
+              <span class="font-bold text-[#FCD53F]">FiveM</span> است که به
+              کاربران امکان می‌دهد بدون هیچ محدودیت و تحریمی به سرورها متصل
+              شوند. با استفاده از سیستم بهینه‌سازی اتصال، اتصال بهبود یافته و
+              تجربه‌ای پایدار و روان برای بازیکنان فراهم می‌شود. کاربران
+              می‌توانند بدون نیاز به تغییر تنظیمات پیچیده، سرورها را مشاهده کرده
+              و به آن‌ها متصل شوند 🫡
+            </p>
+          </div>
         </div>
+      </section>
 
-        <main class="relative flex-1 pt-[--header-height]">
-            <section class="relative mx-auto lg:-mt-[--header-height] lg:px-8 lg:pt-36">
-                <div class="intro-background absolute left-[-49.8%] -right-1/2 top-0 -z-[1] mx-auto hidden h-full max-w-full object-cover opacity-30 lg:block"></div>
-                <div class="intro-overlay mx-auto flex flex-col items-center gap-y-12 border-b border-stone-500 px-6 py-20 lg:container sm:px-8 sm:py-24 lg:rounded-[32px] lg:border-b-0 lg:p-24 lg:px-0 lg:ring-1 lg:ring-white/15 xl:max-w-[1200px]">
-                    <div class="flex w-full max-w-3xl flex-col items-center gap-y-6" >
-                        <h1 class="text-white text-[10vw] sm:text-[8vw] md:text-[6vw] lg:text-[96px] xl:text-[120px] leading-[50px] sm:leading-[60px] md:leading-[70px] lg:leading-[80px] xl:leading-[90px] tracking-[1.8px] sm:tracking-[2px] md:tracking-[2.5px] lg:tracking-[3px] xl:tracking-[3.6px] uppercase w-max md:mt-[-38px]" style="font-family: 'Be Vietnam ExtraBold Italic';">
-                            <span class="text-[#C30440]">la</span> launcher
-                        </h1>
-                        <p class="w-full text-balance text-center text-sm leading-normal text-white/75 transition-none delay-300 duration-1000 animate-in fade-in-0 slide-in-from-top-3 running fill-mode-backwards sm:text-base lg:text-lg mb-[10px] md:mb-[76.8px]"
-                            >The Ultimate FiveM Experience Without Restrictions!<br>
-                            Seamless, optimized, free, and securely built for Iranian gamers.
-                        </p>
+      <section class="relative mx-auto flex justify-center px-8 md:px-10">
+        <div class="container flex flex-col xl:max-w-[1200px]">
+          <ul
+            class="grid grid-flow-col grid-cols-1 grid-rows-4 gap-6 sm:grid-cols-2 sm:grid-rows-2 xl:grid-cols-4 xl:grid-rows-1"
+            dir="rtl"
+            style="font-family: 'Rajdhani SemiBold', Peyda"
+          >
+            <li
+              class="feature-bg-gradient rounded-xl p-6 shadow-lg ring-1 ring-white/15 backdrop-blur-md transition-[transform,box-shadow,background] duration-300 ease-out [background-position:100%_70%] [background-size:100%_250%] hover:ring-white/25 hover:[background-position:100%_0%]"
+            >
+              <img
+                src="../assets/img/icon/optimize.svg"
+                class="w-[32px] h-[32px]"
+                alt="o"
+              />
+              <h2 class="mt-4 text-base font-medium">بهینه و مصرف کم منابع.</h2>
+              <p class="mt-2 text-sm leading-normal text-white/75">
+                این لانچر با تمرکز بر مصرف کم منابع سیستم و سرعت بالا طراحی شده
+                تا تجربه‌ای روان و بدون دردسر را برای کاربران فراهم کند.
+              </p>
+            </li>
+            <li
+              class="feature-bg-gradient rounded-xl p-6 shadow-lg ring-1 ring-white/15 backdrop-blur-md transition-[transform,box-shadow,background] duration-300 ease-out [background-position:100%_70%] [background-size:100%_250%] hover:ring-white/25 hover:[background-position:100%_0%]"
+            >
+              <img
+                src="../assets/img/icon/ui-ux.svg"
+                class="w-[32px] h-[32px]"
+                alt="u"
+              />
+              <h2 class="mt-4 text-base font-medium">رابط کاربری اختصاصی!</h2>
+              <p class="mt-2 text-sm leading-normal text-white/75">
+                این لانچر با رابط کاربری اختصاصی و مشابه FiveM طراحی شده است تا
+                کاربران حس یکپارچگی و راحتی بیشتری داشته باشند.
+              </p>
+            </li>
+            <li
+              class="feature-bg-gradient rounded-xl p-6 shadow-lg ring-1 ring-white/15 backdrop-blur-md transition-[transform,box-shadow,background] duration-300 ease-out [background-position:100%_70%] [background-size:100%_250%] hover:ring-white/25 hover:[background-position:100%_0%]"
+            >
+              <img
+                src="../assets/img/icon/virus.svg"
+                class="w-[32px] h-[32px]"
+                alt="v"
+              />
+              <h2 class="mt-4 text-base font-medium">بدون هیچ خطر امنیتی!</h2>
+              <p class="mt-2 text-sm leading-normal text-white/75">
+                لانچر کاملاً ایمن است و بدون ایجاد تغییر در سیستم یا آسیب رساندن
+                به آن، دسترسی شما را فراهم می‌کند. سریع، سبک و بدون دردسر.
+              </p>
+            </li>
+            <li
+              class="feature-bg-gradient rounded-xl p-6 shadow-lg ring-1 ring-white/15 backdrop-blur-md transition-[transform,box-shadow,background] duration-300 ease-out [background-position:100%_70%] [background-size:100%_250%] hover:ring-white/25 hover:[background-position:100%_0%]"
+            >
+              <img
+                src="../assets/img/icon/update.svg"
+                class="w-[32px] h-[32px]"
+                alt="u"
+              />
+              <h2 class="mt-4 text-base font-medium">به روز و اتصال سریع.</h2>
+              <p class="mt-2 text-sm leading-normal text-white/75">
+                لانچر LA همیشه FiveM شما را به‌روز نگه می‌دارد و به شما
+                اطلاع‌رسانی می‌کند، همچنین می‌توانید با اتصال خلاصه‌شده، سریع‌تر
+                و آسان‌تر به سرورها متصل شوید!
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-                        <p class="text-center text-[#FCD53F] text-[18px] sm:text-[20px] lg:text-[22px] font-[700] leading-[23px] font-['Inter Bold'] mb-[-8.76px]" style="text-shadow: 0px 0px 20px rgba(252, 213, 63, 0.44);">
-                            FREE FOR EVERYONE!
-                        </p>
-        
-                        <div class="flex items-center text-white space-x-8 justify-between mb-[-5.76px]">
-                            <div class="text-center w-[60px] sm:w-[80px] md:w-[100px]">
-                                <p class="conuts text-white text-[25px] sm:text-[28px] md:text-[30px] leading-[30px] font-['Rajdhani_SemiBold'] flex justify-center items-center">
-                                    <span class="inline-block w-6 h-6 border-4 border-t-white border-gray-500/30 rounded-full animate-spin mb-2.5"></span>
-                                </p>
-                                <p class="text-white/75 text-center font-[Peyda] text-[12px] sm:text-[14px] md:text-[16px] font-bold leading-[20px] uppercase">سرور فعال</p>
-                                <p class="text-[#3A3C43] font-[Peyda] text-[12px] sm:text-[14px] md:text-[16px] font-bold leading-[12px] uppercase">در لیست</p>
-                            </div>
-
-                            <div class="w-px h-[35px] bg-[#D9D9D9] hidden sm:block"></div>
-                
-                            <div class="text-center w-[60px] sm:w-[80px] md:w-[100px]">
-                                <p class="conuts text-white text-[25px] sm:text-[28px] md:text-[30px] leading-[30px] font-['Rajdhani_SemiBold'] flex justify-center items-center">
-                                    <span class="inline-block w-6 h-6 border-4 border-t-white border-gray-500/30 rounded-full animate-spin mb-2.5"></span>
-                                </p>
-                                <p class="text-white/75 text-center font-[Peyda] text-[12px] sm:text-[14px] md:text-[16px] font-bold leading-[20px] uppercase">کاربر فعال</p>
-                                <p class="text-[#3A3C43] font-[Peyda] text-[12px] sm:text-[14px] md:text-[16px] font-bold leading-[12px] uppercase">همین لحظه</p>
-                            </div>
-                        
-                            <div class="w-px h-[35px] bg-[#D9D9D9] hidden sm:block"></div>
-
-                            <div class="text-center w-[60px] sm:w-[80px] md:w-[100px]">
-                                <p class="conuts text-white text-[25px] sm:text-[28px] md:text-[30px] leading-[30px] font-['Rajdhani_SemiBold'] flex justify-center items-center">
-                                    <span class="inline-block w-6 h-6 border-4 border-t-white border-gray-500/30 rounded-full animate-spin mb-2.5"></span>
-                                </p>
-                                <p class="text-white/75 text-center font-[Peyda] text-[12px] sm:text-[14px] md:text-[16px] font-bold leading-[20px] uppercase">نصب</p>
-                                <p class="text-[#3A3C43] font-[Peyda] text-[12px] sm:text-[14px] md:text-[16px] font-bold leading-[12px] uppercase">تا کنون</p>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap justify-center gap-x-3 gap-y-2 delay-500 duration-1000 animate-in fade-in-0 slide-in-from-top-3 fill-mode-backwards" >
-                            <a href="#" class="downloadButton disabled inline-flex items-center justify-center whitespace-nowrap outline-none max-w-max ring-offset-2 ring-offset-stone-900 transition-all duration-150 ease-out-quad focus-visible:ring-2 active:scale-[0.975] disabled:cursor-not-allowed disabled:opacity-40 bg-[#C30440] font-semibold text-white/80 text-right font-[Peyda] text-[16px] font-extrabold shadow-[0px_-1px_0px_1px_rgba(0,0,0,0.20)_inset] ring-stone-50 hover:bg-[#171A24] h-12 gap-2 rounded-[9px] px-5 shrink-0 grow basis-auto disabled" >
-                                <span id="buttonText" dir="rtl">در حال بارگذاری...</span>
-                                <span id="buttonLoading" class="inline-block w-6 h-6 border-4 border-t-white border-gray-500/30 rounded-full animate-spin"></span>
-                                <img id="buttonIcon" src="../img/icon/download.svg" alt="loading" class="w-6 h-6 hidden">
-                            </a>
-                        </div>
-                        <span class="relative text-[rgba(224,225,226,0.50)] text-center font-[Peyda] text-[12px] w-full -mt-[15px]" dir="rtl">
-                            برای Windows 11, Windows 10
-                        </span>
-                    </div>
-
-                    <span class="absolute bottom-[15px] text-[rgba(224,225,226,0.75)] text-center font-[Peyda] text-[14px] font-medium leading-[16px] w-full px-[40px]">
-                        .بستری برای سرور های فایوم ایران که به شما امکان اتصال سریع و پایدار را فراهم می کند
-                    </span>     
-                    <img class="snail self-start absolute bottom-0 lg:rounded-[32px] hidden" src="../img/snail-la5m.webp" alt="" >         
-                </div>
-            </section>
-
-            <section class="relative mx-auto flex justify-center px-12 pb-[90px] py-28 md:px-10">
-                <div class="container flex flex-col items-center gap-12 lg:flex-row xl:max-w-[1200px]">
-                    <astro-island>
-                        <div class="flex w-full flex-col items-center lg:max-w-2xl">
-                            <div class="relative w-full overflow-hidden rounded-md bg-[#0D0D0D] h-auto shadow-xl ring-1 ring-white/10 sm:rounded-lg">
-                                <div>
-                                    <ul class="flex touch-pan-y touch-pinch-zoom [backface-visibility:hidden"
-                                        style="transform: translate3d(0px, 0px, 0px);">
-                                        <li class="min-w-0 shrink-0 grow-0 basis-full">
-                                            <button type="button" class="w-full h-full">
-                                                <img src="../img/showcase/fivem_showcase_client_1.webp" alt="LA fivem client interface showcase 1" fetchpriority="auto" width="1280" height="720" class="select-none w-full h-full object-cover" alt="LA client interface showcase">
-                                            </button>
-                                        </li>
-                                        <li class="min-w-0 shrink-0 grow-0 basis-full">
-                                            <button type="button" class="w-full h-full">
-                                                <img src="../img/showcase/fivem_showcase_client_2.webp" alt="LA fivem client interface showcase 2 " fetchpriority="auto" width="1280" height="720" class="select-none w-full h-full object-cover" alt="LA client interface showcase">
-                                            </button>
-                                        </li>
-                                        <li class="min-w-0 shrink-0 grow-0 basis-full">
-                                            <button type="button" class="w-full h-full">
-                                                <img src="../img/showcase/fivem_showcase_client_3.webp" alt="LA fivem client interface showcase 3" fetchpriority="auto" width="1280" height="720" class="select-none w-full h-full object-cover" alt="LA client interface showcase">
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="mt-1 flex h-[21px] w-full max-w-sm gap-2.5">
-                                <button class="group flex-1 py-2 outline-none" type="button" aria-label="Go to slide #1" data-selected="true">
-                                    <div class="h-[5px] rounded-full bg-white/10 transition-colors group-hover:bg-white/15 group-data-[selected]:bg-[#C30440]"></div>
-                                </button>
-                                <button class="group flex-1 py-2 outline-none" type="button" aria-label="Go to slide #2">
-                                    <div class="h-[5px] rounded-full bg-white/10 transition-colors group-hover:bg-white/15 group-data-[selected]:bg-[#C30440]"></div>
-                                </button>
-                                <button class="group flex-1 py-2 outline-none" type="button" aria-label="Go to slide #3">
-                                    <div class="h-[5px] rounded-full bg-white/10 transition-colors group-hover:bg-white/15 group-data-[selected]:bg-[#C30440]"></div>
-                                </button>
-                            </div>
-                        </div>
-                    </astro-island>
-                    <div class="flex flex-col items-start lg:-mt-8" dir="rtl">
-                        <h2 class="mb-6 max-w-3xl text-balance text-[2.5rem] font-[Peyda] font-medium leading-[1.1] tracking-tight text-white md:text-[3.3rem]"
-                    >دسترسی سریع<br>به سرور لیست</h2>
-                        <p class="max-w-3xl font-[Peyda] text-balance text-sm leading-relaxed text-white/75 md:text-base md:leading-relaxed"
-                        ><span class="text-[#C30440] font-extrabold">LA Launcher</span> یک لانچر حرفه‌ای برای <span class="font-bold text-[#FCD53F]">FiveM</span> است که به کاربران امکان می‌دهد بدون هیچ محدودیت و تحریمی به سرورها متصل شوند. با استفاده از سیستم بهینه‌سازی اتصال، اتصال بهبود یافته و تجربه‌ای پایدار و روان برای بازیکنان فراهم می‌شود. کاربران می‌توانند بدون نیاز به تغییر تنظیمات پیچیده، سرورها را مشاهده کرده و به آن‌ها متصل شوند 🫡</p> 
-                    </div>
-                </div>
-            </section>
-
-            <section class="relative mx-auto flex justify-center px-8 md:px-10">
-                <div class="container flex flex-col xl:max-w-[1200px]">
-                    <ul class="grid grid-flow-col grid-cols-1 grid-rows-4 gap-6 sm:grid-cols-2 sm:grid-rows-2 xl:grid-cols-4 xl:grid-rows-1" dir="rtl" style="font-family: 'Rajdhani SemiBold', Peyda;"
+      <section class="relative mx-auto flex justify-center px-8 md:px-10 py-24">
+        <div class="container" dir="rtl">
+          <div class="mx-auto max-w-7xl">
+            <div
+              class="relative partnership isolate overflow-hidden md:px-10 md:py-10 p-6 shadow-2xl rounded-2xl sm:rounded-3xl"
+            >
+              <div class="grid lg:grid-cols-2 grid-cols-1 gap-6 font-[Peyda]">
+                <div class="max-w-lg">
+                  <h2 class="text-3xl sm:text-3xl font-bold text-white">
+                    فراخوان همکاری با متخصص امنیت نرم‌افزار
+                  </h2>
+                  <p
+                    class="max-w-3xl font-[Peyda] text-balance text-sm leading-relaxed text-white/75 md:text-base md:leading-relaxed mt-4"
+                  >
+                    تیم ما به دنبال توسعه‌دهنده ای با دانش فنی عمیق در حوزه
+                    امنیت نرم‌افزارهای ویندوز است. فرد موردنظر باید توانایی
+                    تحلیل، شناسایی و رفع تهدیدات سطح پایین، توسعه ماژول‌های
+                    امنیتی پیشرفته و مقاوم‌سازی سیستم‌ها را داشته باشد.
+                  </p>
+                  <a href="https://discord.la5m.ir" target="_blank">
+                    <div
+                      class="md:mt-10 mt-4 flex flex-wrap sm:flex-nowrap max-w-md gap-4"
                     >
-                        <li class="feature-bg-gradient rounded-xl p-6 shadow-lg ring-1 ring-white/15 backdrop-blur-md transition-[transform,box-shadow,background] duration-300 ease-out [background-position:100%_70%] [background-size:100%_250%] hover:ring-white/25 hover:[background-position:100%_0%]">
-                            <img src="../img/icon/optimize.svg" class="w-[32px] h-[32px]" alt="o">
-                            <h2 class="mt-4 text-base font-medium">بهینه و مصرف کم منابع.</h2>
-                            <p class="mt-2 text-sm leading-normal text-white/75">این لانچر با تمرکز بر مصرف کم منابع سیستم و سرعت بالا طراحی شده تا تجربه‌ای روان و بدون دردسر را برای کاربران فراهم کند.</p>
-                        </li>
-                        <li class="feature-bg-gradient rounded-xl p-6 shadow-lg ring-1 ring-white/15 backdrop-blur-md transition-[transform,box-shadow,background] duration-300 ease-out [background-position:100%_70%] [background-size:100%_250%] hover:ring-white/25 hover:[background-position:100%_0%]">
-                            <img src="../img/icon/ui-ux.svg" class="w-[32px] h-[32px]" alt="u">
-                            <h2 class="mt-4 text-base font-medium">رابط کاربری اختصاصی!</h2>
-                            <p class="mt-2 text-sm leading-normal text-white/75">این لانچر با رابط کاربری اختصاصی و مشابه FiveM طراحی شده است تا کاربران حس یکپارچگی و راحتی بیشتری داشته باشند.</p>
-                        </li>
-                        <li class="feature-bg-gradient rounded-xl p-6 shadow-lg ring-1 ring-white/15 backdrop-blur-md transition-[transform,box-shadow,background] duration-300 ease-out [background-position:100%_70%] [background-size:100%_250%] hover:ring-white/25 hover:[background-position:100%_0%]">
-                            <img src="../img/icon/virus.svg" class="w-[32px] h-[32px]" alt="v">
-                            <h2 class="mt-4 text-base font-medium">بدون هیچ خطر امنیتی!</h2>
-                            <p class="mt-2 text-sm leading-normal text-white/75">لانچر کاملاً ایمن است و بدون ایجاد تغییر در سیستم یا آسیب رساندن به آن، دسترسی شما را فراهم می‌کند.
-                                سریع، سبک و بدون دردسر.</p>
-                        </li>
-                        <li class="feature-bg-gradient rounded-xl p-6 shadow-lg ring-1 ring-white/15 backdrop-blur-md transition-[transform,box-shadow,background] duration-300 ease-out [background-position:100%_70%] [background-size:100%_250%] hover:ring-white/25 hover:[background-position:100%_0%]">
-                            <img src="../img/icon/update.svg" class="w-[32px] h-[32px]" alt="u">
-                            <h2 class="mt-4 text-base font-medium">به روز و اتصال سریع.</h2>
-                            <p class="mt-2 text-sm leading-normal text-white/75">لانچر LA همیشه FiveM شما را به‌روز نگه می‌دارد و به شما اطلاع‌رسانی می‌کند،
-                                همچنین می‌توانید با اتصال خلاصه‌شده، سریع‌تر و آسان‌تر به سرورها متصل شوید!</p>
-                        </li>
-                    </ul>
+                      <button
+                        type="submit"
+                        class="flex items-center gap-1.5 rounded-md bg-white px-3.5 py-2.5 text-sm font-bold text-gray-900 shadow-sm hover:bg-[#C30440] transition-all duration-150 ease-out-quad focus-visible:ring-2 active:scale-[0.975] disabled:cursor-not-allowed disabled:opacity-40"
+                      >
+                        <img
+                          src="../assets/img/icon/develop.svg"
+                          class="size-6"
+                          alt="d"
+                        />ارتباط با بخش توسعه
+                      </button>
+                    </div>
+                  </a>
                 </div>
-            </section>
-            
-            <section class="relative mx-auto flex justify-center px-8 md:px-10 py-24">
-                <div class="container" dir="rtl">
-                    <div class="mx-auto max-w-7xl">
-                        <div class="relative partnership isolate overflow-hidden md:px-10 md:py-10 p-6 shadow-2xl rounded-2xl sm:rounded-3xl">
-                            <div class="grid lg:grid-cols-2 grid-cols-1 gap-6 font-[Peyda]">
-                                <div class="max-w-lg">
-                                    <h2 class="text-3xl sm:text-3xl font-bold text-white">فراخوان همکاری با متخصص امنیت نرم‌افزار</h2>
-                                    <p class="max-w-3xl font-[Peyda] text-balance text-sm leading-relaxed text-white/75 md:text-base md:leading-relaxed mt-4">تیم ما به دنبال توسعه‌دهنده ای با دانش فنی عمیق در حوزه امنیت نرم‌افزارهای ویندوز است. فرد موردنظر باید توانایی تحلیل، شناسایی و رفع تهدیدات سطح پایین، توسعه ماژول‌های امنیتی پیشرفته و مقاوم‌سازی سیستم‌ها را داشته باشد.</p>
-                                    <a href="https://discord.la5m.ir" target="_blank">
-                                        <div class="md:mt-10 mt-4 flex flex-wrap sm:flex-nowrap max-w-md gap-4">
-                                            <button type="submit" class="flex items-center gap-1.5 rounded-md bg-white px-3.5 py-2.5 text-sm font-bold text-gray-900 shadow-sm hover:bg-[#C30440] transition-all duration-150 ease-out-quad focus-visible:ring-2 active:scale-[0.975] disabled:cursor-not-allowed disabled:opacity-40"><img src="../img/icon/develop.svg" class="size-6" alt="d">ارتباط با بخش توسعه</button>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="grid md:grid-cols-2 grid-cols-1 gap-6" style="font-family: 'Rajdhani Medium', Peyda;">
-                                    <div class="flex flex-col justify-between m-auto">
-                                        <div class="h-10 w-10 flex items-center justify-center rounded-md border border-gray-700 text-white bg-gray-700/40">
-                                            <img src="../img/icon/revarse-enginer.svg" class="w-[28px] h-[28px]" alt="re">
-                                        </div>
-                                        <h3 class="text-xl text-gray-50 mt-2" style="font-family: 'Rajdhani Semibold';">Security Architecture & Exploit Mitigation</h3>
-                                        <p class="text-sm leading-normal text-white/75 mt-2">توسعه و پیاده‌سازی مکانیسم‌های امنیتی سطح پایین مانند Hooking، Kernel Patch Protection (KPP) و Code Integrity. مقابله با Exploitها و حملات مبتنی بر Injection، Memory Corruption و Bypass Techniques.</p>
-                                    </div>
-                                    <div class="flex flex-col justify-between m-auto">
-                                        <div class="h-10 w-10 flex items-center justify-center rounded-md border border-gray-700 text-white bg-gray-700/40">
-                                            <img src="../img/icon/security-architecture.svg" class="w-[28px] h-[28px]" alt="sa">
-                                        </div>
-                                        <h3 class="text-xl text-gray-50 mt-2" style="font-family: 'Rajdhani Semibold';">Reverse Engineering & System Hardening</h3>
-                                        <p class="text-sm leading-normal text-white/75 mt-2">بررسی و تحلیل کدهای اجرایی با ابزارهایی نظیر IDA Pro، Ghidra و x64dbg، مهندسی معکوس درایورهای ویندوز، نوشتن Shellcodeهای امن و مقاوم‌سازی سیستم از طریق Kernel-Level Debugging, Patch Guard Evasion.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <div
+                  class="grid md:grid-cols-2 grid-cols-1 gap-6"
+                  style="font-family: 'Rajdhani Medium', Peyda"
+                >
+                  <div class="flex flex-col justify-between m-auto">
+                    <div
+                      class="h-10 w-10 flex items-center justify-center rounded-md border border-gray-700 text-white bg-gray-700/40"
+                    >
+                      <img
+                        src="../assets/img/icon/revarse-enginer.svg"
+                        class="w-[28px] h-[28px]"
+                        alt="re"
+                      />
                     </div>
+                    <h3
+                      class="text-xl text-gray-50 mt-2"
+                      style="font-family: 'Rajdhani Semibold'"
+                      lang="en"
+                    >
+                      Security Architecture & Exploit Mitigation
+                    </h3>
+                    <p class="text-sm leading-normal text-white/75 mt-2">
+                      توسعه و پیاده‌سازی مکانیسم‌های امنیتی سطح پایین مانند
+                      Hooking، Kernel Patch Protection (KPP) و Code Integrity.
+                      مقابله با Exploitها و حملات مبتنی بر Injection، Memory
+                      Corruption و Bypass Techniques.
+                    </p>
+                  </div>
+                  <div class="flex flex-col justify-between m-auto">
+                    <div
+                      class="h-10 w-10 flex items-center justify-center rounded-md border border-gray-700 text-white bg-gray-700/40"
+                    >
+                      <img
+                        src="../assets/img/icon/security-architecture.svg"
+                        class="w-[28px] h-[28px]"
+                        alt="sa"
+                      />
+                    </div>
+                    <h3
+                      class="text-xl text-gray-50 mt-2"
+                      style="font-family: 'Rajdhani Semibold'"
+                      lang="en"
+                    >
+                      Reverse Engineering & System Hardening
+                    </h3>
+                    <p class="text-sm leading-normal text-white/75 mt-2">
+                      بررسی و تحلیل کدهای اجرایی با ابزارهایی نظیر IDA Pro،
+                      Ghidra و x64dbg، مهندسی معکوس درایورهای ویندوز، نوشتن
+                      Shellcodeهای امن و مقاوم‌سازی سیستم از طریق Kernel-Level
+                      Debugging, Patch Guard Evasion.
+                    </p>
+                  </div>
                 </div>
-            </section>
-            
-            <footer class="relative mx-auto flex justify-center px-8 md:px-10">
-                <div class="w-full container py-4 px-4 sm:px-6 lg:px-8 mx-auto" style="font-family: 'Rajdhani Medium', Peyda;">
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 overflow-hidden">
-                        <div class="col-span-full lg:col-span-2">
-                            <div class="flex items-center">
-                                <img src="../img/logo-la5m.webp" alt="" class="h-10 me-2">
-                                <a class="font-[800] text-[30px] tracking-[1px] uppercase leading-[26px] mr-auto sm:mr-0" aria-label="logo" style="font-family: 'Be Vietnam Medium Italic';"><span class="text-[#C30440]">LA</span> launcher</a>
-                            </div>
-                            <p class="text-white max-w-xs mt-6 text-end" dir="rtl">این برنامه به منظور رفع مشکلات اتصال به سرورهای FiveM در ایران و بهبود دسترسی به سرورهای cfx.re طراحی شده است. </p>
-                        </div>
-                
-                        <div class="col-span-2" dir="rtl">
-                            <h4 class="font-semibold text-gray-100 uppercase">برنامه های مورد نیاز</h4>
-                        
-                            <div class="mt-6 flex grid-cols-3 gap-3">
-                                <a href="https://www.rockstargames.com/gta-online" target="_blank"><img src="../img/footer/gta-online.png" alt="GTA Online" class="w-25 h-20 rounded-[8px] hover:shadow-[0_0_15px_0_rgba(0,0,0,0.5)] duration-300 active:scale-[0.97] transition-all object-contain"></a> 
-                                <a href="https://fivem.net" target="_blank"><img src="../img/footer/fivem.png" alt="FiveM" class="w-25 h-20 rounded-[8px] hover:shadow-[0_0_15px_0_rgba(240,126,52,0.5)] duration-300 active:scale-[0.97] transition-all object-contain"></a>
-                                <a href="https://la5m.ir" target="_blank"><img src="../img/footer/la.png" alt="LA" class="w-25 h-20 rounded-[8px] hover:shadow-[0_0_15px_0_rgba(22,25,35,0.5)] duration-300 active:scale-[0.97] transition-all object-contain"></a>
-                            </div>
-                        </div>
-
-                        <div class="col-span-1" dir="rtl">
-                            <h4 class="font-semibold text-gray-100 uppercase">مرتبط</h4>
-                        
-                            <div class="mt-6 flex grid-cols-5 gap-2">
-                                <a href="https://enamad.ir" target="_blank"><img src="../img/footer/enamad.png" alt="Enamad" class="w-20 h-15 hover:[filter:drop-shadow(0_0_8px_rgba(47,106,184,0.2))] duration-300 active:scale-[0.97] transition-all object-contain"></a>
-                                <a href="https://5star.tebex.io" target="_blank"><img src="../img/footer/fivestar.png" alt="FiveStar" class="w-20 h-15 hover:[filter:drop-shadow(0_0_8px_rgba(252,255,37,0.2))] duration-300 active:scale-[0.97] transition-all object-contain"></a>
-                            </div>
-                        </div>
-
-                        <div class="col-span-1" dir="rtl">
-                            <h4 class="font-semibold text-gray-100 uppercase">رسانه های فعال</h4>
-                            <div class="mt-6 grid space-y-3">
-                                <a class="inline-flex items-center gap-x-4 text-white hover:text-gray-200" href="https://discord.la5m.ir" target="_blank">
-                                    <div class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white bg-[#C30440]">
-                                        <img src="../img/icon/discord.svg" class="flex-shrink-0 size-4" alt="d">
-                                    </div>
-                                    Discord
-                                </a>
-
-                                <a class="inline-flex items-center gap-x-4 text-white hover:text-gray-200" href="https://github.com/LaPlatform/la-launcher" target="_blank">
-                                    <div class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white bg-[#C30440]">
-                                        <svg class="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-                                        </svg>
-                                    </div>
-                                    Github
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-5 sm:mt-12 grid border-t border-stone-800 py-5">
-                        <div class="h-full flex flex-wrap justify-center items-center md:justify-between text-center md:text-start gap-3">
-                            <p class="text-sm font-medium text-gray-400">
-                                Copyright © <script>document.write(new Date().getFullYear())</script> <span class="text-gray-300">LA Launcher</span>. All rights reserved. <span class="text-gray-300">LA Launcher</span> is a part of <a class="text-gray-300" href="https://5star.tebex.io" target="_blank">5star.tebex.io</a>.
-                            </p>
-                            <p class="text-center text-sm text-gray-400">
-                                <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" class="flex items-center justify-center bg-[#C30440] text-white py-2 px-4 rounded-full hover:bg-[#161923] transition-colors">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 mr-2" viewBox="0 0 16 16" fill="none">
-                                    <path d="M15 8L8 1L1 8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8 15V2" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                                <span class="font-[Peyda] text[#fff] text-sm font-bold shadow-sm">برو بالا</span>
-                                </button>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-        </main>
-
-        <div id="carouselModal" data-state="closed" class="fixed inset-0 z-20 bg-stone-600/50 backdrop-blur-sm will-change-opacity hidden">
-            <div id="backdrop" class="fixed inset-0 bg-stone-600/50 backdrop-blur-sm animate-in fade-in-0 duration-300"></div>
-            <div class="fixed z-20 flex h-full w-screen flex-col rounded-xl px-5 pb-10 pt-12 outline-none md:px-8 animate-in fade-in-0 duration-300">
-                <div class="flex flex-1 flex-col items-start justify-center">
-                    <div class="flex flex-1 flex-col gap-8">
-                        <div class="flex h-full items-center justify-center">
-                            <ul id="imageList" class="flex touch-pan-y touch-pinch-zoom [backface-visibility:hidden] -me-3 md:-me-8 transition-transform duration-300 ease-in-out">
-                                <li class="flex shrink-0 grow-0 basis-full items-center justify-center pe-3 md:ps-8">
-                                    <img class="h-full max-h-[70svh] w-auto select-none rounded-lg border border-white/5 bg-white/5 object-contain shadow-lg"
-                                        loading="lazy" 
-                                        fetchpriority="low" 
-                                        decoding="async" 
-                                        width="1920" 
-                                        height="1080" 
-                                        src="../img/showcase/fivem_showcase_client_1.webp" 
-                                        alt="LA client interface showcase">
-                                </li>
-                                <li class="flex shrink-0 grow-0 basis-full items-center justify-center pe-3 md:ps-8">
-                                    <img class="h-full max-h-[70svh] w-auto select-none rounded-lg border border-white/5 bg-white/5 object-contain shadow-lg"
-                                        loading="lazy" 
-                                        fetchpriority="low" 
-                                        decoding="async" 
-                                        width="1920" 
-                                        height="1080" 
-                                        src="../img/showcase/fivem_showcase_client_2.webp" 
-                                        alt="LA client interface showcase">
-                                </li>
-                                <li class="flex shrink-0 grow-0 basis-full items-center justify-center pe-3 md:ps-8">
-                                    <img class="h-full max-h-[70svh] w-auto select-none rounded-lg border border-white/5 bg-white/5 object-contain shadow-lg"
-                                        loading="lazy" 
-                                        fetchpriority="low" 
-                                        decoding="async" 
-                                        width="1920" 
-                                        height="1080" 
-                                        src="../img/showcase/fivem_showcase_client_3.webp" 
-                                        alt="LA client interface showcase">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="mx-auto my-4 flex h-auto w-full justify-center gap-2 sm:gap-3">
-                        <button class="thumbnail group flex h-full overflow-hidden rounded border-2 border-white/5 opacity-50 outline-none transition-[border-color,opacity] hover:opacity-75 focus-visible:border-white/25 data-[selected]:border-white/25 data-[selected]:opacity-100" 
-                                type="button" 
-                                aria-label="Go to slide #1" 
-                                data-index="0" 
-                                data-selected="true">
-                            <img width="128" 
-                                height="72" 
-                                class="h-12 w-full select-none object-contain sm:h-16" 
-                                fetchpriority="low" 
-                                decoding="async" 
-                                src="../img/showcase/fivem_showcase_client_1.webp">
-                        </button>
-                        <button class="thumbnail group flex h-full overflow-hidden rounded border-2 border-white/5 opacity-50 outline-none transition-[border-color,opacity] hover:opacity-75 focus-visible:border-white/25 data-[selected]:border-white/25 data-[selected]:opacity-100" 
-                                type="button" 
-                                aria-label="Go to slide #2" 
-                                data-index="1">
-                            <img width="128" 
-                                height="72" 
-                                class="h-12 w-full select-none object-contain sm:h-16" 
-                                fetchpriority="low" 
-                                decoding="async" 
-                                src="../img/showcase/fivem_showcase_client_2.webp">
-                        </button>
-                        <button class="thumbnail group flex h-full overflow-hidden rounded border-2 border-white/5 opacity-50 outline-none transition-[border-color,opacity] hover:opacity-75 focus-visible:border-white/25 data-[selected]:border-white/25 data-[selected]:opacity-100" 
-                                type="button" 
-                                aria-label="Go to slide #3" 
-                                data-index="2">
-                            <img width="128" 
-                                height="72" 
-                                class="h-12 w-full select-none object-contain sm:h-16" 
-                                fetchpriority="low" 
-                                decoding="async" 
-                                src="../img/showcase/fivem_showcase_client_3.webp">
-                        </button>
-                    </div>
-                    <button type="button" 
-                            id="closeCarousel" 
-                            aria-label="Close" 
-                            class="absolute right-5 top-5 text-white/60 hover:text-white/75 md:right-8 md:top-8">
-                        <svg fill="none" 
-                            xmlns="http://www.w3.org/2000/svg" 
-                            viewBox="0 0 24 24" 
-                            class="size-8 stroke-2 md:size-10">
-                            <path d="M18 6 6 18M6 6l12 12" 
-                                stroke-linecap="round" 
-                                stroke-linejoin="round" 
-                                vector-effect="non-scaling-stroke" 
-                                stroke="currentColor">
-                            </path>
-                        </svg>
-                    </button>
-                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="relative mx-auto flex justify-center px-8 md:px-10">
+        <div
+          class="w-full container py-4 px-4 sm:px-6 lg:px-8 mx-auto"
+          style="font-family: 'Rajdhani Medium', Peyda"
+        >
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 overflow-hidden"
+          >
+            <div class="col-span-full lg:col-span-2">
+              <div class="flex items-center">
+                <img
+                  src="../assets/img/logo-la5m.webp"
+                  alt=""
+                  class="h-10 me-2"
+                />
+                <a
+                  class="font-[800] text-[30px] tracking-[1px] uppercase leading-[26px] mr-auto sm:mr-0"
+                  aria-label="logo"
+                  style="font-family: 'Be Vietnam Medium Italic'"
+                  ><span class="text-[#C30440]">LA</span> launcher</a
+                >
+              </div>
+              <p class="text-white max-w-xs mt-6 text-end" dir="rtl">
+                این برنامه به منظور رفع مشکلات اتصال به سرورهای FiveM در ایران و
+                بهبود دسترسی به سرورهای cfx.re طراحی شده است.
+              </p>
+            </div>
+
+            <div class="col-span-2" dir="rtl">
+              <h4 class="font-semibold text-gray-100 uppercase">
+                برنامه های مورد نیاز
+              </h4>
+
+              <div class="mt-6 flex grid-cols-3 gap-3">
+                <a
+                  href="https://www.rockstargames.com/gta-online"
+                  target="_blank"
+                  ><img
+                    src="../assets/img/footer/gta-online.png"
+                    alt="GTA Online"
+                    class="w-25 h-20 rounded-[8px] hover:shadow-[0_0_15px_0_rgba(0,0,0,0.5)] duration-300 active:scale-[0.97] transition-all object-contain"
+                /></a>
+                <a href="https://fivem.net" target="_blank"
+                  ><img
+                    src="../assets/img/footer/fivem.png"
+                    alt="FiveM"
+                    class="w-25 h-20 rounded-[8px] hover:shadow-[0_0_15px_0_rgba(240,126,52,0.5)] duration-300 active:scale-[0.97] transition-all object-contain"
+                /></a>
+                <a href="https://la5m.ir" target="_blank"
+                  ><img
+                    src="../assets/img/footer/la.png"
+                    alt="LA"
+                    class="w-25 h-20 rounded-[8px] hover:shadow-[0_0_15px_0_rgba(22,25,35,0.5)] duration-300 active:scale-[0.97] transition-all object-contain"
+                /></a>
+              </div>
+            </div>
+
+            <div class="col-span-1" dir="rtl">
+              <h4 class="font-semibold text-gray-100 uppercase">مرتبط</h4>
+
+              <div class="mt-6 flex grid-cols-5 gap-2">
+                <a href="https://enamad.ir" target="_blank"
+                  ><img
+                    src="../assets/img/footer/enamad.png"
+                    alt="Enamad"
+                    class="w-20 h-15 hover:[filter:drop-shadow(0_0_8px_rgba(47,106,184,0.2))] duration-300 active:scale-[0.97] transition-all object-contain"
+                /></a>
+                <a href="https://5star.tebex.io" target="_blank"
+                  ><img
+                    src="../assets/img/footer/fivestar.png"
+                    alt="FiveStar"
+                    class="w-20 h-15 hover:[filter:drop-shadow(0_0_8px_rgba(252,255,37,0.2))] duration-300 active:scale-[0.97] transition-all object-contain"
+                /></a>
+              </div>
+            </div>
+
+            <div class="col-span-1" dir="rtl">
+              <h4 class="font-semibold text-gray-100 uppercase">
+                رسانه های فعال
+              </h4>
+              <div class="mt-6 grid space-y-3">
+                <a
+                  class="inline-flex items-center gap-x-4 text-white hover:text-gray-200"
+                  href="https://discord.la5m.ir"
+                  target="_blank"
+                >
+                  <div
+                    class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white bg-[#C30440]"
+                  >
+                    <img
+                      src="../assets/img/icon/discord.svg"
+                      class="flex-shrink-0 size-4"
+                      alt="d"
+                    />
+                  </div>
+                  Discord
+                </a>
+
+                <a
+                  class="inline-flex items-center gap-x-4 text-white hover:text-gray-200"
+                  href="https://github.com/LaPlatform/la-launcher"
+                  target="_blank"
+                >
+                  <div
+                    class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white bg-[#C30440]"
+                  >
+                    <svg
+                      class="flex-shrink-0 size-4"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="16"
+                      height="16"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                      ></path>
+                    </svg>
+                  </div>
+                  Github
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-5 sm:mt-12 grid border-t border-stone-800 py-5">
+            <div
+              class="h-full flex flex-wrap justify-center items-center md:justify-between text-center md:text-start gap-3"
+            >
+              <p class="text-sm font-medium text-gray-400" lang="en">
+                Copyright ©
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                <span class="text-gray-300" lang="en">LA Launcher</span>. All
+                rights reserved.
+                <span class="text-gray-300" lang="en">LA Launcher</span> is a
+                part of
+                <a
+                  class="text-gray-300 font-bold"
+                  href="https://5star.tebex.io"
+                  target="_blank"
+                  >5star.tebex.io</a
+                >.
+              </p>
+              <p class="text-center text-sm text-gray-400">
+                <button
+                  onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+                  class="flex items-center justify-center bg-[#C30440] text-white py-2 px-4 rounded-full hover:bg-[#161923] transition-colors"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-3.5 h-3.5 mr-2"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                  >
+                    <path
+                      d="M15 8L8 1L1 8"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8 15V2"
+                      stroke="white"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span
+                    class="font-[Peyda] text[#fff] text-sm font-bold shadow-sm"
+                    >برو بالا</span
+                  >
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <div
+      id="carouselModal"
+      data-state="closed"
+      class="fixed inset-0 z-20 bg-stone-600/50 backdrop-blur-sm will-change-opacity hidden"
+    >
+      <div
+        id="backdrop"
+        class="fixed inset-0 bg-stone-600/50 backdrop-blur-sm animate-in fade-in-0 duration-300"
+      ></div>
+      <div
+        class="fixed z-20 flex h-full w-screen flex-col rounded-xl px-5 pb-10 pt-12 outline-none md:px-8 animate-in fade-in-0 duration-300"
+      >
+        <div class="flex flex-1 flex-col items-start justify-center">
+          <div class="flex flex-1 flex-col gap-8">
+            <div class="flex h-full items-center justify-center">
+              <ul
+                id="imageList"
+                class="flex touch-pan-y touch-pinch-zoom [backface-visibility:hidden] -me-3 md:-me-8 transition-transform duration-300 ease-in-out"
+              >
+                <li
+                  class="flex shrink-0 grow-0 basis-full items-center justify-center pe-3 md:ps-8"
+                >
+                  <img
+                    class="h-full max-h-[70svh] w-auto select-none rounded-lg border border-white/5 bg-white/5 object-contain shadow-lg"
+                    loading="lazy"
+                    fetchpriority="low"
+                    decoding="async"
+                    width="1920"
+                    height="1080"
+                    src="../assets/img/showcase/fivem_showcase_client_1.webp"
+                    alt="LA client interface showcase"
+                  />
+                </li>
+                <li
+                  class="flex shrink-0 grow-0 basis-full items-center justify-center pe-3 md:ps-8"
+                >
+                  <img
+                    class="h-full max-h-[70svh] w-auto select-none rounded-lg border border-white/5 bg-white/5 object-contain shadow-lg"
+                    loading="lazy"
+                    fetchpriority="low"
+                    decoding="async"
+                    width="1920"
+                    height="1080"
+                    src="../assets/img/showcase/fivem_showcase_client_2.webp"
+                    alt="LA client interface showcase"
+                  />
+                </li>
+                <li
+                  class="flex shrink-0 grow-0 basis-full items-center justify-center pe-3 md:ps-8"
+                >
+                  <img
+                    class="h-full max-h-[70svh] w-auto select-none rounded-lg border border-white/5 bg-white/5 object-contain shadow-lg"
+                    loading="lazy"
+                    fetchpriority="low"
+                    decoding="async"
+                    width="1920"
+                    height="1080"
+                    src="../assets/img/showcase/fivem_showcase_client_3.webp"
+                    alt="LA client interface showcase"
+                  />
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            class="mx-auto my-4 flex h-auto w-full justify-center gap-2 sm:gap-3"
+          >
+            <button
+              class="thumbnail group flex h-full overflow-hidden rounded border-2 border-white/5 opacity-50 outline-none transition-[border-color,opacity] hover:opacity-75 focus-visible:border-white/25 data-[selected]:border-white/25 data-[selected]:opacity-100"
+              type="button"
+              aria-label="Go to slide #1"
+              data-index="0"
+              data-selected="true"
+            >
+              <img
+                width="128"
+                height="72"
+                class="h-12 w-full select-none object-contain sm:h-16"
+                fetchpriority="low"
+                decoding="async"
+                src="../assets/img/showcase/fivem_showcase_client_1.webp"
+              />
+            </button>
+            <button
+              class="thumbnail group flex h-full overflow-hidden rounded border-2 border-white/5 opacity-50 outline-none transition-[border-color,opacity] hover:opacity-75 focus-visible:border-white/25 data-[selected]:border-white/25 data-[selected]:opacity-100"
+              type="button"
+              aria-label="Go to slide #2"
+              data-index="1"
+            >
+              <img
+                width="128"
+                height="72"
+                class="h-12 w-full select-none object-contain sm:h-16"
+                fetchpriority="low"
+                decoding="async"
+                src="../assets/img/showcase/fivem_showcase_client_2.webp"
+              />
+            </button>
+            <button
+              class="thumbnail group flex h-full overflow-hidden rounded border-2 border-white/5 opacity-50 outline-none transition-[border-color,opacity] hover:opacity-75 focus-visible:border-white/25 data-[selected]:border-white/25 data-[selected]:opacity-100"
+              type="button"
+              aria-label="Go to slide #3"
+              data-index="2"
+            >
+              <img
+                width="128"
+                height="72"
+                class="h-12 w-full select-none object-contain sm:h-16"
+                fetchpriority="low"
+                decoding="async"
+                src="../assets/img/showcase/fivem_showcase_client_3.webp"
+              />
+            </button>
+          </div>
+          <button
+            type="button"
+            id="closeCarousel"
+            aria-label="Close"
+            class="absolute right-5 top-5 text-white/60 hover:text-white/75 md:right-8 md:top-8"
+          >
+            <svg
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              class="size-8 stroke-2 md:size-10"
+            >
+              <path
+                d="M18 6 6 18M6 6l12 12"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                vector-effect="non-scaling-stroke"
+                stroke="currentColor"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      id="feedback"
+      class="fixed z-[100] flex justify-center items-center bg-[#00000052] backdrop-blur-[5.208vw] w-full h-full hidden"
+    >
+      <div
+        class="gap-6 px-6 py-6 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl animate-in fade-in-0 slide-in-from-top-6 duration-700 fill-mode-backwards max-w-[90vw] font-['Peyda','Rajdhani_SemiBold']"
+        dir="rtl"
+      >
+        <p class="text-[18px] font-medium">
+          نظر خود را در مورد LA Launcher به ما بگوید
+        </p>
+        <p class="mt-2 text-[14px]">
+          این کار شما باعث پیشرف خدمات و انرژی دادن به ما می شود.
+        </p>
+
+        <div class="mt-4 flex justify-between">
+          <div
+            class="flex h-12 w-14 cursor-pointer items-center justify-center bg-white/10 border-[2px] border-white/20 rounded-[8px] hover:bg-white/20 text-xl"
+            onclick="selectEmoji('😤')"
+          >
+            😤
+          </div>
+          <div
+            class="flex h-12 w-14 cursor-pointer items-center justify-center bg-white/10 border-[2px] border-white/20 rounded-[8px] hover:bg-white/20 text-xl"
+            onclick="selectEmoji('😒')"
+          >
+            😒
+          </div>
+          <div
+            class="flex h-12 w-14 cursor-pointer items-center justify-center bg-white/10 border-[2px] border-white/20 rounded-[8px] hover:bg-white/20 text-xl"
+            onclick="selectEmoji('😐')"
+          >
+            😐
+          </div>
+          <div
+            class="flex h-12 w-14 cursor-pointer items-center justify-center bg-white/10 border-[2px] border-white/20 rounded-[8px] hover:bg-white/20 text-xl"
+            onclick="selectEmoji('🙂')"
+          >
+            🙂
+          </div>
+          <div
+            class="flex h-12 w-14 cursor-pointer items-center justify-center bg-white/10 border-[2px] border-white/20 rounded-[8px] hover:bg-white/20 text-xl"
+            onclick="selectEmoji('😀')"
+          >
+            😀
+          </div>
         </div>
 
-        <div id="feedback" class="fixed z-[100] flex justify-center items-center bg-[#00000052] backdrop-blur-[5.208vw] w-full h-full hidden">
-            <div class="gap-6 px-6 py-6 bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl animate-in fade-in-0 slide-in-from-top-6 duration-700 fill-mode-backwards max-w-[90vw] font-['Peyda','Rajdhani_SemiBold']" dir="rtl">
-
-                <p class="text-[18px] font-medium">نظر خود را در مورد LA Launcher به ما بگوید</p>
-                <p class="mt-2 text-[14px]">این کار شما باعث پیشرف خدمات و انرژی دادن به ما می شود.</p>
-
-                <div class="mt-4 flex justify-between">
-                    <div class="flex h-12 w-14 cursor-pointer items-center justify-center bg-white/10 border-[2px] border-white/20 rounded-[8px] hover:bg-white/20 text-xl" onclick="selectEmoji('😤')">😤</div>
-                    <div class="flex h-12 w-14 cursor-pointer items-center justify-center bg-white/10 border-[2px] border-white/20 rounded-[8px] hover:bg-white/20 text-xl" onclick="selectEmoji('😒')">😒</div>
-                    <div class="flex h-12 w-14 cursor-pointer items-center justify-center bg-white/10 border-[2px] border-white/20 rounded-[8px] hover:bg-white/20 text-xl" onclick="selectEmoji('😐')">😐</div>
-                    <div class="flex h-12 w-14 cursor-pointer items-center justify-center bg-white/10 border-[2px] border-white/20 rounded-[8px] hover:bg-white/20 text-xl" onclick="selectEmoji('🙂')">🙂</div>
-                    <div class="flex h-12 w-14 cursor-pointer items-center justify-center bg-white/10 border-[2px] border-white/20 rounded-[8px] hover:bg-white/20 text-xl" onclick="selectEmoji('😀')">😀</div>
-                </div>
-
-                <div class="mt-4">                
-                    <textarea placeholder="لطفا یک پیام برای ما ارسال کنید, دوست داریم نظر و انتقادات شما در مورد این سرویس را بدانیم 📝" maxlength="500" class="w-full p-[12px] text-[15px] bg-transparent border-[2px] border-white/20 rounded-[10px] text-right focus:outline-none h-[180px] resize-none focus:outline-none focus:border-[#C30440] transition-colors duration-300 ease-in-out"></textarea>
-                </div>
-
-                <div class="mt-4 flex justify-end" style="flex-direction: row-reverse; justify-content: space-between;">
-                    <button id="submitBtn" class="p-[0_20px] sm:p-[0_26px] rounded-md bg-[#C30440] text-white font-bold shadow-[0px_-1px_0px_1px_rgba(0,0,0,0.20)_inset] ring-stone-50 hover:bg-[#171A24]" onclick="submitFeedback()">ثبت</button>
-                    <p class="text-[0.8rem] sm:text-[0.9rem] text-right">خوش حالیم که شما از خدمات راضی هستید<br>برای حمایت از می توانید <a href="https://la5m.ir/donate" class="text-yellow-400">دونیت</a> کنید 🙏</p>
-                </div>
-            </div>
+        <div class="mt-4">
+          <textarea
+            placeholder="لطفا یک پیام برای ما ارسال کنید, دوست داریم نظر و انتقادات شما در مورد این سرویس را بدانیم 📝"
+            maxlength="500"
+            class="w-full p-[12px] text-[15px] bg-transparent border-[2px] border-white/20 rounded-[10px] text-right focus:outline-none h-[180px] resize-none focus:outline-none focus:border-[#C30440] transition-colors duration-300 ease-in-out"
+          ></textarea>
         </div>
-    </body>
+
+        <div
+          class="mt-4 flex justify-end"
+          style="flex-direction: row-reverse; justify-content: space-between"
+        >
+          <button
+            id="submitBtn"
+            class="p-[0_20px] sm:p-[0_26px] rounded-md bg-[#C30440] text-white font-bold shadow-[0px_-1px_0px_1px_rgba(0,0,0,0.20)_inset] ring-stone-50 hover:bg-[#171A24]"
+            onclick="submitFeedback()"
+          >
+            ثبت
+          </button>
+          <p class="text-[0.8rem] sm:text-[0.9rem] text-right">
+            خوش حالیم که شما از خدمات راضی هستید<br />برای حمایت از می توانید
+            <a href="https://la5m.ir/donate" class="text-yellow-400">دونیت</a>
+            کنید 🙏
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
