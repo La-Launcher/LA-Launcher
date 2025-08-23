@@ -1,57 +1,67 @@
-import './utils/loading.dat.js';
+import "./utils/loading.dat.js";
 
 $(async function () {
-    const sendStatusToLauncher = async (status, tracking = null) => {
-        try {
-            console.log(status, tracking)
-            const result = await fetch(`http://127.0.0.1:7878/payment?status=${status}&tracking=${tracking}`, {method: "POST", headers: { "Content-Type": "application/json" }});
+  const sendStatusToLauncher = async (status, tracking = null) => {
+    try {
+      console.log(status, tracking);
+      const result = await fetch(
+        `http://127.0.0.1:7878/payment?status=${status}&tracking=${tracking}`,
+        { method: "POST", headers: { "Content-Type": "application/json" } }
+      );
 
-            const text = await result.text();
-            console.log("Payment status sent:", status, tracking);
+      const text = await result.text();
+      console.log("Payment status sent:", status, tracking);
 
-            return text === "ok";
-        } catch(e) {
-            console.error("Cannot send status to launcher:", e);
-        }
-    };
-
-    const params = new URLSearchParams(window.location.search);
-    let status = params.get("status");
-    let savedTracking = localStorage.getItem("lastTrackingCode");
-
-    if (status == "null") {
-        localStorage.removeItem("lastPaymentSuccess");
-        localStorage.removeItem("lastTrackingCode");
-        status = false;
-        savedTracking = null;
+      return text === "ok";
+    } catch (e) {
+      console.error("Cannot send status to launcher:", e);
     }
+  };
 
-    const tracking = params.get("tracking");
-    const hadSuccess = localStorage.getItem("lastPaymentSuccess");
-    const renderHtml = html => $("#content-box").html(html);
-    const isSended = await sendStatusToLauncher(status || hadSuccess, tracking || savedTracking);
+  const params = new URLSearchParams(window.location.search);
+  let status = params.get("status");
+  let savedTracking = localStorage.getItem("lastTrackingCode");
 
-    if (!status) {
-        if (hadSuccess === "true") {
-            document.title = "LA Platform - Already Verified";
-            renderHtml(`
+  if (status == "null") {
+    localStorage.removeItem("lastPaymentSuccess");
+    localStorage.removeItem("lastTrackingCode");
+    status = false;
+    savedTracking = null;
+  }
+
+  const tracking = params.get("tracking");
+  const hadSuccess = localStorage.getItem("lastPaymentSuccess");
+  const renderHtml = (html) => $("#content-box").html(html);
+  const isSended = await sendStatusToLauncher(
+    status || hadSuccess,
+    tracking || savedTracking
+  );
+
+  if (!status) {
+    if (hadSuccess === "true") {
+      document.title = "LA Platform - Already Verified";
+      renderHtml(`
                 <dotlottie-player src="../json/payment-success.lottie" speed="1" autoplay style="height:200px;opacity:0.7;margin:-20px 0;"></dotlottie-player>
                 <div>
                 <h2 class="text-2xl sm:text-3xl font-bold text-white">پرداخت شما قبلاً تایید شده است</h2>
                 <p class="text-white/60 text-md">نیازی به تایید دوباره نیست.</p>
                 </div>
-                ${savedTracking ? `<div class="bg-white/5 rounded-lg px-4 py-3 w-full max-w-xs">
+                ${
+                  savedTracking
+                    ? `<div class="bg-white/5 rounded-lg px-4 py-3 w-full max-w-xs">
                 <p class="text-white/80 text-sm mb-1">کد پیگیری:</p>
                 <p class="text-white text-lg tracking-wider select-all font-['Rajdhani_SemiBold']">${savedTracking}</p>
                 </div>
-                <p class="text-white/60 text-xs max-w-xs mt-[-10px]">لطفاً این کد را نگه دارید. در صورت بروز هرگونه مشکل یا سوال درباره سرویس، به آن نیاز خواهید داشت.</p>` : ''}
+                <p class="text-white/60 text-xs max-w-xs mt-[-10px]">لطفاً این کد را نگه دارید. در صورت بروز هرگونه مشکل یا سوال درباره سرویس، به آن نیاز خواهید داشت.</p>`
+                    : ""
+                }
             `);
-        } else {
-            document.title = "LA Platform - Payment Error";
-            renderHtml(`
-                <dotlottie-player src="../json/payment-failed.lottie" speed="1" autoplay style="height:200px;opacity:0.7;margin:-20px 0;"></dotlottie-player>
+    } else {
+      document.title = "LA Platform - Payment Error";
+      renderHtml(`
+                <dotlottie-player class="text-5xl" src="../json/payment-failed.lottie" speed="1" autoplay style="opacity:0.7;margin:-20px 0;"></dotlottie-player>
                 <div>
-                <h2 class="text-2xl sm:text-3xl font-bold text-white">خطا در پردازش اطلاعات 🤨</h2>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white mt-5">خطا در پردازش اطلاعات 🤨</h2>
                 <p class="text-white/60 text-md mt-[10px]">
                     متأسفانه پرداخت با خطا مواجه شد.  
                     مبلغ پرداختی طی ۲۴ الی ۷۲ ساعت آینده به حساب شما بازگردانده می‌شود.  
@@ -59,18 +69,22 @@ $(async function () {
                 </p>
                 </div>
             `);
-        }
-    } else if (status === "true" && tracking) {
-        document.title = "LA Platform - Payment Success";
-        localStorage.setItem("lastPaymentSuccess", "true");
-        localStorage.setItem("lastTrackingCode", tracking);
+    }
+  } else if (status === "true" && tracking) {
+    document.title = "LA Platform - Payment Success";
+    localStorage.setItem("lastPaymentSuccess", "true");
+    localStorage.setItem("lastTrackingCode", tracking);
 
-        renderHtml(`
+    renderHtml(`
             <dotlottie-player src="../json/payment-success.lottie" speed="1" autoplay style="height:230px;opacity:0.7;margin:-20px 0;"></dotlottie-player>
             <div>
                 <h2 class="text-2xl sm:text-3xl font-bold text-white">سرویس شما فعال شد 🥂</h2>
                 <p class="text-sm sm:text-base text-white/70 max-w-md leading-relaxed">
-                    سرویس خریداری شده شما با موفقیت فعال شد! ${isSended ? 'اکنون می‌توانید این صفحه را ببندید و به لانچر بازگردید 🦾' : 'لانچر پاسخگو نبود! لطفاً آن را مجدد باز کنید و سرویس خود لذت ببرید 💪'}
+                    سرویس خریداری شده شما با موفقیت فعال شد! ${
+                      isSended
+                        ? "اکنون می‌توانید این صفحه را ببندید و به لانچر بازگردید 🦾"
+                        : "لانچر پاسخگو نبود! لطفاً آن را مجدد باز کنید و سرویس خود لذت ببرید 💪"
+                    }
                 </p>
             </div>
             
@@ -82,11 +96,11 @@ $(async function () {
                 لطفاً این کد را نگه دارید. در صورت بروز هرگونه مشکل یا سوال درباره سرویس، به آن نیاز خواهید داشت.
             </p>
         `);
-        window.history.replaceState({}, document.title, window.location.pathname);
-    } else if (status === "false") {
-        localStorage.setItem("lastPaymentSuccess", "false");
-        document.title = "LA Platform - Payment Failed";
-        renderHtml(`
+    window.history.replaceState({}, document.title, window.location.pathname);
+  } else if (status === "false") {
+    localStorage.setItem("lastPaymentSuccess", "false");
+    document.title = "LA Platform - Payment Failed";
+    renderHtml(`
             <dotlottie-player src="../json/payment-failed.lottie" speed="1" autoplay style="height:230px;opacity:0.7;margin:-20px 0;"></dotlottie-player>
             <div>
                 <h2 class="text-2xl sm:text-3xl font-bold text-white">پرداخت ناموفق بود 🤔</h2>
@@ -95,6 +109,6 @@ $(async function () {
                 </p>
             </div>
         `);
-        window.history.replaceState({}, document.title, window.location.pathname);
-    }
+    window.history.replaceState({}, document.title, window.location.pathname);
+  }
 });

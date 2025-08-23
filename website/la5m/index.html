@@ -171,13 +171,14 @@
         <div class="md:hidden flex">
           <button
             type="button"
-            class="mobile-header text-gray-700 hover:text-indigo-600"
+            class="mobile-header text-gray-700 hover:text-indigo-600 flex flex-col justify-center items-end gap-1 relative"
+            aria-label="open mobile menu"
           >
-            <img
-              src="../assets/img/icon/dashboard-mobile.svg"
-              class="size-6 transition-all duration-150 ease-out-quad focus-visible:ring-2 active:scale-[0.955]"
-              alt="d"
-            />
+            <div class="h-1 w-4 bg-gray-300/60 rounded-2xl"></div>
+            <div class="h-1 w-3 bg-gray-300/60 rounded-2xl"></div>
+            <div
+              class="absolute -bottom-1 -right-1.5 h-5 w-0.5 bg-gray-300/60"
+            ></div>
           </button>
         </div>
       </nav>
@@ -447,6 +448,7 @@
                     <li class="min-w-0 shrink-0 grow-0 basis-full">
                       <button type="button" class="w-full h-full">
                         <img
+                          loading="lazy"
                           src="../assets/img/showcase/fivem_showcase_client_2.webp"
                           alt="LA fivem client interface showcase 2 "
                           fetchpriority="auto"
@@ -460,6 +462,7 @@
                     <li class="min-w-0 shrink-0 grow-0 basis-full">
                       <button type="button" class="w-full h-full">
                         <img
+                          loading="lazy"
                           src="../assets/img/showcase/fivem_showcase_client_3.webp"
                           alt="LA fivem client interface showcase 3"
                           fetchpriority="auto"
@@ -538,6 +541,7 @@
               class="feature-bg-gradient rounded-xl p-6 shadow-lg ring-1 ring-white/15 backdrop-blur-md transition-[transform,box-shadow,background] duration-300 ease-out [background-position:100%_70%] [background-size:100%_250%] hover:ring-white/25 hover:[background-position:100%_0%]"
             >
               <img
+                loading="lazy"
                 src="../assets/img/icon/optimize.svg"
                 class="w-[32px] h-[32px]"
                 alt="o"
@@ -552,6 +556,7 @@
               class="feature-bg-gradient rounded-xl p-6 shadow-lg ring-1 ring-white/15 backdrop-blur-md transition-[transform,box-shadow,background] duration-300 ease-out [background-position:100%_70%] [background-size:100%_250%] hover:ring-white/25 hover:[background-position:100%_0%]"
             >
               <img
+                loading="lazy"
                 src="../assets/img/icon/ui-ux.svg"
                 class="w-[32px] h-[32px]"
                 alt="u"
@@ -566,6 +571,7 @@
               class="feature-bg-gradient rounded-xl p-6 shadow-lg ring-1 ring-white/15 backdrop-blur-md transition-[transform,box-shadow,background] duration-300 ease-out [background-position:100%_70%] [background-size:100%_250%] hover:ring-white/25 hover:[background-position:100%_0%]"
             >
               <img
+                loading="lazy"
                 src="../assets/img/icon/virus.svg"
                 class="w-[32px] h-[32px]"
                 alt="v"
@@ -580,6 +586,7 @@
               class="feature-bg-gradient rounded-xl p-6 shadow-lg ring-1 ring-white/15 backdrop-blur-md transition-[transform,box-shadow,background] duration-300 ease-out [background-position:100%_70%] [background-size:100%_250%] hover:ring-white/25 hover:[background-position:100%_0%]"
             >
               <img
+                loading="lazy"
                 src="../assets/img/icon/update.svg"
                 class="w-[32px] h-[32px]"
                 alt="u"
@@ -622,11 +629,8 @@
                         type="submit"
                         class="flex items-center gap-1.5 rounded-md bg-white px-3.5 py-2.5 text-sm font-bold text-gray-900 shadow-sm hover:bg-[#C30440] transition-all duration-150 ease-out-quad focus-visible:ring-2 active:scale-[0.975] disabled:cursor-not-allowed disabled:opacity-40"
                       >
-                        <img
-                          src="../assets/img/icon/develop.svg"
-                          class="size-6"
-                          alt="d"
-                        />ارتباط با بخش توسعه
+                        loading="lazy" src="../assets/img/icon/develop.svg"
+                        class="size-6" alt="d" />ارتباط با بخش توسعه
                       </button>
                     </div>
                   </a>
@@ -640,6 +644,7 @@
                       class="h-10 w-10 flex items-center justify-center rounded-md border border-gray-700 text-white bg-gray-700/40"
                     >
                       <img
+                        loading="lazy"
                         src="../assets/img/icon/revarse-enginer.svg"
                         class="w-[28px] h-[28px]"
                         alt="re"
@@ -664,6 +669,7 @@
                       class="h-10 w-10 flex items-center justify-center rounded-md border border-gray-700 text-white bg-gray-700/40"
                     >
                       <img
+                        loading="lazy"
                         src="../assets/img/icon/security-architecture.svg"
                         class="w-[28px] h-[28px]"
                         alt="sa"
@@ -701,6 +707,7 @@
             <div class="col-span-full lg:col-span-2">
               <div class="flex items-center">
                 <img
+                  loading="lazy"
                   src="../assets/img/logo-la5m.webp"
                   alt=""
                   class="h-10 me-2"
@@ -728,18 +735,21 @@
                   href="https://www.rockstargames.com/gta-online"
                   target="_blank"
                   ><img
-                    src="../assets/img/footer/gta-online.png"
+                    loading="lazy"
+                    src="../assets/img/footer/gta-online.webp"
                     alt="GTA Online"
                     class="w-25 h-20 rounded-[8px] hover:shadow-[0_0_15px_0_rgba(0,0,0,0.5)] duration-300 active:scale-[0.97] transition-all object-contain"
                 /></a>
                 <a href="https://fivem.net" target="_blank"
                   ><img
+                    loading="lazy"
                     src="../assets/img/footer/fivem.png"
                     alt="FiveM"
                     class="w-25 h-20 rounded-[8px] hover:shadow-[0_0_15px_0_rgba(240,126,52,0.5)] duration-300 active:scale-[0.97] transition-all object-contain"
                 /></a>
                 <a href="https://la5m.ir" target="_blank"
                   ><img
+                    loading="lazy"
                     src="../assets/img/footer/la.png"
                     alt="LA"
                     class="w-25 h-20 rounded-[8px] hover:shadow-[0_0_15px_0_rgba(22,25,35,0.5)] duration-300 active:scale-[0.97] transition-all object-contain"
@@ -753,12 +763,14 @@
               <div class="mt-6 flex grid-cols-5 gap-2">
                 <a href="https://enamad.ir" target="_blank"
                   ><img
+                    loading="lazy"
                     src="../assets/img/footer/enamad.png"
                     alt="Enamad"
                     class="w-20 h-15 hover:[filter:drop-shadow(0_0_8px_rgba(47,106,184,0.2))] duration-300 active:scale-[0.97] transition-all object-contain"
                 /></a>
                 <a href="https://5star.tebex.io" target="_blank"
                   ><img
+                    loading="lazy"
                     src="../assets/img/footer/fivestar.png"
                     alt="FiveStar"
                     class="w-20 h-15 hover:[filter:drop-shadow(0_0_8px_rgba(252,255,37,0.2))] duration-300 active:scale-[0.97] transition-all object-contain"
@@ -780,6 +792,7 @@
                     class="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white bg-[#C30440]"
                   >
                     <img
+                      loading="lazy"
                       src="../assets/img/icon/discord.svg"
                       class="flex-shrink-0 size-4"
                       alt="d"
@@ -896,6 +909,7 @@
                   class="flex shrink-0 grow-0 basis-full items-center justify-center pe-3 md:ps-8"
                 >
                   <img
+                    loading="lazy"
                     class="h-full max-h-[70svh] w-auto select-none rounded-lg border border-white/5 bg-white/5 object-contain shadow-lg"
                     loading="lazy"
                     fetchpriority="low"
@@ -910,6 +924,7 @@
                   class="flex shrink-0 grow-0 basis-full items-center justify-center pe-3 md:ps-8"
                 >
                   <img
+                    loading="lazy"
                     class="h-full max-h-[70svh] w-auto select-none rounded-lg border border-white/5 bg-white/5 object-contain shadow-lg"
                     loading="lazy"
                     fetchpriority="low"
@@ -924,6 +939,7 @@
                   class="flex shrink-0 grow-0 basis-full items-center justify-center pe-3 md:ps-8"
                 >
                   <img
+                    loading="lazy"
                     class="h-full max-h-[70svh] w-auto select-none rounded-lg border border-white/5 bg-white/5 object-contain shadow-lg"
                     loading="lazy"
                     fetchpriority="low"
@@ -948,6 +964,7 @@
               data-selected="true"
             >
               <img
+                loading="lazy"
                 width="128"
                 height="72"
                 class="h-12 w-full select-none object-contain sm:h-16"
@@ -963,6 +980,7 @@
               data-index="1"
             >
               <img
+                loading="lazy"
                 width="128"
                 height="72"
                 class="h-12 w-full select-none object-contain sm:h-16"
@@ -978,6 +996,7 @@
               data-index="2"
             >
               <img
+                loading="lazy"
                 width="128"
                 height="72"
                 class="h-12 w-full select-none object-contain sm:h-16"
