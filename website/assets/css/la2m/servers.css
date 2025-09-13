@@ -179,7 +179,7 @@ img {
 .app-servers-filter {
     position: absolute;
     width: 319px;
-    height: 511.45px;
+    height: 768px;
     border-radius: 6.01px;
     background: radial-gradient(37.21% 37.21% at 50% 62.79%, rgb(59 57 53 / 75%) 0%, rgb(63 62 57 / 75%) 100%);
     box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.45);
@@ -222,6 +222,10 @@ img {
     padding: 10px;
     align-items: center;
     cursor: pointer;
+}
+
+.app-servers-filter-box box:hover {
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .app-servers-filter-box span {
@@ -267,6 +271,7 @@ img {
     align-items: center;
     box-sizing: border-box;
     border: 3px solid transparent;
+    cursor: pointer;
 }
 
 .app-servers-filter-title-line div:last-child:hover {
@@ -350,6 +355,7 @@ img {
     transition: stroke-dasharray 0.6s, stroke-dashoffset 0.6s;
 }
 
+.app-servers-filter-country-box,
 .app-servers-filter-tags-box {
     width: 100%;
     height: -webkit-fill-available;
@@ -360,15 +366,18 @@ img {
     scroll-snap-type: y mandatory;
 }
 
+.app-servers-filter-country-box:hover,
 .app-servers-filter-tags-box:hover {
     overflow-y: scroll;
     opacity: 1;
 }
 
+.app-servers-filter-country-box:hover::-webkit-scrollbar,
 .app-servers-filter-tags-box::-webkit-scrollbar {
     width: 0px;
 }
 
+.app-servers-filter-country-box div,
 .app-servers-filter-tags-box div {
     width: 319px;
     height: 30px;
@@ -383,11 +392,21 @@ img {
     scroll-snap-align: end;
 }
 
-.app-servers-filter-tags-box h1 {
-    margin-left: 12px;
-    font-family: 'Rajdhani Medium';
+.app-servers-filter-country-box div:hover,
+.app-servers-filter-tags-box div:hover {
+    background-color: rgba(255, 255, 255, 0.10);
 }
 
+.app-servers-filter-country-box h1,
+.app-servers-filter-tags-box span {
+    margin-left: 12px;
+    font-family: 'Rajdhani SemiBold';
+    font-size: 15px;
+    display: flex;
+    gap: 8px;
+}
+
+.app-servers-filter-country-box h2,
 .app-servers-filter-tags-box h2 {
     color: rgba(172, 172, 172, 0.75);
     text-align: right;
@@ -447,21 +466,27 @@ img {
     margin-right: 11.5px;
 }
 
-.filter-tag h1 {
+.filter-tag span, h1 {
     letter-spacing: 1px;
     font-size: 2em;
+    letter-spacing: 0.048vw;
 }
 
-.filter-tag h2 {
+.filter-tag h2, .filter-country h2 {
     font-size: 1.5em;
     margin-block: 0.83em;
     font-weight: bold;
+    letter-spacing: 0.048vw;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: revert;
 }
 
 .app-servers-loading {
     position: absolute;
     display: flex;
-    position-area: center;
+    place-self: anchor-center;
     flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
@@ -575,4 +600,8 @@ img {
     font-style: normal;
     font-weight: 600;
     text-transform: uppercase;
+}
+
+.app-servers-filter-country-box .filter-country span {
+    border-radius: 5.76px;
 }

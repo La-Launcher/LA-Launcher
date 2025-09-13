@@ -1,7 +1,7 @@
 import './utils/loading.dat.js';
 import { wait } from "./utils/tools.js";
 import { parseColorCodes } from './utils/color.codeparser.js';
-import { sortServers, renderTags } from './utils/search.filter.sort.js';
+import { sortServers, renderFilters } from './utils/search.filter.sort.js';
 import { refreshServerInfo } from './services/server.info.js';
 import './services/download.service.js';
 
@@ -59,7 +59,7 @@ async function UpdateServers() {
 
             players += server.players.count;
             const serverElement = $(`
-                <div id="${server.id}" tags="${server.tags?.list}" class="app-server-list-main fade-in-row ${server.licenseType === "pt" ? "app-server-license-effect" : ''}">
+                <div id="${server.id}" tags="${server.tags?.list}" country="${server.locale}" class="app-server-list-main fade-in-row ${server.licenseType === "pt" ? "app-server-license-effect" : ''}">
                     <div>
                         <img class="app-server-list-server-logo" src="../img/logo-template/${randomLogo}.svg" alt="Server Logo">
                         ${server.offline ? "<offline><span>خاموش</span></offline>" : ''} 
@@ -68,7 +68,7 @@ async function UpdateServers() {
                     </div>
                     <div>
                         <span class="app-server-list-server-player-count min-w-[55px] lg:min-w-[80px] [min-inline-size:max-content]">${server.players.maxCount} / ${server.players.count}</span>
-                        <img class="app-server-list-server-flag" src="../img/icon/flag.png" alt="f">
+                        <span class="app-server-list-server-flag fi fi-${server.localeCountry.toLowerCase()}"></span>
                         ${licenseTag}
                         ${tags}
                     </div>
@@ -76,8 +76,8 @@ async function UpdateServers() {
             `);
         
             serversData.append(serverElement);
-            setTimeout(() => serverElement.addClass('show'), 20);
-            await wait(100);
+            setTimeout(() => serverElement.addClass('show'), 10);
+            await wait(40);
 
             const serverLogo = serverElement.find(".app-server-list-server-logo");
             $('<img>').attr('src', logoUrl)
@@ -89,7 +89,7 @@ async function UpdateServers() {
         $("#players span").html(players + " players");
         $(".app-servers-sort div").first().addClass("selected").siblings().removeClass("selected");
         sortServers("boost");
-        renderTags(allTags);
+        renderFilters(getServers.data, allTags);
         refreshServerInfo();
     };
 }

@@ -34,6 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../font/PFDinDisplayPro/style.css"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../js/assets/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icons/css/flag-icons.min.css">
     <script type="module" src="../js/servers.js"></script>
   </head>
   <body class="relative min-h-screen bg-gray-100">
@@ -126,10 +127,18 @@
           <span>سرور های پر</span>
         </box>
       </div>
+      
       <div class="app-servers-filter-line"></div>
-      <div class="app-servers-filter-title-line">
+      <div class="app-servers-filter-title-line" id="filter-country">
+        <div><span>کشور ها</span></div>
+        <div id="app-servers-filter-country-trash"><img src="../img/icon/trash.svg" alt="t"></div>
+      </div>
+      <div class="app-servers-filter-country-box"></div>
+
+      <div class="app-servers-filter-line"></div>
+      <div class="app-servers-filter-title-line" id="filter-tag">
         <div><span>تگ ها</span></div>
-        <div id="app-servers-filter-trash"><img src="../img/icon/trash.svg" alt="t"></div>
+        <div id="app-servers-filter-tag-trash"><img src="../img/icon/trash.svg" alt="t"></div>
       </div>
       <div class="app-servers-filter-tags-box"></div>
     </div>

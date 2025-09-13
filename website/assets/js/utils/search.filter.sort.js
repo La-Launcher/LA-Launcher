@@ -1,5 +1,106 @@
+let activeTags = [], redTags = [], activeCountries = [], redCountries = [];
+const countryLocaleMap = {
+    "fa-ir": "Iranian (Farsi)",
+    "fa-af": "Afghan (Dari)",
+    "en-us": "American (English)",
+    "en-gb": "British (English)",
+    "en-au": "Australian (English)",
+    "en-ca": "Canadian (English)",
+    "en-nz": "New Zealander (English)",
+    "en-in": "Indian (English)",
+    "en-pk": "Pakistani (English)",
+    "en-ph": "Filipino (English)",
+    "en-sg": "Singaporean (English)",
+    "en-za": "South African (English)",
+    "ar-sa": "Saudi (Arabic)",
+    "ar-eg": "Egyptian (Arabic)",
+    "ar-ae": "Emirati (Arabic)",
+    "ar-kw": "Kuwaiti (Arabic)",
+    "ar-om": "Omani (Arabic)",
+    "ar-qa": "Qatari (Arabic)",
+    "ar-bh": "Bahraini (Arabic)",
+    "ar-dz": "Algerian (Arabic)",
+    "ar-ma": "Moroccan (Arabic)",
+    "ar-tn": "Tunisian (Arabic)",
+    "ar-ly": "Libyan (Arabic)",
+    "ar-iq": "Iraqi (Arabic)",
+    "ar-ps": "Palestinian (Arabic)",
+    "ar-sy": "Syrian (Arabic)",
+    "ar-jo": "Jordanian (Arabic)",
+    "ar-lb": "Lebanese (Arabic)",
+    "zh-cn": "Chinese (Chinese)",
+    "zh-tw": "Taiwanese (Chinese)",
+    "zh-hk": "Hong Konger (Chinese)",
+    "ja-jp": "Japanese (Japanese)",
+    "ko-kr": "Korean (Korean)",
+    "de-de": "German (German)",
+    "de-at": "Austrian (German)",
+    "de-ch": "Swiss (German)",
+    "fr-fr": "French (French)",
+    "fr-ca": "Canadian (French)",
+    "fr-be": "Belgian (French)",
+    "fr-ch": "Swiss (French)",
+    "es-es": "Spanish (Spanish)",
+    "es-mx": "Mexican (Spanish)",
+    "es-ar": "Argentine (Spanish)",
+    "es-co": "Colombian (Spanish)",
+    "es-cl": "Chilean (Spanish)",
+    "es-pe": "Peruvian (Spanish)",
+    "es-ve": "Venezuelan (Spanish)",
+    "es-ec": "Ecuadorian (Spanish)",
+    "es-bo": "Bolivian (Spanish)",
+    "es-hn": "Honduran (Spanish)",
+    "es-gt": "Guatemalan (Spanish)",
+    "es-sv": "Salvadoran (Spanish)",
+    "es-py": "Paraguayan (Spanish)",
+    "es-uy": "Uruguayan (Spanish)",
+    "es-ni": "Nicaraguan (Spanish)",
+    "es-cr": "Costa Rican (Spanish)",
+    "pt-pt": "Portuguese (Portuguese)",
+    "pt-br": "Brazilian (Portuguese)",
+    "ru-ru": "Russian (Russian)",
+    "uk-ua": "Ukrainian (Ukrainian)",
+    "pl-pl": "Polish (Polish)",
+    "ro-ro": "Romanian (Romanian)",
+    "hu-hu": "Hungarian (Hungarian)",
+    "fi-fi": "Finnish (Finnish)",
+    "sv-se": "Swedish (Swedish)",
+    "no-no": "Norwegian (Norwegian)",
+    "da-dk": "Danish (Danish)",
+    "nl-nl": "Dutch (Dutch)",
+    "nl-be": "Flemish (Flemish)",
+    "el-gr": "Greek (Greek)",
+    "tr-tr": "Turkish (Turkish)",
+    "he-il": "Israeli (Hebrew)",
+    "hi-in": "Indian (Hindi)",
+    "bn-in": "Indian (Bengali)",
+    "ta-in": "Indian (Tamil)",
+    "te-in": "Indian (Telugu)",
+    "ml-in": "Indian (Malayalam)",
+    "mr-in": "Indian (Marathi)",
+    "gu-in": "Indian (Gujarati)",
+    "kn-in": "Indian (Kannada)",
+    "pa-in": "Indian (Punjabi)",
+    "pa-pk": "Pakistani (Punjabi)",
+    "or-in": "Indian (Odia)",
+    "as-in": "Indian (Assamese)",
+    "ne-np": "Nepalese (Nepali)",
+    "si-lk": "Sri Lankan (Sinhala)",
+    "km-kh": "Cambodian (Khmer)",
+    "lo-la": "Laotian (Lao)",
+    "my-mm": "Burmese (Burmese)",
+    "th-th": "Thai (Thai)",
+    "vi-vn": "Vietnamese (Vietnamese)",
+    "id-id": "Indonesian (Indonesian)",
+    "ms-my": "Malaysian (Malay)",
+    "ms-sg": "Singaporean (Malay)",
+    "ur-in": "Indian (Urdu)",
+    "ur-pk": "Pakistani (Urdu)"
+};
+
 $(".app-main-server-search-input").on("input", filterServers);
-$("#app-servers-filter-trash").on("click", clearAllTags);
+$("#app-servers-filter-tag-trash").on("click", clearAllTags);
+$("#app-servers-filter-country-trash").on("click", clearAllCountries);
 
 $(".app-servers-filter-box box").on("click", function() {
     const checkbox = $(this).find("input[type='checkbox']");
@@ -18,20 +119,28 @@ function filterServers() {
 
         const serverName = $(this).find(".app-server-list-server-name").text().toLowerCase();
         const serverIp = $(this).attr("ip") ? $(this).attr("ip").toLowerCase() : '';
+        const serverCountry = $(this).attr('country') ? $(this).attr('country').toLowerCase() : '';
+        const serverTags = $(this).attr('tags')?.split(',').map(t => t.trim().toLowerCase()) || [];
 
         let matchesFilter = (emptyShow && playerCount === 0) || (fullShow && playerCount >= maxCount);
         let matchesSearch = serverName.includes(searchTerm) || serverIp.includes(searchTerm);
+        let matchesTags = (activeTags.length === 0 || activeTags.every(t => serverTags.includes(t))) && 
+                         (redTags.length === 0 || !redTags.some(t => serverTags.includes(t)));
+        let matchesCountries = (activeCountries.length === 0 || activeCountries.every(c => serverCountry === c)) && 
+                             (redCountries.length === 0 || !redCountries.some(c => serverCountry === c));
 
-        let matchesTags = activeTags.every(t => $(this).attr('tags')?.split(',').includes(t)) && !redTags.some(t => $(this).attr('tags')?.split(',').includes(t));
-
-        if ((matchesFilter || !matchesSearch) || !matchesTags)
+        if ((matchesFilter || !matchesSearch) || !matchesTags || !matchesCountries)
             $(this).hide();
         else
             $(this).show();
     });
 
-    toggleTrashButton();
-    saveTagsToLocalStorage();
+    toggleTrashButton(true);
+    toggleTrashButton(false);
+    saveFiltersToLocalStorage();
+
+    $("#players span").text($(".app-server-list-server-player-count:visible").toArray().reduce((sum, el) => sum + (+el.textContent.split("/")[1] || 0), 0) + " players");
+    $("#servers span").text($(".app-server-list-server-player-count:visible").length + " servers");
 }
 
 $(".app-server-info-more input").on("input", function () {
@@ -41,18 +150,22 @@ $(".app-server-info-more input").on("input", function () {
     });
 });
 
-let activeTags = [], redTags = [];
-
-function filterServersByTag() {
+function filterServersByFilters() {
     $('.app-server-list-main').each(function() {
-        const server = $(this), serverTags = server.attr('tags')?.split(',') || [];
-        server.toggle(activeTags.every(t => serverTags.includes(t)) && !redTags.some(t => serverTags.includes(t)));
+        const server = $(this);
+        const serverTags = server.attr('tags')?.split(',').map(t => t.trim().toLowerCase()) || [];
+        const serverCountry = server.attr('country')?.toLowerCase() || '';
+        const matchesTags = (activeTags.length === 0 || activeTags.every(t => serverTags.includes(t))) && 
+                           (redTags.length === 0 || !redTags.some(t => serverTags.includes(t)));
+        const matchesCountries = (activeCountries.length === 0 || activeCountries.every(c => serverCountry === c)) && 
+                               (redCountries.length === 0 || !redCountries.some(c => serverCountry === c));
+        server.toggle(matchesTags && matchesCountries);
     });
     filterServers();
 }
 
 function handleTagClick(tagElement) {
-    const tag = tagElement.find('h1').text().trim().toLowerCase();
+    const tag = tagElement.find('span').text().trim().toLowerCase();
     if (tagElement.hasClass('active')) {
         activeTags = activeTags.filter(t => t !== tag);
         redTags.push(tag);
@@ -64,76 +177,139 @@ function handleTagClick(tagElement) {
         activeTags.push(tag);
         tagElement.addClass('active').css('background', '#166955');
     }
-    filterServersByTag();
-    toggleTrashButton();
-    saveTagsToLocalStorage();
+    filterServersByFilters();
+    toggleTrashButton(false); 
+    saveFiltersToLocalStorage();
+}
+
+function handleCountryClick(countryElement) {
+    const country = countryElement.attr("data-locale");
+    if (countryElement.hasClass('active')) {
+        activeCountries = activeCountries.filter(c => c !== country);
+        redCountries.push(country);
+        countryElement.removeClass('active').addClass('red').css('background', '#7D2A21');
+    } else if (countryElement.hasClass('red')) {
+        redCountries = redCountries.filter(c => c !== country);
+        countryElement.removeClass('red').css('background', '');
+    } else {
+        activeCountries.push(country);
+        countryElement.addClass('active').css('background', '#166955');
+    }
+    filterServersByFilters();
+    toggleTrashButton(true); 
+    saveFiltersToLocalStorage();
 }
 
 function clearAllTags() {
     activeTags = [];
     redTags = [];
     $('.filter-tag').removeClass('active red').css('background', ''); 
-    filterServersByTag();
-    toggleTrashButton();
-    saveTagsToLocalStorage();
+    filterServersByFilters();
+    toggleTrashButton(false); 
+    saveFiltersToLocalStorage();
 }
 
-function toggleTrashButton() {
-    if (activeTags.length > 0 || redTags.length > 0) 
-        $("#app-servers-filter-trash, .app-main-server-search-filter-button-menu div").show();
-    else
-        $("#app-servers-filter-trash, .app-main-server-search-filter-button-menu div").hide();
+function clearAllCountries() {
+    activeCountries = [];
+    redCountries = [];
+    $('.filter-country').removeClass('active red').css('background', ''); 
+    filterServersByFilters();
+    toggleTrashButton(true); 
+    saveFiltersToLocalStorage();
 }
 
-function saveTagsToLocalStorage() {
-    const filters = {
+function toggleTrashButton(isCountry) {
+    const tagActive = activeTags.length > 0 || redTags.length > 0;
+    const countryActive = activeCountries.length > 0 || redCountries.length > 0;
+    const menuDiv = $('.app-main-server-search-filter-button-menu div');
+
+    if (isCountry) {
+        $('#app-servers-filter-country-trash').toggle(countryActive);
+        menuDiv.toggle(tagActive || countryActive); 
+    } else {
+        $('#app-servers-filter-tag-trash').toggle(tagActive);
+        menuDiv.toggle(tagActive || countryActive); 
+    }
+}
+
+function saveFiltersToLocalStorage() {
+    localStorage.setItem(`server_filters`, JSON.stringify({
         activeTags,
         redTags,
+        activeCountries,
+        redCountries,
         emptyShow: $("#app-servers-filter-empty").is(":checked"),
         fullShow: $("#app-servers-filter-full").is(":checked")
-    };
-    localStorage.setItem('serverFilters', JSON.stringify(filters));
+    }));
 }
 
-function loadTagsFromLocalStorage() {
-    const filters = JSON.parse(localStorage.getItem('serverFilters'));
+function loadFiltersFromLocalStorage() {
+    const filters = JSON.parse(localStorage.getItem(`server_filters`));
+
     if (filters) {
         activeTags = filters.activeTags || [];
         redTags = filters.redTags || [];
+        activeCountries = filters.activeCountries.length == 0 ? ['fa-ir'] : filters.activeCountries;
+        redCountries = filters.redCountries || [];
         $("#app-servers-filter-empty").prop("checked", filters.emptyShow);
         $("#app-servers-filter-full").prop("checked", filters.fullShow);
-
         filterServers();
     }
 }
 
-export function renderTags(tags) {
-    loadTagsFromLocalStorage();
-    const tagsBoxHash = $('.app-servers-filter-tags-box');
+export function renderFilters(servers, tags) {
+    loadFiltersFromLocalStorage();
+    const tagsBoxHash = $('.app-servers-filter-tags-box').empty();
+    const countriesBoxHash = $('.app-servers-filter-country-box').empty();
 
     const activeTagsBackup = [...activeTags];
     const redTagsBackup = [...redTags];
+    const activeCountriesBackup = [...activeCountries];
+    const redCountriesBackup = [...redCountries];
 
-    if (activeTags.length > 0 || redTags.length > 0) {
+    if (activeTags.length > 0 || redTags.length > 0 || activeCountries.length > 0 || redCountries.length > 0) {
         tagsBoxHash.empty();
+        countriesBoxHash.empty();
         activeTags = [];
         redTags = [];
+        activeCountries = [];
+        redCountries = [];
     }
 
     tags.forEach(data => {
-        const tagElement = $(`<div class="filter-tag"><h1>${data[0]}</h1><h2>${data[1]}</h2></div>`);
+        const tagElement = $(`<div class="filter-tag"><span>${data[0]}</span><h2>${data[1]}</h2></div>`);
         tagsBoxHash.append(tagElement);
 
         if (activeTagsBackup.includes(data[0].toLowerCase())) tagElement.addClass('active').css('background', '#166955');
         if (redTagsBackup.includes(data[0].toLowerCase())) tagElement.addClass('red').css('background', '#7D2A21');
     });
 
+    const localePlayerCount = {};
+    servers.forEach(data => {
+        const locale = data.locale.toLowerCase();
+        if (countryLocaleMap[locale]) localePlayerCount[locale] = (localePlayerCount[locale] || 0) + (parseInt(data.players.count) || 0);
+    });
+
+    Object.entries(localePlayerCount).forEach(([locale, playerCount]) => {
+        const countryName = countryLocaleMap[locale];
+        const [, countryCode] = locale.split('-');
+        const countryElement = $(`<div class="filter-country" data-locale="${locale}"><h1><span class="fi fi-${countryCode.toLowerCase()}"></span>${countryName}</h1><h2>${playerCount}</h2></div>`);
+        
+        countriesBoxHash.append(countryElement);
+        if (activeCountriesBackup.includes(locale)) countryElement.addClass('active').css('background', '#166955');
+        if (redCountriesBackup.includes(locale)) countryElement.addClass('red').css('background', '#7D2A21');
+    });
+
     activeTags = activeTagsBackup.filter(tag => tags.some(t => t[0].toLowerCase() === tag));
-    redTags = redTagsBackup.filter(tag => tags.some(t => t[0].toLowerCase() === tag));    
+    redTags = redTagsBackup.filter(tag => tags.some(t => t[0].toLowerCase() === tag));
+    activeCountries = activeCountriesBackup.filter(country => countryLocaleMap.hasOwnProperty(country));
+    redCountries = redCountriesBackup.filter(country => countryLocaleMap.hasOwnProperty(country));
 
     $('.filter-tag').click(function() { handleTagClick($(this)); });
+    $('.filter-country').click(function() { handleCountryClick($(this)); });
 
-    toggleTrashButton();
+    toggleTrashButton(true); 
+    toggleTrashButton(false);
 }
 
 let activeSorts = { letter: null, number: null };
@@ -199,11 +375,9 @@ let hoverTimeout, menuCheckTimeout, sortMenuCheckTimeout;
 function showMenu(menu, button, offsetTop) {
     let position = button.offset();
     let screenWidth = $(window).width();
-    console.log(screenWidth)
     let newTopVW = ((position.top + offsetTop) / screenWidth) * 100;
     let newLeftVW = (position.left / screenWidth) * 100;
 
-    console.log(newLeftVW)
     menu.css({ "top": ((position.top + 20) / screenWidth) * 100 + "vw", "left": newLeftVW + "vw", "display": "none", "opacity": 0 });
 
     setTimeout(() => {
