@@ -36,6 +36,7 @@ $(document).ready(async function() {
     const $paymentButton = $('a.cursor-pointer');
     const pricePerBoost = 9000;
     const minBoosts = 10;
+    const maxBoosts = 10000000;
 
     function updatePriceDisplay(boostCount) {
         $price.text((boostCount * pricePerBoost).toLocaleString('en-IR'));
@@ -77,10 +78,11 @@ $(document).ready(async function() {
 
     $boostInput.on('input', function() {
         let boostCount = parseInt($(this).val()) || minBoosts;
-        if (boostCount < minBoosts) {
-            boostCount = minBoosts;
-            $(this).val(minBoosts);
-        }
+
+        if (boostCount < minBoosts) boostCount = minBoosts;
+        if (boostCount > maxBoosts) boostCount = maxBoosts;
+
+        $(this).val(boostCount);
         updatePriceDisplay(boostCount);
         adjustInputWidth();
     });
@@ -93,9 +95,11 @@ $(document).ready(async function() {
     $boostInput.on('paste', function(e) {
         e.preventDefault();
         const pastedData = (e.originalEvent || e).clipboardData.getData('text/plain');
-        const numericValue = pastedData.replace(/[^\d]/g, '');
-        let boostCount = numericValue ? parseInt(numericValue) : minBoosts;
+        let boostCount = parseInt(pastedData.replace(/[^\d]/g, '')) || minBoosts;
+
         if (boostCount < minBoosts) boostCount = minBoosts;
+        if (boostCount > maxBoosts) boostCount = maxBoosts;
+
         $(this).val(boostCount);
         updatePriceDisplay(boostCount);
         adjustInputWidth();
@@ -103,10 +107,11 @@ $(document).ready(async function() {
 
     $boostInput.on('blur', function() {
         let boostCount = parseInt($(this).val()) || minBoosts;
-        if (boostCount < minBoosts) {
-            boostCount = minBoosts;
-            $(this).val(minBoosts);
-        }
+
+        if (boostCount < minBoosts) boostCount = minBoosts;
+        if (boostCount > maxBoosts) boostCount = maxBoosts;
+
+        $(this).val(boostCount);
         updatePriceDisplay(boostCount);
         adjustInputWidth();
     });
