@@ -5,7 +5,7 @@ import { setImage } from './utils/tools.js';
 
 $(document).ready(async function() {
     const params = new URLSearchParams(window.location.search);
-    const serverId = params.get('id');
+    const serverId = params.get('cfxid');
     if (!serverId) return window.location.href = '/404';
 
     const gameName = $('meta[name="game-name"]').attr('content');
