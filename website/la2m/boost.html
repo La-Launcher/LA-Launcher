@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html dir="rtl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="FiveStar Development Team">
+    <meta name="theme-color" content="#ba0202">
+    <meta property="og:site_name" content="LA Platform - Server Boost">
+    <meta property="og:image:width" content="64">
+    <meta property="og:image:height" content="64">
+    <meta property="og:image:type" content="image/png">
+    <meta name="game-name" content='gta5'>
+    <title id="page-title">LA Platform - Server Boost</title>
+    <link rel="icon" type="image/png" href="../img/logo/32x32.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="../img/logo/64x64.png">
+    <link rel="stylesheet" type="text/css" href="../font/Rajdhani/style.css"/>
+    <link rel="stylesheet" type="text/css" href="../font/Peyda/style.css"/>
+    <link rel="stylesheet" href="../css/la2m/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="../js/assets/jquery-3.7.1.min.js"></script>
+    <script type="module" src="../js/boost.js"></script>
+  </head>
+  <body class="relative min-h-screen bg-gray-900 font-[Peyda]">
+    <div id="notification" dir="rtl" class="notification z-[22] mx-[20px] md:mx-0 backdrop-blur-[25px] bg-[#00000052] rounded-[12px] fixed border border-white/10 top-[2.1vh] right-0 left-0 dir-rtl font-['Peyda','Rajdhani_Medium'] max-w-md p-6 flex items-center gap-4 shadow-sm opacity-0 -translate-y-full transition-all duration-500 ease-in-out">
+      <div class="icon flex-shrink-0"></div>
+      <div class="content flex-grow"></div>
+      <div class="close flex-shrink-0"></div>
+    </div>
+
+    <img id="serverBannerMain" src="../img/bg-servers.webp" alt="Background" class="absolute inset-0 w-full h-full object-cover z-0"/>
+    <div class="absolute inset-0 bg-black/80 z-[9] backdrop-blur-[25px]"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95vw] max-w-[550px] h-auto flex flex-col items-center justify-center gap-6 z-10">
+      <div id="content-box" class="flex flex-col items-center text-center gap-4 px-6 pt-10 pb-7 bg-[rgba(0,0,0,0.25)] backdrop-blur-[30px] rounded-2xl border border-white/10 shadow-2xl w-full" style="font-family: 'Rajdhani SemiBold', Peyda;">
+        <dotlottie-player src="../json/checking-data.lottie" speed="1" autoplay loop style="height:200px;opacity:0.5;margin:-65px 0;"></dotlottie-player>
+        <p class="text-white text-lg font-semibold mt-4 mb-[-10px]">در حال بررسی اطلاعات سرور<span class='loading-tag'>...</span></span></p>
+      </div>
+
+      <div id="content-box2" class="flex flex-col items-center text-center gap-4 px-6 pt-10 pb-7 bg-[rgba(0,0,0,0.25)] backdrop-blur-[30px] rounded-2xl border border-white/10 shadow-2xl w-full hidden" style="font-family: 'Rajdhani SemiBold', Peyda;">
+        <div class="absolute top-0 h-[75px] w-full">
+          <img id="serverBanner" src="../img/pattern.webp" alt="Server Banner" class="absolute top-0 left-0 w-full h-full object-cover rounded-t-2xl
+            [mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0))]
+            [mask-repeat:no-repeat] [mask-size:100%_100%]
+            [-webkit-mask-image:linear-gradient(to_bottom,rgba(0,0,0,1),rgba(0,0,0,0))]
+            [-webkit-mask-repeat:no-repeat] [-webkit-mask-size:100%_100%]" />
+        </div>
+
+        <div class="flex items-center justify-between w-full gap-[12px]">
+          <div class="flex items-center gap-[12px]">
+            <img id="serverIcon" src="../img/logo-template/1.svg" alt="Server Icon" class="w-16 h-16 rounded-[4px]">
+            <h1 id="serverName" class="text-2xl text-[#D3EAFD] tracking-[0.048vw] z-[1] text-right">Loading</h1>
+          </div>
+
+          <div class="flex items-center gap-2 bg-black/20 px-3 py-2 rounded-lg w-max z-[1]">
+            <span id="serverBoost" class="font-semibold text-[16px] text-[#dadbd0]" style="font-family: 'Rajdhani SemiBold';">26</span>
+            <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-[#ff75ac]" style="width: 20px;"><path stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12.33 9.75C11.56 11.52 9.8 12.75 7.75 12.75C4.99 12.75 2.75 10.51 2.75 7.75C2.75 4.99 4.99 2.75 7.75 2.75C9.8 2.75 11.56 3.98 12.33 5.75M13.76 4.13L12.89 7L10.02 6.13M7.53998 5.56995V8.51995L8.68998 9.67995"></path></svg>
+          </div>
+        </div>
+
+        <div class="flex flex-col text-right text-white">
+          <h2 class="text-xl font-semibold">بوست سرور</h2>
+          <p class="text-sm text-gray-300">سرور مورد نظر خود را تغویت کنید و در سرور لیست آن را بالاتر از سرور های دیگر ببرید 📈</p>
+        </div>
+
+        <div class="w-full flex flex-col gap-[10px]" style="line-height: normal;">
+          <div class="input-container flex items-center p-[8px_12px] bg-transparent border-[2px] border-white/20 rounded-[10px] focus-within:border-white/40 transition-colors duration-300 ease-in-out">
+            <input id="boostInput" type="number" min="10" value="10" class="bg-transparent text-white text-right focus:outline-none [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-moz-appearance:textfield] w-12"/>
+            <span id="suffix" class="text-white/50 select-none">بوست - <span id="price">80,000</span> تومان</span>
+          </div>
+          <p class="text-white/90 text-center font-[Peyda] text-[14px] sm:text-[15px] font-medium leading-[17.04px] tracking-[-0.6px]" dir="rtl" style="line-height: normal;">تعداد بوست مورد نیاز برای سرور را وارد کنید. توجه داشته باشید که این بوست به صورت دائمی روی سرور اعمال خواهد شد.</p>
+        </div>
+
+        <a target="_blank" dir="rtl" class="cursor-pointer rounded-[13px] bg-[#ba0202] text-white px-6 py-4 hover:bg-[red] transition duration-300 text-white font-[Peyda] text-[14px] sm:text-[15px] w-full flex items-center gap-[6px] justify-center font-bold leading-[17.04px] tracking-[-0.6px] shadow-[0_0_20px_rgba(255,0,21,0.8),_inset_0_-4px_6px_rgba(0,0,0,0.25)] hover:scale-[0.995] select-none">خرید بوست و رفتن به درگاه پرداخت</a>
+      </div>
+    </div>
+  </body>
+</html>

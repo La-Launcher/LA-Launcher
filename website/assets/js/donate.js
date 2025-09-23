@@ -1,6 +1,5 @@
 import showNotification from "./services/notification.service.js";
 import './utils/loading.dat.js';
-import { wait } from "./utils/tools.js";
 
 $(document).ready(() => {
     const form = $("#donation-form"),

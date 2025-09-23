@@ -70,6 +70,8 @@ async function UpdateServers() {
                         <span class="app-server-list-server-player-count min-w-[55px] lg:min-w-[80px] [min-inline-size:max-content]">${server.players.maxCount} / ${server.players.count}</span>
                         <span class="app-server-list-server-flag fi fi-${server.localeCountry.toLowerCase()}"></span>
                         ${licenseTag}
+                        <active-boost class="app-server-list-server-active-boost"><img src="../img/icon/boost.svg" alt="b"><span>تقویت</span></active-boost>
+                        <boost class="app-server-list-server-boost"><img src="../img/icon/boost.svg" alt="b"><span>${server.boost}</span></boost>
                         ${tags}
                     </div>
                 </div>

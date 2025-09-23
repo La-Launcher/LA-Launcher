@@ -605,3 +605,71 @@ h1, h2, h3, h4, h5, h6 {
 .app-servers-filter-country-box .filter-country span {
     border-radius: 5.76px;
 }
+
+.app-server-list-server-active-boost {
+    padding-inline: 8px;
+    width: max-content;
+    height: 22.08px;
+    border-radius: 4px;
+    background: rgba(255, 255, 240, 0.05);
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-left: 6px;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+    display: none;
+    z-index: 1;
+}
+
+.app-server-list-server-active-boost span {
+    color: rgba(255, 255, 240, 0.80);
+    text-align: center;
+    font-family: "PFDinDisplayPro-Regular";
+    font-size: 10.3px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+}
+
+.app-server-list-server-active-boost img {
+    width: 10px;
+    height: 7px;
+}
+
+.app-server-list:not(:has(.disable-server))>div:hover .app-server-list-server-boost,
+.app-server-list:not(:has(.disable-server))>div:hover .app-server-list-server-active-boost {
+    display: flex;
+}
+
+.app-server-list-server-active-boost:active {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.app-server-list-server-active-boost:hover {
+    background: rgba(255, 255, 240, 0.075);
+    border: 2px solid rgba(255, 255, 255, 0.075);
+}
+
+.app-server-list-server-boost {
+    gap: 7px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2.88px;
+    display: none;
+}
+
+.app-server-list-server-boost img {
+    width: 14px;
+    height: 14px;
+}
+
+.app-server-list-server-boost span {
+    color: rgba(255, 255, 240, 0.75);
+    text-align: right;
+    font-family: 'Rajdhani Medium';
+    font-size: 15.898px;
+}

@@ -3,7 +3,6 @@ import './utils/loading.dat.js';
 $(async function () {
     const sendStatusToLauncher = async (status, tracking = null) => {
         try {
-            console.log(status, tracking)
             const result = await fetch(`http://127.0.0.1:7878/payment?status=${status}&tracking=${tracking}`, {method: "POST", headers: { "Content-Type": "application/json" }});
 
             const text = await result.text();
@@ -27,9 +26,38 @@ $(async function () {
     }
 
     const tracking = params.get("tracking");
-    const hadSuccess = localStorage.getItem("lastPaymentSuccess");
     const renderHtml = html => $("#content-box").html(html);
+    const order = params.get("order");
+
+    if (order == "true") {
+        document.title = "LA Platform - Payment Success";
+        localStorage.setItem("lastPaymentSuccess", "true");
+        localStorage.setItem("lastTrackingCode", tracking);
+
+        renderHtml(`
+            <dotlottie-player src="../json/payment-success.lottie" speed="1" autoplay style="height:230px;opacity:0.7;margin:-20px 0;"></dotlottie-player>
+            <div>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">پرداخت با موفقیت انجام شد🥂</h2>
+                <p class="text-sm sm:text-base text-white/70 max-w-md leading-relaxed">
+                    پرداخت شما با موفقیت انجام شد, با تشکر 🙏
+                </p>
+            </div>
+            
+            <div class="bg-white/5 rounded-lg px-4 py-3 w-full max-w-xs">
+                <p class="text-white/80 text-sm mb-1">کد پیگیری:</p>
+                <p class="text-white text-lg tracking-wider select-all font-['Rajdhani_SemiBold']">${tracking}</p>
+            </div>
+            <p class="text-white/60 text-xs max-w-xs mt-[-10px]">
+                لطفاً این کد را نگه دارید. در صورت بروز هرگونه مشکل یا سوال درباره سفارش، به آن نیاز خواهید داشت.
+            </p>
+        `);
+        window.history.replaceState({}, document.title, window.location.pathname);
+        return
+    }
+
+    const hadSuccess = localStorage.getItem("lastPaymentSuccess");
     const isSended = await sendStatusToLauncher(status || hadSuccess, tracking || savedTracking);
+
 
     if (!status) {
         if (hadSuccess === "true") {
