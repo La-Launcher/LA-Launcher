@@ -57,6 +57,8 @@ $(document).ready(async function() {
         $('body').append($a);
         $a[0].click();
         $a.remove();
+        $paymentButton.removeClass("opacity-50 cursor-not-allowed").html("خرید بوست و رفتن به درگاه پرداخت");
+        $boostInput.prop('disabled', false).css('opacity', '1');
     }
 
     async function lockPaymentState() {
