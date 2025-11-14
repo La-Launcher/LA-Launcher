@@ -63,7 +63,7 @@ $(document).ready(async function() {
 
             const { paymentUrl, message } = await response.json();
 
-            if (paymentUrl) return location.href = paymentUrl;
+            if (paymentUrl) return gameName == "gta5" ? location.href = url : window.open(url, '_blank');
             throw new Error(message || "ساخت درگاه موفق نبود.");
         } catch (err) {
             console.error(err);
