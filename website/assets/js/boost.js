@@ -47,6 +47,18 @@ $(document).ready(async function() {
         $boostInput.css('width', `${valueLength}ch`);
     }
 
+    function openWithoutReferrer(url) {
+        const $a = $('<a>', {
+            href: url,
+            target: '_blank',
+            rel: 'noopener noreferrer'
+        });
+
+        $('body').append($a);
+        $a[0].click();
+        $a.remove();
+    }
+
     async function lockPaymentState() {
         $paymentButton.addClass("opacity-50 cursor-not-allowed").html("درحال رفتن به درگاه پرداخت<span class='loading-tag'>...</span>");
         $boostInput.prop('disabled', true).css('opacity', '0.5');
@@ -63,7 +75,8 @@ $(document).ready(async function() {
 
             const { paymentUrl, message } = await response.json();
 
-            if (paymentUrl) return gameName == "gta5" ? location.href = paymentUrl : window.open(paymentUrl, '_blank');
+            if (paymentUrl) return gameName === "gta5" ? (location.href = paymentUrl) : openWithoutReferrer(paymentUrl);
+            
             throw new Error(message || "ساخت درگاه موفق نبود.");
         } catch (err) {
             console.error(err);
