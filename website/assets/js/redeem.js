@@ -37,11 +37,10 @@ $(document).ready(async function() {
             </div>
         `);
 
-        $(document).on('click', '.copy-gift-link', function (e) {
+        $(document).on('click', '.copy-gift-link', async function (e) {
             e.preventDefault();
 
             const $btn = $(this);
-
             const link = window.location.href.replace('&priview=true', '');
             const $label = $btn.find('span');
             const original = $label.text();
@@ -51,9 +50,14 @@ $(document).ready(async function() {
                 setTimeout(() => $label.text(original), 1500);
             };
 
-            if (navigator.clipboard && navigator.clipboard.writeText)
-                navigator.clipboard.writeText(link).then(done);
-            else {
+            try {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    await navigator.clipboard.writeText(link);
+                    done();
+                } else {
+                    throw new Error('Clipboard API not available');
+                }
+            } catch (err) {
                 const $temp = $('<input>').val(link).appendTo('body');
                 $temp[0].select();
                 document.execCommand('copy');
