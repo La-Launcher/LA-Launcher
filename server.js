@@ -5,7 +5,7 @@ const PLATFORM_NAME = process.env.PLATFORM_NAME ?? "la5m";
 
 app.use(express.static("website/assets"));
 
-["index", "servers", "errors", "donate", "api", "payment", "boost"].forEach(route => {
+["index", "servers", "errors", "donate", "api", "payment", "boost", "redeem"].forEach(route => {
   app.get("/" + (route === "index" ? "" : route), (_, res) => res.sendFile(path.join(__dirname, `website/${PLATFORM_NAME}/${route}.html`)));
 });
 

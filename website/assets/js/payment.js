@@ -25,7 +25,8 @@ $(async function () {
         savedTracking = null;
     }
 
-    const tracking = params.get("tracking");
+    const redeem = params.get("redeem");
+    const tracking = params.get("tracking") || redeem;
     const renderHtml = html => $("#content-box").html(html);
     const order = params.get("order");
 
@@ -45,7 +46,7 @@ $(async function () {
             
             <div class="bg-white/5 rounded-lg px-4 py-3 w-full max-w-xs">
                 <p class="text-white/80 text-sm mb-1">کد پیگیری:</p>
-                <p class="text-white text-lg tracking-wider select-all font-['Rajdhani_SemiBold']">${tracking}</p>
+                <p class="text-white text-lg tracking-wider select-all font-['Rajdhani_SemiBold'] cursor-copy">${tracking}</p>
             </div>
             <p class="text-white/60 text-xs max-w-xs mt-[-10px]">
                 لطفاً این کد را نگه دارید. در صورت بروز هرگونه مشکل یا سوال درباره سفارش، به آن نیاز خواهید داشت.
@@ -58,19 +59,19 @@ $(async function () {
     const hadSuccess = localStorage.getItem("lastPaymentSuccess");
     const isSended = await sendStatusToLauncher(status || hadSuccess, tracking || savedTracking);
 
-
     if (!status) {
         if (hadSuccess === "true") {
+            const isGift = (savedTracking.match(/-/g) || []).length == 2;
+
             document.title = "LA Platform - Already Verified";
             renderHtml(`
                 <dotlottie-player src="../json/payment-success.lottie" speed="1" autoplay style="height:200px;opacity:0.7;margin:-20px 0;"></dotlottie-player>
                 <div>
-                <h2 class="text-2xl sm:text-3xl font-bold text-white">پرداخت شما قبلاً تایید شده است</h2>
-                <p class="text-white/60 text-md">نیازی به تایید دوباره نیست.</p>
-                </div>
-                ${savedTracking ? `<div class="bg-white/5 rounded-lg px-4 py-3 w-full max-w-xs">
-                <p class="text-white/80 text-sm mb-1">کد پیگیری:</p>
-                <p class="text-white text-lg tracking-wider select-all font-['Rajdhani_SemiBold']">${savedTracking}</p>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white">پرداخت شما قبلاً تایید شده است</h2>
+                    <p class="text-white/60 text-md">نیازی به تایید دوباره نیست.</p>
+                    </div>
+                    ${savedTracking ? `<div class="bg-white/5 rounded-lg px-4 py-3 w-full ${isGift ? 'flex flex-col 6px' : 'max-w-xs'}"><p class="text-white/80 text-sm mb-1">${isGift ? "لینک هدیه:" : "کد پیگیری:"}</p>
+                    ${isGift ? `<iframe src="https://la5m.ir/redeem?code=${savedTracking}&priview=true" class="h-[192px] rounded" title="Gift For You"></iframe>` : `<p class="text-white text-lg tracking-wider select-all font-['Rajdhani_SemiBold'] cursor-copy">${savedTracking}</p>`}
                 </div>
                 <p class="text-white/60 text-xs max-w-xs mt-[-10px]">لطفاً این کد را نگه دارید. در صورت بروز هرگونه مشکل یا سوال درباره سرویس، به آن نیاز خواهید داشت.</p>` : ''}
             `);
@@ -96,20 +97,20 @@ $(async function () {
         renderHtml(`
             <dotlottie-player src="../json/payment-success.lottie" speed="1" autoplay style="height:230px;opacity:0.7;margin:-20px 0;"></dotlottie-player>
             <div>
-                <h2 class="text-2xl sm:text-3xl font-bold text-white">سرویس شما فعال شد 🥂</h2>
+                <h2 class="text-2xl sm:text-3xl font-bold text-white">${redeem ? "لینک هدیه ثبت شد" : "سرویس شما فعال شد"} 🥂</h2>
                 <p class="text-sm sm:text-base text-white/70 max-w-md leading-relaxed">
-                    سرویس خریداری شده شما با موفقیت فعال شد! ${isSended ? 'اکنون می‌توانید این صفحه را ببندید و به لانچر بازگردید 🦾' : 'لانچر پاسخگو نبود! لطفاً آن را مجدد باز کنید و سرویس خود لذت ببرید 💪'}
+                   ${redeem ? "لطفا لینک زیر را به دوست خود هدیه دهید 👇" : ` سرویس خریداری شده شما با موفقیت فعال شد! ${isSended ? 'اکنون می‌توانید این صفحه را ببندید و به لانچر بازگردید 🦾' : 'لانچر پاسخگو نبود! لطفاً آن را مجدد باز کنید و سرویس خود لذت ببرید 💪'}`}
                 </p>
             </div>
             
-            <div class="bg-white/5 rounded-lg px-4 py-3 w-full max-w-xs">
-                <p class="text-white/80 text-sm mb-1">کد پیگیری:</p>
-                <p class="text-white text-lg tracking-wider select-all font-['Rajdhani_SemiBold']">${tracking}</p>
+            <div class="group relative bg-white/5 rounded-lg px-4 py-3 w-full ${redeem ? 'flex flex-col 6px' : 'max-w-xs'}">
+                <p class="text-white/80 text-sm mb-1">${redeem ? "لینک هدیه:" : "کد پیگیری:"}</p>
+
+                ${redeem ? `<iframe src="https://la5m.ir/redeem?code=${redeem}&priview=true" class="h-[192px] rounded" title="Gift For You"></iframe>` : `<p class="text-white text-lg tracking-wider select-all font-['Rajdhani_SemiBold'] cursor-copy">${tracking}</p>`}
             </div>
-            <p class="text-white/60 text-xs max-w-xs mt-[-10px]">
-                لطفاً این کد را نگه دارید. در صورت بروز هرگونه مشکل یا سوال درباره سرویس، به آن نیاز خواهید داشت.
-            </p>
-        `);
+
+            <p class="text-white/60 text-xs max-w-xs mt-[-10px]">${redeem ? "لینک بالا را کپی کرده و کارت هدیه را برای دوست خود ارسال کنید 🤍" :  "لطفاً این کد را نگه دارید. در صورت بروز هرگونه مشکل یا سوال درباره سرویس، به آن نیاز خواهید داشت."}</p>
+            `);
         window.history.replaceState({}, document.title, window.location.pathname);
     } else if (status === "false") {
         localStorage.setItem("lastPaymentSuccess", "false");
