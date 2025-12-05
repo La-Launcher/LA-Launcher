@@ -66,14 +66,20 @@ $(async function () {
             document.title = "LA Platform - Already Verified";
             renderHtml(`
                 <dotlottie-player src="../json/payment-success.lottie" speed="1" autoplay style="height:200px;opacity:0.7;margin:-20px 0;"></dotlottie-player>
+
                 <div>
                     <h2 class="text-2xl sm:text-3xl font-bold text-white">پرداخت شما قبلاً تایید شده است</h2>
                     <p class="text-white/60 text-md">نیازی به تایید دوباره نیست.</p>
-                    </div>
-                    ${savedTracking ? `<div class="bg-white/5 rounded-lg px-4 py-3 w-full ${isGift ? 'flex flex-col 6px max-w-[80%]' : 'max-w-xs'}"><p class="text-white/80 text-sm mb-1">${isGift ? "لینک هدیه:" : "کد پیگیری:"}</p>
-                    ${isGift ? `<iframe src="https://la5m.ir/redeem?code=${savedTracking}&priview=true" class="h-[192px] rounded" title="Gift For You"></iframe>` : `<p class="text-white text-lg tracking-wider select-all font-['Rajdhani_SemiBold'] cursor-copy">${savedTracking}</p>`}
                 </div>
-                 <p class="text-white/60 text-xs max-w-xs mt-[-10px]">${isGift ? "لطفا بر روی صفحه بالا هاور کنید و لینک کارت هدیه را برای دوست خود ارسال کنید 🤍" :  "لطفاً این کد را نگه دارید. در صورت بروز هرگونه مشکل یا سوال درباره سرویس، به آن نیاز خواهید داشت."}</p> : ''}
+
+                ${savedTracking ? `
+                    <div class="bg-white/5 rounded-lg px-4 py-3 w-full ${isGift ? 'flex flex-col 6px max-w-[80%]' : 'max-w-xs'}">
+                        <p class="text-white/80 text-sm mb-1">${isGift ? 'لینک هدیه:' : 'کد پیگیری:'}</p>
+                        ${isGift ? `<iframe src="https://la5m.ir/redeem?code=${savedTracking}&priview=true" class="h-[192px] rounded" title="Gift For You"></iframe>` : `<p class="text-white text-lg tracking-wider select-all font-['Rajdhani_SemiBold'] cursor-copy">${savedTracking}</p>`}
+                    </div>
+
+                    <p class="text-white/60 text-xs max-w-xs mt-[-10px]">${isGift ? 'لطفا بر روی صفحه بالا هاور کنید و لینک کارت هدیه را برای دوست خود ارسال کنید 🤍' : 'لطفاً این کد را نگه دارید. در صورت بروز هرگونه مشکل یا سوال درباره سرویس، به آن نیاز خواهید داشت.'}</p>
+                ` : ''}
             `);
         } else {
             document.title = "LA Platform - Payment Error";
