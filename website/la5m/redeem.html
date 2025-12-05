@@ -15,7 +15,7 @@
     <link rel="apple-touch-icon" href="../img/logo/64x64.png">
     <link rel="stylesheet" type="text/css" href="../font/Rajdhani/style.css" />
     <link rel="stylesheet" type="text/css" href="../font/Peyda/style.css" />
-    <style>::-moz-selection {background-color: #C30440; color: #050505}::selection {background-color: #C30440;color: #050505} .ticket-shine-text{position:relative;display:inline-block;color:#ffffff;text-shadow:0 0 0.25vw rgba(0,0,0,0.25)}.ticket-shine-text::after{content:attr(data-text);position:absolute;inset:0;background:linear-gradient(120deg,transparent 0%,transparent 40%,#a8a8a8 50%,transparent 60%,transparent 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:textShine 5.2s linear infinite;pointer-events:none}@keyframes textShine{0%{background-position:150% center}100%{background-position:-150% center}}body { overflow: hidden; perspective: 156.25vw; } .scene { position: relative; transform-style: preserve-3d; width: 100%; height: 100%; } #card { filter: drop-shadow(rgb(0, 0, 0) 0.156vw 0.156vw 0vw); will-change: transform, filter; } .use-draggable { touch-action: none; cursor: grab; transition: transform 0.25s cubic-bezier(0.22, 0.61, 0.36, 1); } .use-falling { transform: translateY(150vh) rotate(25deg) scale(0.95); opacity: 0; transition: transform 1s cubic-bezier(0.11, 0.64, 0.72, 1.0), opacity 0.9s ease-out; pointer-events: none; } .new-card-appear { opacity: 0; transform: translateY(2.083vw) scale(0.95); transition: opacity 0.5s ease, transform 0.5s ease; } .new-card-appear.show { opacity: 1; transform: translateY(0) scale(1); }</style>
+    <style>::-moz-selection {background-color: #C30440; color: #050505}::selection {background-color: #C30440;color: #050505} .ticket-shine-text{position:relative;display:inline-block;color:#ffffff;text-shadow:0 0 4.8px rgba(0,0,0,0.25)}.ticket-shine-text::after{content:attr(data-text);position:absolute;inset:0;background:linear-gradient(120deg,transparent 0%,transparent 40%,#a8a8a8 50%,transparent 60%,transparent 100%);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:textShine 5.2s linear infinite;pointer-events:none}@keyframes textShine{0%{background-position:150% center}100%{background-position:-150% center}}body { overflow: hidden; perspective: 3000px; } .scene { position: relative; transform-style: preserve-3d; width: 100%; height: 100%; } #card { filter: drop-shadow(rgb(0, 0, 0) 2.995px 2.995px 0px); will-change: transform, filter; } .use-draggable { touch-action: none; cursor: grab; transition: transform 0.25s cubic-bezier(0.22, 0.61, 0.36, 1); } .use-falling { transform: translateY(150vh) rotate(25deg) scale(0.95); opacity: 0; transition: transform 1s cubic-bezier(0.11, 0.64, 0.72, 1.0), opacity 0.9s ease-out; pointer-events: none; } .new-card-appear { opacity: 0; transform: translateY(39.994px) scale(0.95); transition: opacity 0.5s ease, transform 0.5s ease; } .new-card-appear.show { opacity: 1; transform: translateY(0) scale(1); }</style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
@@ -32,11 +32,15 @@
 
     <img src="../img/bg-donate.webp" alt="Background" class="absolute inset-0 w-full h-full object-cover z-0"/>
     <div class="absolute inset-0 bg-black/60 z-[9] backdrop-blur-[0.521vw]"></div>
-     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95vw] max-w-[28.646vw] h-auto flex flex-col items-center justify-center gap-6 z-10">
-        <div id="content-box" class="flex flex-col items-center text-center gap-4 px-6 pt-10 pb-7 bg-[rgba(0,0,0,0.25)] backdrop-blur-[1.563vw] rounded-2xl border border-white/10 shadow-2xl w-full" style="font-family: 'Rajdhani SemiBold', Peyda;">
+    <div class="gift absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[28.646vw] max-w-[28.646vw] h-auto flex flex-col items-center justify-center gap-[1.25vw] z-10">
+        <div id="content-box" class="flex flex-col items-center text-center gap-[0.833vw] px-[1.25vw] pt-[2.083vw] pb-[1.458vw] bg-[rgba(0,0,0,0.25)] backdrop-blur-[1.563vw] rounded-[0.833vw] border-[0.109vw] border-white/10 shadow-[0_1.302vw_2.604vw_-0.625vw_rgba(0,0,0,0.25)] w-full" style="font-family: 'Rajdhani SemiBold', Peyda;">
             <dotlottie-player src="../json/checking-data.lottie" speed="1" autoplay loop style="height:10.417vw;opacity:0.5;margin:-3.385vw 0;"></dotlottie-player>
-            <p class="text-white text-lg font-semibold mt-4 mb-[-0.521vw]">در حال بارگذاری اطلاعات گیفت کارت<span class='loading-tag'>...</span></span></p>
+            <p class="text-white text-[0.938vw] font-semibold mt-[0.833vw] mb-[-0.521vw]">
+                در حال بارگذاری اطلاعات گیفت کارت
+                <span class='loading-tag'>...</span></span>
+            </p>
         </div>
+
         <div class="hidden flex items-center justify-center scene" id="card">
             <div class="use use-draggable relative h-[25.781vw]">
                 <audio id="ripSound" src="sound/ripping.mp3" preload="auto"></audio>
@@ -96,10 +100,10 @@
                     <h1 id="redeem" class="text-[1.823vw] [font-family:'Rajdhani_SemiBold'] leading-normal text-white text-center select-all" style="line-height: normal;">7MKQ-94YJ-0M21</h1>
                 </div>
 
-                <div class="relative left-[-10.156vw] top-[-21.302vw] filter drop-shadow-[0_0_0.313vw_rgba(218,218,218,0.5)] pointer-events-none">🤍</div>
+                <div class="relative left-[-10.156vw] top-[-21.302vw] text-[0.885vw] filter drop-shadow-[0_0_0.313vw_rgba(218,218,218,0.5)] pointer-events-none">🤍</div>
 
                 <div class="relative left-[-10.625vw] top-[-22.917vw] w-[5.208vw] pointer-events-none" dir="ltr">
-                    <span id="price" class="fixed text-[1.25vw] [font-family:'Rajdhani_SemiBold'] leading-none text-white [text-shadow:0_0_0.25vw_rgba(255,255,255,0.25)]" style="line-height: normal;">39T</span>
+                    <div id="price" class="[font-family:'Rajdhani_SemiBold'] text-[1.25vw] leading-none text-white [text-shadow:0_0_0.25vw_rgba(255,255,255,0.25)]" style="line-height: normal;">39T</div>
                     <div class="relative top-[-0.938vw] left-[0.104vw] w-[2.188vw] h-[0.125vw] bg-[#FF0000] rotate-[340deg]"></div>
                 </div>
             </div>

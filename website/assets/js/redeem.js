@@ -8,7 +8,6 @@ $(document).ready(async function() {
     if (!redeemCode) return window.location.href = '/404';
 
     const result = await fetch(`https://api.la5m.ir/gift/info?code=${encodeURIComponent(redeemCode)}`);
-
     if (result.status !== 200) {
         $("#content-box p").html("اتصال به سرور برقرار نشد!");
         setTimeout(() => {
@@ -19,7 +18,6 @@ $(document).ready(async function() {
     }
 
     const serverData = await result.json();
-
     if (!serverData) return window.location.href = '/404';
 
     $("#status").text(serverData.status ? "Gift used" : "Ready to use");
@@ -38,6 +36,7 @@ $(document).ready(async function() {
                 </button>
             </div>
         `);
+
         $(document).on('click', '.copy-gift-link', function (e) {
             e.preventDefault();
 
@@ -48,13 +47,13 @@ $(document).ready(async function() {
             const original = $label.text();
 
             const done = () => {
-                $label.text('save to clipboard!');
+                $label.text('Copied to clipboard!');
                 setTimeout(() => $label.text(original), 1500);
             };
 
-            if (navigator.clipboard && navigator.clipboard.writeText) {
+            if (navigator.clipboard && navigator.clipboard.writeText)
                 navigator.clipboard.writeText(link).then(done);
-            } else {
+            else {
                 const $temp = $('<input>').val(link).appendTo('body');
                 $temp[0].select();
                 document.execCommand('copy');
@@ -62,7 +61,6 @@ $(document).ready(async function() {
                 done();
             }
         });
-     
     }
 
     function formatValidity(value) {
@@ -93,15 +91,13 @@ $(document).ready(async function() {
         $card.css('filter', `drop-shadow(${-xAxis * 0.2}px ${-yAxis * 0.2}px 0px #000000ff)`);
     });
 
-    $scene.on('mouseenter', () => {
-        $card.css('transition', 'none');
-    });
+    $scene.on('mouseenter', () => $card.css('transition', 'none'));
 
     $scene.on('mouseleave', () => {
         $card.css({
             transition: 'transform 0.8s ease, filter 0.8s ease',
             transform: 'rotateY(0deg) rotateX(0deg)',
-            filter: 'drop-shadow(3px 3px 0px #000000ff)'
+            filter: 'drop-shadow(0.156vw 0.156vw 0vw #000000ff)'
         });
     });
 
