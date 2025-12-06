@@ -1,12 +1,12 @@
 import './utils/loading.dat.js';
 
 $(async function () {
-    const sendStatusToLauncher = async (status, tracking = null) => {
+    const sendStatusToLauncher = async (status, type, orderId = null) => {
         try {
-            const result = await fetch(`http://127.0.0.1:7878/payment?status=${status}&tracking=${tracking}`, {method: "POST", headers: { "Content-Type": "application/json" }});
+            const result = await fetch(`http://127.0.0.1:7878/payment?status=${status}&${type}=${orderId}`, {method: "POST", headers: { "Content-Type": "application/json" }});
 
             const text = await result.text();
-            console.log("Payment status sent:", status, tracking);
+            console.log("Payment status sent:", status, type, orderId);
 
             return text === "ok";
         } catch(e) {
@@ -57,7 +57,7 @@ $(async function () {
     }
 
     const hadSuccess = localStorage.getItem("lastPaymentSuccess");
-    const isSended = await sendStatusToLauncher(status || hadSuccess, tracking || savedTracking);
+    const isSended = await sendStatusToLauncher(status || hadSuccess, (redeem || ((tracking.match(/-/g) || []).length === 2)) ? "redeem" : "tracking", tracking || savedTracking);
 
     if (!status) {
         if (hadSuccess === "true") {
