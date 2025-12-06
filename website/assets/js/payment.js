@@ -57,7 +57,7 @@ $(async function () {
     }
 
     const hadSuccess = localStorage.getItem("lastPaymentSuccess");
-    const isSended = await sendStatusToLauncher(status || hadSuccess, (redeem || ((tracking.match(/-/g) || []).length === 2)) ? "redeem" : "tracking", tracking || savedTracking);
+    const isSended = await sendStatusToLauncher(status || hadSuccess, (redeem || ((tracking?.match(/-/g) || []).length === 2)) ? "redeem" : "tracking", tracking || savedTracking);
 
     if (!status) {
         if (hadSuccess === "true") {
