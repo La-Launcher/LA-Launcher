@@ -226,10 +226,10 @@ $(document).ready(async function() {
                 const text = await result.text();
                 console.log("status redeem gift:", text);
 
-                return text === "ok";
+                return text;
             } catch (error) {
                 console.error("Cannot send status to launcher:", error);
-                return false;
+                return null;
             }
         }
 
@@ -245,7 +245,7 @@ $(document).ready(async function() {
             
             const interval = setInterval(async () => {
                 const ok = await checkVerifyLauncher();
-                if (ok) {
+                if (ok == "true") {
                     clearInterval(interval);
 
                     typeStatusTemp('ACTIVATED', {
@@ -256,6 +256,9 @@ $(document).ready(async function() {
                     opened = true;
                     $('#status').text('REDEEMED');
                     $('#status-spinner').addClass('hidden');
+                } else if (ok == "false") {
+                    clearInterval(interval);
+                    showNotification("error", "خطا!", "درخواست فعال سازی کارت هدیه شما توسط لانچر رد شد", true);
                 }
             }, 1200);
 
