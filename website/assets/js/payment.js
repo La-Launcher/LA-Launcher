@@ -25,6 +25,9 @@ $(async function () {
         savedTracking = null;
     }
 
+    const gameName = $('meta[name="game-name"]').attr('content');
+    console.log(`Loading servers for game: ${gameName}`);
+
     const redeem = params.get("redeem");
     const tracking = params.get("tracking") || redeem;
     const renderHtml = html => $("#content-box").html(html);
@@ -75,7 +78,7 @@ $(async function () {
                 ${savedTracking ? `
                     <div class="bg-white/5 rounded-lg px-4 py-3 w-full ${isGift ? 'flex flex-col 6px max-w-[80%]' : 'max-w-xs'}">
                         <p class="text-white/80 text-sm mb-1">${isGift ? 'لینک هدیه:' : 'کد پیگیری:'}</p>
-                        ${isGift ? `<iframe src="https://la5m.ir/redeem?code=${savedTracking}&priview=true" class="h-[192px] rounded" title="Gift For You"></iframe>` : `<p class="text-white text-lg tracking-wider select-all font-['Rajdhani_SemiBold'] cursor-copy">${savedTracking}</p>`}
+                        ${isGift ? `<iframe src="https://la${gameName == "gta5" ? "5" : "2"}m.ir/redeem?code=${savedTracking}&priview=true" class="h-[192px] rounded" title="Gift For You"></iframe>` : `<p class="text-white text-lg tracking-wider select-all font-['Rajdhani_SemiBold'] cursor-copy">${savedTracking}</p>`}
                     </div>
 
                     <p class="text-white/60 text-xs max-w-xs mt-[-10px]">${isGift ? 'لطفا بر روی صفحه بالا هاور کنید و لینک کارت هدیه را برای دوست خود ارسال کنید 🤍' : 'لطفاً این کد را نگه دارید. در صورت بروز هرگونه مشکل یا سوال درباره سرویس، به آن نیاز خواهید داشت.'}</p>
@@ -112,7 +115,7 @@ $(async function () {
             <div class="group relative bg-white/5 rounded-lg px-4 py-3 w-full ${redeem ? 'flex flex-col 6px max-w-[80%]' : 'max-w-xs'}">
                 <p class="text-white/80 text-sm mb-1">${redeem ? "لینک هدیه:" : "کد پیگیری:"}</p>
 
-                ${redeem ? `<iframe src="https://la5m.ir/redeem?code=${redeem}&priview=true" class="h-[192px] rounded" title="Gift For You"></iframe>` : `<p class="text-white text-lg tracking-wider select-all font-['Rajdhani_SemiBold'] cursor-copy">${tracking}</p>`}
+                ${redeem ? `<iframe src="https://la${gameName == "gta5" ? "5" : "2"}m.ir/redeem?code=${redeem}&priview=true" class="h-[192px] rounded" title="Gift For You"></iframe>` : `<p class="text-white text-lg tracking-wider select-all font-['Rajdhani_SemiBold'] cursor-copy">${tracking}</p>`}
             </div>
 
             <p class="text-white/60 text-xs max-w-xs mt-[-10px]">${redeem ? "لطفا بر روی صفحه بالا هاور کنید و لینک کارت هدیه را برای دوست خود ارسال کنید 🤍" :  "لطفاً این کد را نگه دارید. در صورت بروز هرگونه مشکل یا سوال درباره سرویس، به آن نیاز خواهید داشت."}</p>
