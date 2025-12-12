@@ -9,10 +9,7 @@ $(document).ready(async () => {
     if (!authKey) return (window.location.href = "/404");
 
     const gameName = $('meta[name="game-name"]').attr("content");
-    $("#serverIcon").attr(
-        "src",
-        `../img/logo-template/${Math.floor(Math.random() * 16) + 1}.svg`
-    );
+    $("#serverIcon").attr("src",`../img/logo-template/${Math.floor(Math.random() * 16) + 1}.svg`);
 
     const fetchJson = async (url, opts) => {
         const res = await fetch(url, opts);
@@ -42,16 +39,10 @@ $(document).ready(async () => {
 
     setImage($("#serverBanner"), [serverData.banners?.detail, serverData.banners?.connecting]);
     setImage($("#serverBannerMain"), [serverData.banners?.connecting, serverData.banners?.detail]);
-    setImage($("#serverIcon"), [
-        `https://servers-frontend.fivem.net/api/servers/icon/${serverData.id}/${serverData.iconVersion}.png`,
-    ]);
+    setImage($("#serverIcon"), [`https://servers-frontend.fivem.net/api/servers/icon/${serverData.id}/${serverData.iconVersion}.png`]);
 
     $("#serverName").html(parseColorCodes(serverData.projectName));
-    $("#currents").html(
-        Object.keys(stock)
-            .map((k) => `<div><span class="font-semibold text-[16px] text-[#dadbd0]">${stock[k]}</span>x ${k.replace(/^wg_/, "")}</div>`)
-            .join(" - ")
-    );
+    $("#currents").html(Object.keys(stock).map((k) => `<div><span class="font-semibold text-[16px] text-[#dadbd0]">${stock[k]}</span>x ${k.replace(/^wg_/, "")}</div>`).join(" - "));
 
     const minStocks = 3;
     const maxStocks = 9999;
@@ -83,12 +74,12 @@ $(document).ready(async () => {
                 $input.css("width", `${String(v).length || 2}ch`);
             };
 
-            paint($input.val());
             $input.on("input blur", () => paint($input.val()));
             $input.on("keypress", (e) => {
                 const c = e.which || e.keyCode;
                 if (c < 48 || c > 57) e.preventDefault();
             });
+
             $input.on("paste", (e) => {
                 e.preventDefault();
                 const t = ((e.originalEvent || e).clipboardData.getData("text") || "").replace(/[^\d]/g, "");
@@ -110,6 +101,7 @@ $(document).ready(async () => {
 
     const openWithoutReferrer = (url) => {
         const $a = $("<a>", { href: url, target: "_blank", rel: "noopener noreferrer" });
+
         $("body").append($a);
         $a[0].click();
         $a.remove();
@@ -118,12 +110,12 @@ $(document).ready(async () => {
 
     const buildStockPayload = () => {
         const newStock = {};
+
         $(".deposit-input").each(function () {
             const $inp = $(this);
-            const key = $inp.closest(".input-container").attr("data-key");
-            const v = String($inp.val() ?? "").trim();
-            newStock[key] = v || minStocks;
+            newStock[$inp.closest(".input-container").attr("data-key")] = String($inp.val() ?? "").trim() || minStocks;
         });
+
         return newStock;
     };
 
@@ -132,11 +124,7 @@ $(document).ready(async () => {
         try {
             const payload = buildStockPayload();
     
-            const res = await fetchJson("https://api.la5m.ir/stock/create-invoice", {
-                method: "POST",
-                headers: authHeaders,
-                body: JSON.stringify({ stock: payload }),
-            });
+            const res = await fetchJson("https://api.la5m.ir/stock/create-invoice", { method: "POST", headers: authHeaders, body: JSON.stringify({ stock: payload }) });
             const paymentUrl = res?.payUrl;
             const message = res?.message;
 
