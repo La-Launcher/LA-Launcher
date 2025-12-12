@@ -74,6 +74,7 @@ $(document).ready(async () => {
                 $input.css("width", `${String(v).length || 2}ch`);
             };
 
+            paint($input.val());
             $input.on("input blur", () => paint($input.val()));
             $input.on("keypress", (e) => {
                 const c = e.which || e.keyCode;
@@ -93,9 +94,7 @@ $(document).ready(async () => {
     const $paymentButton = $("a.cursor-pointer");
 
     const setLocked = (locked) => {
-        $paymentButton
-            .toggleClass("opacity-50 cursor-not-allowed", locked)
-            .html(locked ? "درحال رفتن به درگاه پرداخت<span class='loading-tag'>...</span>" : "شارژ سپرده و رفتن به درگاه پرداخت");
+        $paymentButton.toggleClass("opacity-50 cursor-not-allowed", locked).html(locked ? "درحال رفتن به درگاه پرداخت<span class='loading-tag'>...</span>" : "شارژ سپرده و رفتن به درگاه پرداخت");
         $(".deposit-input").prop("disabled", locked).css("opacity", locked ? "0.5" : "1");
     };
 
