@@ -22,7 +22,7 @@ $(document).ready(async function() {
     if (!serverData) return window.location.href = '/404';
 
     $("#status").text(serverData.status ? "Gift Card Used" : "Ready to use");
-    $("#type").text(PLANS[serverData.plan] || "Unknown Plan");
+    $("#type").text(PLANS[serverData.plan] || "Unknown Plan").attr('data-text', PLANS[serverData.plan] || "Unknown Plan");
     $("#validity").text(formatValidity(serverData.validityDays));
     $("#date").html(new Date(serverData.purchasedAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric"}));
 
