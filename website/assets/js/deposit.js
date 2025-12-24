@@ -44,7 +44,7 @@ $(document).ready(async () => {
     $("#serverName").html(parseColorCodes(serverData.projectName));
     $("#currents").html(Object.keys(stock).map((k) => `<div><span class="font-semibold text-[16px] text-[#dadbd0]">${stock[k]}</span>x ${k.replace(/^wg_/, "")}</div>`).join(" - "));
 
-    const minStocks = 3;
+    const minStocks = 10;
     const maxStocks = 9999;
 
     const renderStockRows = (stockObj) => {
