@@ -35,7 +35,7 @@ $(document).ready(async function() {
     const $boostInput = $('#boostInput');
     const $price = $('#price');
     const $paymentButton = $('a.cursor-pointer');
-    const pricePerBoost = 17900;
+    const pricePerBoost = 24900;
     const minBoosts = 10;
     const maxBoosts = 10000000;
 
